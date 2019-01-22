@@ -13,8 +13,10 @@
  }
 
 .btn-purple-outline {
+  background-color: white;
    border-color: #492DA8;
    color: #492DA8;
+   letter-spacing: 1px;
 }
 .btn-purple-outline:hover {
    background-color: #241653;
@@ -552,6 +554,10 @@ a.btn-primary:hover {
 #courses {
   background-image: url("img/backs/dust_scratches.png");
 }
+.card-logo-style{
+  height: 114px;
+  width: 280px;
+}
 
 
 /* --- Timetable Section --- */
@@ -569,6 +575,9 @@ a.btn-primary:hover {
 
 #news {
   background-image: url("img/backs/dust_scratches.png");
+}
+.news-img-style{
+  height: 200px;
 }
 
 /* --- Gallery Section --- */
