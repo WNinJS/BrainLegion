@@ -12,15 +12,20 @@
    color: #492DA8 !important;
  }
 
- .btn-purple {
-   background-color: #492DA8;
+.btn-purple-outline {
    border-color: #492DA8;
- }
-
- .btn-purple:hover {
+   color: #492DA8;
+}
+.btn-purple-outline:hover {
    background-color: #241653;
    border-color: #241653;
- }
+   color: white;
+}
+
+/* .btn-purple:hover {
+   background-color: white;
+   border-color: #241653;
+ }*/
 
  .btn-purple:focus,
  .btn-purple:active {
