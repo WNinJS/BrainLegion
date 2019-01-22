@@ -1,0 +1,582 @@
+AWSTATS DATA FILE 7.6 (build 20161204)
+# If you remove this file, all statistics for date 201901 will be lost/reset.
+# Last config file used to build this data file was /home/vh4u14185/domains/brainlegion.ru/awstats/.data/awstats.brainlegion.ru.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 30
+POS_GENERAL 2107                
+POS_TIME 2788                
+POS_VISITOR 13450               
+POS_DAY 20148               
+POS_DOMAIN 3580                
+POS_LOGIN 3812                
+POS_ROBOT 3967                
+POS_WORMS 4869                
+POS_EMAILSENDER 5000                
+POS_EMAILRECEIVER 5143                
+POS_SESSION 20721               
+POS_SIDER 20890               
+POS_FILETYPES 5278                
+POS_DOWNLOADS 5553                
+POS_OS 9382                
+POS_BROWSER 9607                
+POS_SCREENSIZE 10694               
+POS_UNKNOWNREFERER 10768               
+POS_UNKNOWNREFERERBROWSER 11134               
+POS_ORIGIN 11216               
+POS_SEREFERRALS 11357               
+POS_PAGEREFS 11535               
+POS_SEARCHWORDS 11944               
+POS_KEYWORDS 12398               
+POS_MISC 2452                
+POS_ERRORS 12771               
+POS_CLUSTER 3668                
+POS_SIDER_403 12872               
+POS_SIDER_400 13059               
+POS_SIDER_404 13141               
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20190122010358 341 84031 8593047536262
+FirstTime 20190101003018
+LastTime 20190121220051
+LastUpdate 20190122010835 341 0 341 0 0
+TotalVisits 219                 
+TotalUnique 159                 
+MonthHostsKnown 0                   
+MonthHostsUnknown 175                 
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+QuickTimeSupport 0 0 0
+JavaEnabled 0 0 0
+JavascriptDisabled 0 0 0
+PDFSupport 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+AddToFavourites 0 0 0
+RealPlayerSupport 0 0 0
+TotalMisc 0 0 0
+DirectorSupport 0 0 0
+FlashSupport 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 12 12 114668 12 29 125650
+1 12 13 468067 10 34 148843
+2 15 15 182266 6 12 52054
+3 2 2 16996 6 15 69614
+4 12 22 218458 12 29 56430
+5 6 6 72086 31 49 1612927
+6 9 9 118678 11 24 161082
+7 7 10 111503 10 14 44416
+8 18 28 255973 8 13 56914
+9 6 6 55422 3 5 17576
+10 10 10 50988 7 17 60717
+11 4 5 335953 10 13 5070
+12 18 225 145102930 4 20 142053
+13 18 229 100720797 11 39 1651363
+14 13 50 18924266 16 62 2077997
+15 15 74 35954486 12 25 3010048
+16 10 10 68316 9 13 47319
+17 15 133 52349772 15 58 1870284
+18 4 5 585471 8 33 293253
+19 7 7 51154 10 37 1745123
+20 3 6 422805 6 33 255241
+21 19 65 24865743 20 31 534334
+22 11 47 25272467 16 48 358985
+23 5 5 42490 11 24 256636
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 10 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 1
+ip 251 994 406361755
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 10 first Hits must be first (order not required for others)
+BEGIN_ROBOT 19
+YandexBot/ 185 1298314 20190122010358 54
+Googlebot/ 123 1154171 20190121131228 17
+bingbot/ 50 1765222 20190121232129 13
+bot[\s_+:,\.\;\/\\-] 47 561056 20190119000257 2
+yandex 21 178458 20190106171028 0
+AhrefsBot/ 17 65839 20190118060330 7
+YandexImages/ 16 8734599 20190121215738 0
+MJ12bot/ 15 144652 20190117045809 6
+YandexMobileBot/ 13 127803 20190103225149 0
+no_user_agent 12 325556 20190120214749 0
+(firefox/)([0-9]\.|[0-1][0]\.) 1 8498 20190106233100 0
+BLEXBot/ 12 40571 20190106001855 3
+[\s_+:,\.\;\/\\-]bot 8 37835 20190102153424 1
+unknown 3 563 20190120045139 3
+SemrushBot/ 11 56528 20190117134445 4
+favicon 2 10024 20190116103622 0
+SafeDNSBot 6 110488 20190119230959 1
+facebookexternalhit/ 1 154 20190112121214 1
+Xenu[\x20]Link[\x20]Sleuth 1 0 20190117155748 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 11
+css 97 698485 0 0
+png 95 99461805 0 0
+woff 1 8776 0 0
+woff2 17 128520 0 0
+map 4 186658 0 0
+php 226 2237888 0 0
+html 21 132263 0 0
+mp4 22 140041005 0 0
+js 113 1577148 0 0
+jpg 329 161370210 0 0
+svg 69 518997 0 0
+END_FILETYPES
+
+# Downloads - Hits - Bandwidth
+BEGIN_DOWNLOADS 20
+/index.html/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4 1 0 8498
+/index.html/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4 1 0 8498
+/index.html/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4 1 0 8498
+/index.html/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4 1 0 8498
+/index.html/res/video/2.mp4/res/video/2.mp4 1 0 8498
+/index.html/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4 1 0 8498
+/index.html/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4 1 0 8498
+/index.html/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4 1 0 8498
+/index.html/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4 1 0 8498
+/index.html/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4 1 0 8498
+/index.html/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4 1 0 8498
+/index.html/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4 1 0 8498
+/index.html/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4 1 0 8498
+/index.html/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4 1 0 8498
+/index.html/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4 1 0 8498
+/index.html/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4 1 0 8498
+/index.html/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4 1 0 8498
+/index.html/res/video/2.mp4 1 0 8498
+/index.html/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4 1 0 8498
+/index.html/res/video/2.mp4/res/video/2.mp4/res/video/2.mp4 1 0 8498
+END_DOWNLOADS
+
+# OS ID - Hits
+BEGIN_OS ID - Hits - Pages 12
+linuxandroid 144 7
+winlong 6 6
+winxp 2 2
+ios_iphone 5 4
+win2000 1 1
+macosx12 19 19
+linux 42 11
+win7 491 166
+macosx10 1 1
+Unknown 16 16
+win8.1 1 1
+win10 266 17
+END_OS
+
+# Browser ID - Hits - Pages
+BEGIN_BROWSER 48
+chrome67.0.3396.87 1 1
+chrome52.0.2743.116 1 1
+safari11.0 5 4
+chrome71.0.3578.98 149 6
+chrome31.0.1650.57 1 1
+firefox49.0 1 1
+opera49.0.2725.64 1 1
+chrome58.0.3029.110 6 4
+chrome63.0.3239.84 1 1
+chrome61.0.3163.100 17 17
+chrome11.0.696.34 1 1
+chrome50.0.2661.94 2 2
+chrome43.0.2376.69 2 2
+firefox64.0 38 4
+opera10.01 1 1
+firefox59.0 1 1
+chrome60.0.3112.101 1 1
+chrome34.0.1847.116 6 6
+chrome40.0.2214.85 24 1
+chrome41.0.2272.89 126 126
+chrome71.0.3578.99 81 5
+chrome66.0.3359.181 4 4
+chrome70.0.3538.102 313 14
+chrome49.0.2623.112 1 1
+chrome30.0.1599.114 1 1
+chrome2.0.177.0 1 1
+chrome65.0.3325.181 3 0
+chrome6.0.458.0 1 1
+firefox50.0 1 1
+chrome70.0.3538.77 1 1
+firefox42.0 1 1
+chrome34.0.1847.131 1 1
+opera53.0.2907.99 1 1
+chrome68.0.3440.106 1 1
+chrome41.0.2272.118 60 2
+chrome0.2.149.27 1 1
+chrome62.0.3202.94 2 2
+firefox38.0 1 1
+firefox47.0 1 1
+chrome51.0.2704.103 1 1
+chrome67.0.3396.99 2 2
+mozilla 16 16
+chrome33.0.1750.117 1 1
+opera53.0.2907.106 1 1
+netscape5.0 2 1
+chrome42.0.2311.135 1 1
+msie10.0 34 4
+chrome70.0.3538.110 75 2
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 3
+Mozilla/5.0_(compatible;_BackupLand/1.0;_https://go.backupland.com/;_Domain_check_for_viruses;) 20190120132658
+Mozilla/5.0_(compatible;_Google-Site-Verification/1.0) 20190103000507
+Mozilla/5.0_(compatible;_WebDataStats/1.0_;__https://webdatastats.com/policy.html) 20190120045138
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 0
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 74 83
+From1 1 1
+From2 24 27
+From3 129 129
+From4 23 754
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 2
+www_google_com 2 5
+yandexru 22 22
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 10 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 9
+http://burger-imperia.com 69 69
+http://pizza-imperia.com 18 18
+http://pizza-tycoon.com 13 13
+http://hundejo.com 11 11
+http://burger-imperia.com 9 9
+http://pizza-imperia.com 5 5
+http://bike-promotion.ru 2 2
+https://www.facebook.com 1 1
+http://topbux.ru/8611 1 1
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 3
+parsinfo.ru 6
+%d0%98%d0%9f+%d0%9a%d0%b0%d1%80%d0%b0%d0%b2%d0%b0%d0%b5%d0%b2+%d0%90%d1%80%d1%81%d0%b5%d0%bd%d0%b8%d0%b9+%d0%90%d0%bb%d0%b5%d0%ba%d1%81%d0%b0%d0%bd%d0%b4%d1%80%d0%be%d0%b2%d0%b8%d1%87 2
+%d0%b4%d0%b8%d0%b7%d0%b0%d0%b9%d0%bd+%d1%81%d1%82%d1%83%d0%b4%d0%b8%d0%b8+%d0%b2+%d1%83%d1%84%d0%b5 1
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 9
+parsinfo.ru 6
+%d0%9a%d0%b0%d1%80%d0%b0%d0%b2%d0%b0%d0%b5%d0%b2 2
+%d0%90%d1%80%d1%81%d0%b5%d0%bd%d0%b8%d0%b9 2
+%d0%98%d0%9f 2
+%d0%90%d0%bb%d0%b5%d0%ba%d1%81%d0%b0%d0%bd%d0%b4%d1%80%d0%be%d0%b2%d0%b8%d1%87 2
+%d0%b2 1
+%d0%b4%d0%b8%d0%b7%d0%b0%d0%b9%d0%bd 1
+%d1%81%d1%82%d1%83%d0%b4%d0%b8%d0%b8 1
+%d1%83%d1%84%d0%b5 1
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 2
+403 7 1526
+404 105 32072
+END_ERRORS
+
+# URL with 403 errors - Hits - Last URL referrer
+BEGIN_SIDER_403 7
+/bbs.cgi 1 -
+/yybbs.cgi 1 -
+/aska.cgi 1 -
+/g_book.cgi 1 -
+/light.cgi 1 -
+/seo-joy.cgi 1 -
+/album.cgi 1 -
+END_SIDER_403
+
+# URL with 400 errors - Hits - Last URL referrer
+BEGIN_SIDER_400 0
+END_SIDER_400
+
+# URL with 404 errors - Hits - Last URL referrer
+BEGIN_SIDER_404 0
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 10 first Hits must be first (order not required for others)
+BEGIN_VISITOR 175
+185.12.124.78 13 13 110474 20190120132658
+52.53.201.78 10 10 84980 20190120235543
+136.169.224.119 8 44 24609061 20190121214311
+13.57.233.99 7 7 1162 20190121164519
+138.68.180.18 6 6 37515 20190114080420
+62.133.191.254 5 101 70894194 20190121125716
+94.41.43.253 5 153 80646404 20190115133500
+66.102.9.152 4 29 24806307 20190121125526
+3.85.140.249 4 4 59616 20190104212244
+178.128.229.150 4 4 0 20190111105844
+77.82.233.101 0 1 280863 
+109.70.100.18 1 1 8498 20190110153621
+199.249.230.78 1 1 8498 20190115020315
+157.230.111.173 1 1 8498 20190114212653
+109.70.100.21 1 1 8498 20190116011411
+130.149.80.199 1 1 8498 20190120112201
+185.220.101.10 1 1 8498 20190110225310
+37.187.129.166 3 3 25494 20190121220051
+185.220.101.32 1 1 8498 20190119080849
+95.221.176.85 1 11 124980 20190113040828
+89.144.12.17 2 2 16996 20190115003614
+194.44.247.218 1 1 29596 20190120022738
+37.187.180.18 1 1 8498 20190114222914
+178.140.228.207 1 1 8498 20190121170028
+37.57.128.246 1 1 29596 20190114052937
+158.69.37.14 1 1 8498 20190116063617
+23.239.23.104 1 1 8498 20190120190030
+199.249.230.68 1 1 8498 20190120080855
+166.70.207.2 1 1 8498 20190118025015
+5.35.37.50 1 1 29596 20190118023904
+185.100.87.206 3 3 25494 20190121163047
+185.107.47.215 1 1 8498 20190113172404
+185.220.101.34 2 2 16996 20190121150414
+162.247.74.199 1 1 8498 20190117100100
+212.3.130.246 0 1 374423 
+185.220.101.3 3 3 25494 20190119011430
+184.175.34.239 1 1 166 20190117160349
+66.102.9.150 1 28 14573535 20190121125519
+185.100.86.182 1 1 8498 20190116063549
+188.232.127.115 1 1 8498 20190116040731
+31.220.0.225 3 3 25494 20190120203230
+188.226.2.79 1 1 8498 20190102183846
+89.236.34.117 1 1 8498 20190119021313
+54.36.9.139 1 1 29596 20190112115655
+185.220.101.12 2 2 16996 20190117085357
+185.220.101.5 1 1 8498 20190110153625
+199.249.230.82 1 1 8498 20190114182144
+192.99.247.1 1 1 8498 20190117142353
+5.228.23.105 0 1 559811 
+198.40.54.178 2 2 16996 20190121023643
+185.220.101.13 1 1 8498 20190121133955
+176.10.99.200 1 1 8498 20190119130917
+85.254.72.26 1 1 8498 20190104062644
+173.252.87.8 0 9 2563803 
+89.76.239.204 1 1 29596 20190120220815
+94.142.242.84 1 1 8498 20190119154227
+66.70.217.179 1 1 8498 20190109120802
+185.220.101.46 1 1 8498 20190120204601
+95.79.198.100 1 1 8498 20190113041950
+51.15.106.67 1 1 8498 20190120043359
+128.74.163.149 1 29 9701892 20190107170719
+66.249.93.221 2 21 10170047 20190121172150
+163.172.215.253 2 2 16996 20190121021957
+185.234.219.246 1 1 29596 20190113091036
+109.174.112.55 1 1 8498 20190103144956
+209.141.45.212 1 1 8498 20190117155336
+195.176.3.23 1 1 8498 20190119065436
+46.48.13.161 1 1 8498 20190113122510
+52.114.77.26 1 2 31818 20190115133413
+205.185.127.219 1 1 8498 20190110165515
+77.247.181.162 2 2 16996 20190117174609
+62.133.163.228 1 32 10202199 20190117135537
+213.166.71.236 1 1 29596 20190113143457
+51.15.124.1 1 1 8498 20190118002807
+185.234.217.244 1 1 8498 20190119015836
+185.220.101.48 1 1 8498 20190119123200
+173.252.87.9 0 4 1053154 
+89.163.242.241 1 1 8498 20190104211047
+185.220.101.26 1 1 8498 20190120002106
+173.252.87.10 0 1 1361 
+78.109.23.2 1 1 8498 20190121043759
+185.220.101.50 1 1 8498 20190117225213
+65.19.167.131 2 2 16996 20190118003713
+178.205.37.38 1 1 29596 20190114154325
+31.13.144.68 1 33 23114400 20190120173912
+185.32.124.226 1 1 8498 20190121123108
+185.100.87.207 2 2 16996 20190113140843
+194.99.106.148 1 1 8498 20190121081606
+171.25.193.20 3 3 25494 20190113140446
+66.249.93.220 0 21 7956251 
+178.205.194.252 1 1 29596 20190116150055
+103.236.201.110 1 1 8498 20190119021338
+171.25.193.78 1 1 8498 20190119092728
+171.25.193.25 2 2 16996 20190115014320
+185.86.93.35 1 1 8498 20190112013725
+171.25.193.235 1 1 8498 20190119221056
+185.129.62.63 1 1 8498 20190119121850
+173.244.209.5 1 1 8498 20190115192701
+173.252.87.15 0 7 4530498 
+185.220.100.252 1 1 8498 20190111175850
+185.220.101.15 1 1 8498 20190116115830
+185.10.68.105 1 1 8498 20190116014841
+51.15.59.9 1 1 8498 20190118131039
+157.230.56.64 1 1 8498 20190121084349
+198.98.56.149 1 1 8498 20190120022440
+178.175.148.15 1 1 29596 20190116072742
+91.210.144.179 1 1 8498 20190102120023
+18.85.22.239 2 2 16996 20190117170924
+195.123.221.122 1 1 8498 20190115043700
+185.220.101.6 3 3 25494 20190120050900
+185.229.190.131 2 2 29596 20190121022520
+185.220.101.27 1 1 8498 20190116150417
+199.249.230.84 2 2 16996 20190121101150
+51.75.66.250 2 2 16996 20190120135216
+185.220.101.21 1 1 8498 20190117170851
+173.252.87.1 0 1 35134 
+185.220.101.53 2 2 16996 20190116093102
+66.102.9.154 0 21 7484866 
+178.140.209.87 1 11 124980 20190105214320
+66.249.89.55 1 1 92 20190103000507
+54.36.222.37 2 2 16996 20190116043712
+84.39.252.41 1 1 8498 20190112041457
+173.212.240.51 1 1 29596 20190118001107
+5.188.210.53 2 2 59192 20190105061945
+3.88.86.38 0 2 22888 
+178.17.171.102 1 1 8498 20190121143443
+198.98.52.93 1 1 8498 20190116021129
+216.162.47.74 1 1 8498 20190107030615
+185.147.80.155 1 1 8498 20190116011241
+23.129.64.105 1 1 8498 20190117005942
+185.100.86.100 1 1 8498 20190119165506
+145.255.2.211 2 35 23279857 20190104225546
+94.233.228.119 0 3 1895030 
+51.15.43.205 1 1 8498 20190114210540
+66.249.93.222 0 18 1292606 
+87.118.116.90 1 1 8498 20190121063437
+91.121.112.181 1 1 8498 20190114212951
+91.200.29.122 2 2 59192 20190115134106
+185.220.101.30 1 1 8498 20190121055531
+193.90.12.118 1 1 8498 20190118013530
+5.251.135.244 1 1 8498 20190106041236
+37.146.242.212 1 11 124980 20190105082546
+195.254.134.194 1 1 8498 20190119072344
+51.77.177.194 1 1 8498 20190116012946
+185.193.125.115 1 1 8498 20190111223327
+79.126.92.75 2 39 18809690 20190121140937
+104.248.166.242 1 1 8498 20190113045728
+178.17.166.150 1 1 8498 20190108235910
+54.219.182.96 1 1 8498 20190114135608
+95.108.225.211 1 32 9713200 20190108131921
+34.216.64.185 1 1 8498 20190113083216
+167.114.232.244 1 1 8498 20190103102052
+173.252.87.7 0 1 2807 
+185.220.101.22 2 2 16996 20190115194335
+51.15.231.66 1 1 8498 20190112083653
+65.19.167.130 1 1 8498 20190117174651
+185.235.129.215 2 2 59192 20190112213338
+158.69.217.87 1 1 8498 20190120002150
+217.118.93.148 0 3 12713221 
+163.172.205.95 1 1 8498 20190119232659
+185.86.93.37 1 1 8498 20190120045138
+199.249.230.70 1 1 8498 20190113074215
+185.234.217.232 1 1 8498 20190119234353
+145.255.28.34 2 76 42217133 20190116120809
+87.120.36.157 1 1 8498 20190117131658
+212.129.3.60 1 1 8498 20190120145822
+51.15.240.100 1 1 8498 20190117004307
+85.248.227.165 1 1 8498 20190110164328
+192.162.244.18 1 1 8498 20190119074030
+64.246.165.10 1 1 8498 20190109003526
+176.31.208.193 2 2 16996 20190119062838
+173.252.87.13 1 1 8498 20190112121319
+89.146.123.75 0 1 374423 
+192.42.116.16 1 1 8498 20190117052827
+185.220.101.0 1 1 8498 20190119155317
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 21
+20190101 2 2 16996 2
+20190102 4 4 55090 4
+20190103 5 5 25752 5
+20190104 9 42 23364967 5
+20190105 5 25 317650 5
+20190106 3 3 17162 3
+20190107 3 31 9718888 3
+20190108 5 40 12202033 5
+20190109 5 6 315021 5
+20190110 9 35 9767615 9
+20190111 11 44 26174271 8
+20190112 7 30 8288439 7
+20190113 14 26 1026496 14
+20190114 18 21 212606 13
+20190115 17 166 80784466 13
+20190116 22 96 42429289 21
+20190117 22 53 10372325 22
+20190118 10 10 118844 10
+20190119 22 22 186956 22
+20190120 20 52 23318058 20
+20190121 38 281 157648831 23
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 3
+5mn-15mn 1
+30s-2mn 5
+0s-30s 213
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_SIDER 10
+/ 231 2280378 217 213
+/factory.html 5 25155 1 2
+/studio.html 5 53550 0 2
+/scholae.html 4 8264 0 0
+/google5d3a4d9f5c432db0.html 1 92 1 1
+/res/bootstrap/css/bootstrap.min.css.map 1 113369 0 0
+/res/bootstrap/js/bootstrap.min.js.map 1 47477 0 0
+/res/bootstrap/css/bootstrap-reboot.css.map 1 15714 0 0
+/res/bootstrap/css/bootstrap-grid.min.css.map 1 10098 0 0
+/res/tour2/office.html 1 2712 0 1
+END_SIDER

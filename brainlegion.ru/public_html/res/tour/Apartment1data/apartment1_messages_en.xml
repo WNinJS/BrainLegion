@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<krpano>
+
+<!-- ************************ -->
+<!--         Messages         -->
+<!-- ************************ -->
+
+  <data name="en_project_title"><![CDATA[New Project]]></data>
+
+
+
+  <data name="en_pano9_title"><![CDATA[гостинная]]></data>
+
+
+  <data name="en_pano10_title"><![CDATA[кухня]]></data>
+
+
+  <data name="en_pano11_title"><![CDATA[спальня]]></data>
+
+
+  <data name="en_pano12_title"><![CDATA[туалет]]></data>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</krpano>

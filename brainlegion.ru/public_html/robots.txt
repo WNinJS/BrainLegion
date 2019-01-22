@@ -1,0 +1,11 @@
+Host: http://brainlegion.ru/
+
+User-agent:*
+Disallow:/.cagefs
+Disallow:/.cl.selector
+Disallow:/.php
+Disallow:/Maildir
+Allow: /public_html/index.html
+Allow: /public_html/factory.html
+Allow: /public_html/scholae.html
+Sitemap: http://brainlegion.ru/index.html

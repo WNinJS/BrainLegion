@@ -1,0 +1,329 @@
+AWSTATS DATA FILE 7.6 (build 20161204)
+# If you remove this file, all statistics for date 201804 will be lost/reset.
+# Last config file used to build this data file was /home/vh4u14185/domains/brainlegion.ru/awstats/.data/awstats.brainlegion.ru.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 30
+POS_GENERAL 2107                
+POS_TIME 2778                
+POS_VISITOR 7117                
+POS_DAY 8279                
+POS_DOMAIN 3361                
+POS_LOGIN 3588                
+POS_ROBOT 3743                
+POS_WORMS 4221                
+POS_EMAILSENDER 4352                
+POS_EMAILRECEIVER 4495                
+POS_SESSION 8582                
+POS_SIDER 8762                
+POS_FILETYPES 4630                
+POS_DOWNLOADS 4712                
+POS_OS 4760                
+POS_BROWSER 4968                
+POS_SCREENSIZE 5497                
+POS_UNKNOWNREFERER 5571                
+POS_UNKNOWNREFERERBROWSER 5708                
+POS_ORIGIN 5840                
+POS_SEREFERRALS 5972                
+POS_PAGEREFS 6116                
+POS_SEARCHWORDS 6303                
+POS_KEYWORDS 6455                
+POS_MISC 2442                
+POS_ERRORS 6514                
+POS_CLUSTER 3444                
+POS_SIDER_403 6603                
+POS_SIDER_400 6685                
+POS_SIDER_404 6767                
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20180501063246 1 0 8286216483468
+FirstTime 20180419090624
+LastTime 20180430195511
+LastUpdate 20180502005549 1 0 0 0 0
+TotalVisits 42                  
+TotalUnique 29                  
+MonthHostsKnown 0                   
+MonthHostsUnknown 29                  
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+QuickTimeSupport 0 0 0
+JavaEnabled 0 0 0
+JavascriptDisabled 0 0 0
+PDFSupport 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+AddToFavourites 0 0 0
+RealPlayerSupport 0 0 0
+TotalMisc 0 0 0
+DirectorSupport 0 0 0
+FlashSupport 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 4 4 5617 1 1 0
+1 2 2 2810 0 0 0
+2 0 0 0 15 19 11766
+3 0 0 0 0 0 0
+4 1 1 991 0 0 0
+5 1 1 251 0 0 0
+6 2 2 5288 1 1 0
+7 0 0 0 1 1 0
+8 1 1 991 3 3 595
+9 2 2 5288 1 1 991
+10 4 4 10576 8 15 13321
+11 3 3 5288 7 8 4693
+12 5 5 13220 4 4 3460
+13 3 3 3512 8 9 5572
+14 4 4 8923 2 4 2178
+15 11 11 11848 2 7 1478
+16 1 1 2644 4 8 5636
+17 3 3 6279 1 2 487
+18 2 2 5288 0 0 0
+19 1 1 2644 4 4 1666
+20 2 2 1982 1 1 991
+21 4 4 7270 3 10 6051
+22 1 1 2644 0 0 0
+23 0 0 0 0 0 0
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 10 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 1
+ip 57 57 103354
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 10 first Hits must be first (order not required for others)
+BEGIN_ROBOT 9
+python 15 13134 20180428135024 0
+no_user_agent 5 5050 20180427132218 0
+spider 5 4955 20180428165350 0
+(firefox/)([0-9]\.|[0-1][0]\.) 4 4626 20180426024411 0
+YandexBot/ 3 0 20180429073913 0
+Apache\-HttpClient/ 2 1982 20180429215955 0
+Validator\.nu/ 2 1982 20180426024412 0
+oBot/ 1 2644 20180421100738 0
+bot[\s_+:,\.\;\/\\-] 1 991 20180427021114 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 1
+php 57 103354 0 0
+END_FILETYPES
+
+# Downloads - Hits - Bandwidth
+BEGIN_DOWNLOADS 0
+END_DOWNLOADS
+
+# OS ID - Hits
+BEGIN_OS ID - Hits - Pages 12
+linuxandroid 8 8
+winxp 13 13
+macosx11 2 2
+winnt 1 1
+macosx12 3 3
+linux 1 1
+win7 8 8
+macosx 1 1
+win8.1 7 7
+win10 11 11
+Unknown 1 1
+macosx8 1 1
+END_OS
+
+# Browser ID - Hits - Pages
+BEGIN_BROWSER 28
+chrome37.0.2062.124 1 1
+firefox50.0 1 1
+android 1 1
+chrome18463 1 1
+chrome41.0.2226.0 2 2
+chrome63.0.3239.132 2 2
+chrome88772 1 1
+safari2.0.4 1 1
+firefox54.0 1 1
+firefox46.0 2 2
+msie11 7 7
+firefox45.0 3 3
+msie8.0 1 1
+chrome15.0.874.121 1 1
+chrome3174 1 1
+chrome61.0.3163.100 6 6
+firefox33.0 2 2
+chrome18.0.1025.133 7 7
+mozilla 1 1
+chrome33.0.1750.117 1 1
+opera10.01 2 2
+firefox59.0 3 3
+firefox16.0 4 4
+chrome21375 1 1
+chrome60568 1 1
+chrome84799 1 1
+firefox36.0 1 1
+Unknown 1 1
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 1
+acHTTP_component_(AppControls.com) 20180420105914
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 1
+acHTTP_component_(AppControls.com) 20180420105914
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 44 44
+From1 7 7
+From2 0 0
+From3 1 1
+From4 5 5
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 0
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 10 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 1
+https://mawords.com/brainlegion.ru 1 1
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 0
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 0
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 1
+404 52 23521
+END_ERRORS
+
+# URL with 403 errors - Hits - Last URL referrer
+BEGIN_SIDER_403 0
+END_SIDER_403
+
+# URL with 400 errors - Hits - Last URL referrer
+BEGIN_SIDER_400 0
+END_SIDER_400
+
+# URL with 404 errors - Hits - Last URL referrer
+BEGIN_SIDER_404 1
+/rep.txt 1 http://brainlegion.ru/rep.txt
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 10 first Hits must be first (order not required for others)
+BEGIN_VISITOR 29
+95.211.225.158 14 14 22424 20180428170502
+176.98.69.217 6 6 15864 20180425163942
+82.146.49.235 4 4 10576 20180428090253
+185.130.212.72 2 2 868 20180425134952
+78.24.220.1 2 2 2644 20180424111435
+41.33.170.105 2 2 5288 20180421101010
+5.188.62.117 2 2 5288 20180423212548
+213.202.254.136 2 2 1982 20180428212211
+54.67.59.131 2 2 1242 20180428080857
+91.77.20.164 2 2 5288 20180429125659
+79.104.201.91 1 1 2644 20180420105914
+162.244.33.8 1 1 2644 20180419090624
+94.130.167.248 1 1 2644 20180419183221
+5.101.191.136 1 1 2644 20180428000905
+160.109.104.44 1 1 991 20180424204448
+176.99.72.147 1 1 991 20180424174039
+54.213.48.96 1 1 991 20180421001201
+91.105.238.22 1 1 991 20180425201052
+52.27.20.205 1 1 991 20180424001014
+176.57.76.151 1 1 2644 20180430195511
+54.183.165.74 1 1 166 20180426011854
+185.158.115.13 1 1 2644 20180427181647
+83.149.44.246 1 1 2644 20180420102303
+92.47.225.4 1 1 0 20180426154610
+176.57.76.153 1 1 2644 20180426123517
+35.162.25.66 1 1 991 20180420000846
+52.34.232.153 1 1 991 20180430040158
+176.57.76.197 1 1 2644 20180423224242
+176.99.72.79 1 1 991 20180428142923
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 12
+20180419 6 6 11000 3
+20180420 8 8 14635 5
+20180421 5 5 11567 4
+20180422 1 1 2644 1
+20180423 8 8 16288 4
+20180424 7 7 10905 6
+20180425 5 5 4754 4
+20180426 4 4 5454 4
+20180427 1 1 2644 1
+20180428 8 8 14540 6
+20180429 2 2 5288 2
+20180430 2 2 3635 2
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 4
+5mn-15mn 1
+15mn-30mn 2
+0s-30s 38
+30s-2mn 1
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_SIDER 1
+/ 57 103354 42 42
+END_SIDER

@@ -1,0 +1,1611 @@
+# Webalizer V2.21-02 Incremental Data - 01/22/2019 01:03:58
+2019 1 22 1 3 58
+1672 1508 331 98 56 95 421029873 490 372 0
+2 2 159 1 22
+20 20 83741 11 14 10
+25 21 145639 14 16 10
+44 42 318535 16 14 14
+57 54 23422055 15 15 11
+64 56 1977107 13 22 13
+78 74 772490 18 35 15
+50 49 9882635 13 9 9
+79 76 12487987 22 16 16
+26 17 376414 16 12 10
+50 50 9886497 18 15 14
+67 63 27791019 15 18 14
+62 44 8383748 24 20 13
+66 61 1497809 26 25 18
+68 37 1789428 26 42 20
+190 182 80903555 30 25 21
+130 120 42659987 44 32 30
+92 87 12172485 32 33 32
+30 25 215232 23 20 19
+38 36 359861 28 31 27
+93 75 24989636 28 34 26
+341 317 160905260 56 41 29
+2 2 8753 2 1 1
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+42 39 248816 23
+47 32 616910 22
+27 26 234320 20
+17 14 87152 7
+51 33 275159 22
+55 27 1685284 25
+33 28 280302 16
+24 16 156190 15
+41 41 312887 26
+11 10 72998 8
+27 25 111976 17
+18 9 341023 10
+245 232 145245796 22
+268 257 102373244 27
+112 101 21002534 26
+99 93 38964805 26
+23 19 115635 18
+191 186 54220327 50
+38 36 878995 12
+44 40 1796277 15
+39 39 678046 9
+96 87 25400348 32
+95 92 25631452 27
+29 26 299397 15
+0
+0
+0
+1508
+0
+0
+0
+0
+0
+23
+0
+0
+0
+0
+8
+0
+0
+0
+0
+0
+7
+126
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+# -urls- 
+/res/js/map.js
+0 37 0 9990 0 0
+/res/img/backs/dust_scratches.png
+0 18 0 418626 0 0
+/res/tour2/officedata/office.js
+0 2 0 207702 0 0
+/
+0 362 0 3677534 310 104
+/res/tour/Apartment1.html
+0 3 0 5256 2 0
+/res/popper/popper.js
+0 33 0 854997 0 0
+/res/img/news/кухня.jpg
+0 17 0 22299835 0 0
+/res/img/news/гостинная_2.jpg
+0 19 0 7114037 0 0
+/res/img/portfolio/bricks/1.jpg
+0 4 0 256568 0 0
+/res/tour2/officedata/office.xml
+0 1 0 2533 0 0
+/res/img/logos/brainlegion_factory.svg
+0 24 0 181920 0 0
+/res/fontello/font/fontello.ttf
+0 1 0 14312 0 0
+/res/img/logos/brainlegion_studio.svg
+0 24 0 209736 0 0
+/res/img/favicon/favicon-16x16.png
+0 15 0 22890 0 0
+/res/img/portfolio/plane/1.jpg
+0 4 0 860104 0 0
+/studio.html
+0 30 0 364052 20 9
+/res/img/news/вирттур.jpg
+0 17 0 6808993 0 0
+/res/video/2.mp4
+0 22 0 140041005 0 0
+/res/styles.css
+0 34 0 95438 0 0
+/res/bootstrap/css/bootstrap-grid.min.css
+0 34 0 147390 0 0
+/res/img/portfolio/oil-tank/1.jpg
+0 4 0 1103908 0 0
+/res/tour/Apartment1data/apartment1.swf
+0 1 0 97963 0 0
+/res/jquery/jquery-3.2.1.min.js
+0 35 0 1229690 0 0
+/res/img/portfolio/buildings/7.jpg
+0 4 0 2625484 0 0
+/google5d3a4d9f5c432db0.html
+0 1 0 92 1 0
+/res/img/portfolio/buildings/6.jpg
+0 4 0 1071832 0 0
+/res/img/portfolio/conference-room/1.jpg
+0 4 0 1986484 0 0
+/res/bootstrap/css/bootstrap.min.css
+0 33 0 861366 0 0
+/res/img/portfolio/buildings/2.png
+0 4 0 2114204 0 0
+/res/bootstrap/css/bootstrap-reboot.css.map
+0 1 0 15714 0 0
+/res/img/portfolio/buildings/5.jpg
+0 4 0 931064 0 0
+/scholae.html
+0 17 0 42198 8 1
+/res/bootstrap/css/bootstrap.min.css.map
+0 1 0 113369 0 0
+/res/img/logos/brainlegion_main.svg
+0 24 0 138498 0 0
+/res/img/portfolio/hotel/7.jpg
+0 5 0 2255592 0 0
+/res/img/portfolio/explosion/1.jpg
+0 4 0 1695036 0 0
+/res/bootstrap/css/bootstrap-grid.min.css.map
+0 1 0 10098 0 0
+/robots.txt
+0 112 0 23409 0 0
+/res/img/portfolio/buildings/4.jpg
+0 4 0 9953164 0 0
+/res/fontello/font/fontello.woff2
+0 24 0 181440 0 0
+/res/img/portfolio/oil/1.jpg
+0 4 0 4456408 0 0
+/res/fontello/css/fontello.css
+0 35 0 47635 0 0
+/res/img/portfolio/hotel/6.jpg
+0 5 0 3265205 0 0
+/res/img/news/спальня1.jpg
+0 17 0 4287961 0 0
+/res/img/portfolio/furniture/6.jpg
+0 4 0 971648 0 0
+/res/img/portfolio/buildings/3.jpg
+0 4 0 1729820 0 0
+/res/tour2/officedata/lib/jquery-2.1.1.min.js
+0 2 0 68818 0 0
+/res/img/backs/outlets.png
+0 18 0 1836 0 0
+/res/video/poster.png
+0 23 0 33365134 0 0
+/res/img/portfolio/hotel/5.jpg
+0 4 0 3932932 0 0
+/res/img/news/24.jpg
+0 17 0 4854282 0 0
+/res/img/portfolio/furniture/5.jpg
+0 5 0 1099304 0 0
+/res/img/portfolio/hotel/4.jpg
+0 4 0 2451332 0 0
+/res/fontello/font/fontello.woff
+0 1 0 8776 0 0
+/res/js/validate.js
+0 35 0 83090 0 0
+/res/tour2/officedata/office_skin.xml
+0 1 0 6181 0 0
+/res/img/portfolio/furniture/4.jpg
+0 5 0 1157380 0 0
+/res/img/portfolio/buildings/1.jpg
+0 4 0 714928 0 0
+/res/img/portfolio/mixing/1.jpg
+0 4 0 964596 0 0
+/res/bootstrap/js/bootstrap.min.js
+0 36 0 585072 0 0
+/res/tour2/office.html
+0 10 0 31246 5 0
+/res/img/portfolio/hotel/3.jpg
+0 5 0 2092875 0 0
+/res/img/portfolio/factory/1.jpg
+0 4 0 4572340 0 0
+/res/img/portfolio/chairs/1.jpg
+0 4 0 2164900 0 0
+/res/img/portfolio/devices/4.jpg
+0 4 0 614264 0 0
+/res/img/news/22.jpg
+0 17 0 1063962 0 0
+/res/img/portfolio/furniture/3.jpg
+0 5 0 6318060 0 0
+/res/img/portfolio/interior/4.jpg
+0 6 0 1404315 0 0
+/res/bootstrap/js/bootstrap.min.js.map
+0 1 0 47477 0 0
+/res/img/portfolio/army/1.jpg
+0 4 0 3019952 0 0
+/res/img/news/дом.png
+0 17 0 69959330 0 0
+/res/img/portfolio/hotel/2.jpg
+0 5 0 2799055 0 0
+/res/js/scroll.js
+0 13 0 5785 0 0
+/res/img/portfolio/devices/3.jpg
+0 5 0 2270060 0 0
+/res/img/news/21.jpg
+0 17 0 1392385 0 0
+/res/tour/Apartment1data/apartment1.js
+0 2 0 158244 0 0
+/res/img/portfolio/furniture/2.jpg
+0 4 0 1071840 0 0
+/res/img/portfolio/interior/3.jpg
+0 4 0 4829584 0 0
+/res/tour2/officedata/office_core.xml
+0 1 0 6453 0 0
+/res/img/portfolio/hotel/1.jpg
+0 5 0 4117070 0 0
+/res/img/backs/dark.png
+0 4 0 3743160 0 0
+/res/tour2/officedata/office_messages_ru.xml
+0 1 0 872 0 0
+/res/tour2/officedata/graphics/doubleclick/dctouch.min.js
+0 1 0 741 0 0
+/res/img/portfolio/devices/2.jpg
+0 4 0 446824 0 0
+/res/img/portfolio/furniture/1.jpg
+0 4 0 1824528 0 0
+/res/img/portfolio/interior/2.jpg
+0 4 0 4209652 0 0
+/res/bootstrap/css/bootstrap-reboot.css
+0 34 0 65892 0 0
+/res/img/favicon/favicon-32x32.png
+0 13 0 28886 0 0
+/res/js/order.js
+0 13 0 2158 0 0
+/res/img/news/дом3.jpg
+0 17 0 12182914 0 0
+/res/img/portfolio/machine/1.jpg
+0 4 0 1464616 0 0
+/res/img/logos/brainlegion_scholae.svg
+0 24 0 190032 0 0
+/res/img/portfolio/devices/1.jpg
+0 4 0 2771120 0 0
+/res/img/news/office.jpg
+0 17 0 2101472 0 0
+/res/img/portfolio/interior/1.jpg
+0 4 0 5247020 0 0
+/res/img/news/дом2.jpg
+0 17 0 4543505 0 0
+/factory.html
+0 20 0 130029 13 3
+/sitemap.xml
+0 5 0 2105 0 0
+# End Of Table - urls
+# -sites- (monthly)
+51.15.43.205
+0 1 1 8498 1 1547499940
+/
+188.232.127.115
+0 1 1 8498 1 1547611651
+/
+77.88.10.80
+0 1 0 273 1 1546880515
+-
+66.249.69.245
+0 2 1 2983 1 1547796297
+/res/tour2/office.html
+66.249.69.247
+0 1 1 10710 1 1547783562
+/studio.html
+37.146.242.212
+0 11 11 124980 1 1546676746
+/
+66.249.69.249
+0 3 2 2491 1 1547819958
+/scholae.html
+141.8.142.25
+0 121 115 6459076 22 1548119038
+/
+207.46.13.185
+0 1 1 10710 1 1546570902
+/studio.html
+207.46.13.0
+0 3 3 34164 0 0
+-
+46.229.168.129
+0 1 1 8498 1 1546901029
+/
+195.128.127.223
+0 5 0 1659 1 1547017663
+-
+95.108.181.85
+0 1 1 270 0 0
+-
+46.229.168.132
+0 1 1 10710 1 1546557223
+/studio.html
+46.229.168.133
+0 1 1 8498 1 1547580982
+/
+46.229.168.135
+0 1 1 2712 1 1547732685
+/res/tour2/office.html
+46.229.168.136
+0 1 1 154 0 0
+-
+162.247.74.199
+0 1 1 8498 1 1547719260
+/
+46.229.168.138
+0 1 1 8498 1 1547580979
+/
+207.46.13.199
+0 1 1 2066 1 1547364663
+/scholae.html
+185.234.219.246
+0 1 1 29596 1 1547370636
+/
+46.229.168.140
+0 1 1 154 0 0
+-
+107.150.59.98
+0 3 3 23587 1 1547109435
+/
+46.229.168.142
+0 1 1 8498 1 1546557226
+/
+37.9.113.141
+0 3 3 1871 0 0
+-
+46.229.168.146
+0 1 1 154 0 0
+-
+46.229.168.147
+0 1 1 154 0 0
+-
+209.17.97.42
+0 1 1 212 1 1547184615
+/
+46.229.168.149
+0 1 1 8498 1 1546901033
+/
+37.187.129.166
+0 3 3 25494 3 1548108051
+/
+185.193.125.115
+0 1 1 8498 1 1547246007
+/
+192.42.116.16
+0 1 1 8498 1 1547702907
+/
+94.142.242.84
+0 1 1 8498 1 1547912547
+/
+141.8.142.65
+0 2 2 1453032 0 0
+-
+173.212.240.51
+0 1 1 29596 1 1547770267
+/
+209.17.97.74
+0 1 1 212 1 1546618868
+/
+141.8.132.39
+0 1 1 25909 0 0
+-
+185.234.217.208
+0 2 0 658 0 0
+-
+185.234.217.209
+0 2 0 658 0 0
+-
+79.126.92.75
+0 40 39 18809961 1 1548079777
+/factory.html
+192.99.247.1
+0 1 1 8498 1 1547735033
+/
+40.77.167.20
+0 1 1 5031 1 1548112889
+/factory.html
+40.77.167.28
+0 1 1 2712 1 1546791444
+/res/tour2/office.html
+91.210.144.179
+0 2 1 8764 1 1546430428
+-
+46.0.30.33
+0 2 0 539 1 1547422585
+-
+37.9.113.192
+0 1 1 255 0 0
+-
+77.82.233.101
+0 1 1 280863 0 0
+-
+95.79.198.100
+0 1 1 8498 1 1547353190
+/
+158.69.37.14
+0 1 1 8498 1 1547620577
+/
+185.234.217.232
+0 1 1 8498 1 1547941433
+/
+178.17.171.102
+0 1 1 8498 1 1548081283
+/
+54.36.148.231
+0 1 1 5031 1 1547791410
+/factory.html
+128.74.163.149
+0 29 29 9701892 1 1546880839
+/
+185.234.217.244
+0 1 1 8498 1 1547863116
+/
+136.169.224.119
+0 47 44 24609884 1 1548106991
+/
+194.99.106.148
+0 1 1 8498 1 1548058566
+/
+194.44.247.218
+0 1 1 29596 1 1547951258
+/
+198.40.54.178
+0 2 2 16996 2 1548038203
+/
+178.154.244.36
+0 2 2 30437 0 0
+-
+195.254.134.194
+0 1 1 8498 1 1547882624
+/
+5.35.37.50
+0 1 1 29596 1 1547779144
+/
+188.226.2.79
+0 1 1 8498 1 1546454326
+/
+40.77.167.78
+0 1 1 2066 1 1546643662
+/scholae.html
+212.3.130.246
+0 1 1 374423 0 0
+-
+158.69.217.87
+0 1 1 8498 1 1547943710
+/
+40.77.167.87
+0 1 1 5031 1 1547508580
+/factory.html
+198.98.52.93
+0 1 1 8498 1 1547604689
+/
+208.110.93.78
+0 2 2 29851 1 1547701089
+/
+40.77.167.96
+0 1 1 8498 1 1547262461
+/
+157.230.111.173
+0 1 1 8498 1 1547501213
+/
+167.114.232.244
+0 2 1 8765 1 1546510852
+/
+66.249.64.1
+0 33 30 183932 6 1547722448
+/
+185.86.93.35
+0 17 2 12756 1 1547257045
+-
+66.249.64.3
+0 22 19 286023 2 1547749807
+/factory.html
+185.86.93.37
+0 17 2 12756 1 1547959899
+-
+66.249.64.5
+0 18 18 113185 5 1547750270
+/studio.html
+37.187.180.18
+0 1 1 8498 1 1547504954
+/
+178.154.246.13
+0 2 2 11895 0 0
+-
+185.43.251.186
+0 3 0 1128 3 1547055456
+-
+46.4.67.206
+0 2 2 29851 1 1547100406
+/
+178.154.200.43
+0 1 1 255 0 0
+-
+178.154.200.46
+0 3 3 25005 1 1547640530
+/
+198.98.56.149
+0 1 1 8498 1 1547951080
+/
+5.45.81.87
+0 1 1 0 1 1547740668
+/
+173.244.209.231
+0 30 29 462627 1 1547390931
+/res/tour/Apartment1.html
+66.249.64.202
+0 12 12 92228 1 1547686867
+/
+87.250.224.69
+0 69 69 639457 7 1548014818
+/
+178.205.194.252
+0 1 1 29596 1 1547650855
+/
+31.220.0.225
+0 3 3 25494 3 1548016350
+/
+134.249.215.31
+0 7 0 2311 1 1546687086
+/
+54.36.149.38
+0 1 1 8498 1 1546944147
+/
+54.36.149.39
+0 1 1 8498 1 1547500987
+/
+178.154.171.43
+0 1 1 255 0 0
+-
+3.88.86.38
+0 2 2 22888 0 0
+-
+54.219.182.96
+0 1 1 8498 1 1547474168
+/
+91.200.29.122
+0 2 2 59192 2 1547559666
+/
+51.75.66.250
+0 2 2 16996 2 1547992336
+/
+87.250.224.95
+0 1 1 1361 0 0
+-
+209.141.45.212
+0 1 1 8498 1 1547740416
+/
+54.36.149.61
+0 1 1 10710 1 1546396550
+/studio.html
+84.39.252.41
+0 1 1 8498 1 1547266497
+/
+141.8.183.33
+0 1 1 8498 1 1547598802
+/
+85.254.72.26
+0 1 1 8498 1 1546583204
+/
+171.25.193.20
+0 3 3 25494 3 1547388286
+/
+184.175.34.239
+0 2 2 166 1 1547741029
+/
+171.25.193.25
+0 2 2 16996 2 1547516600
+/
+185.220.101.0
+0 1 1 8498 1 1547913197
+/
+185.220.101.3
+0 3 3 25494 3 1547860470
+/
+185.220.101.5
+0 1 1 8498 1 1547134585
+/
+185.220.101.6
+0 3 3 25494 3 1547960940
+/
+89.163.242.241
+0 1 1 8498 1 1546636247
+/
+207.46.13.202
+0 1 1 10710 1 1547001429
+/studio.html
+207.46.13.203
+0 1 1 10710 1 1546481680
+/studio.html
+37.187.26.42
+0 1 1 29596 1 1546786981
+/
+207.46.13.209
+0 1 1 8498 1 1546694491
+/
+157.230.56.64
+0 1 1 8498 1 1548060229
+/
+54.36.149.99
+0 4 4 616 0 0
+-
+94.233.228.119
+0 3 3 1895030 0 0
+-
+51.15.240.100
+0 1 1 8498 1 1547685787
+/
+171.25.193.235
+0 1 1 8498 1 1547935856
+/
+69.30.211.2
+0 2 2 5859 1 1546923771
+/scholae.html
+176.31.208.193
+0 2 2 16996 2 1547879318
+/
+192.162.244.18
+0 1 1 8498 1 1547883630
+/
+23.239.23.104
+0 1 1 8498 1 1548010830
+/
+213.166.71.236
+0 1 1 29596 1 1547390097
+/
+104.248.166.242
+0 1 1 8498 1 1547355448
+/
+173.252.87.1
+0 1 1 35134 0 0
+-
+173.252.87.7
+0 1 1 2807 0 0
+-
+173.252.87.8
+0 9 9 2563803 0 0
+-
+173.252.87.9
+0 4 4 1053154 0 0
+-
+171.25.193.78
+0 1 1 8498 1 1547890048
+/
+163.172.205.95
+0 1 1 8498 1 1547940419
+/
+104.43.173.88
+0 1 0 336 1 1547624253
+-
+141.8.132.1
+0 3 3 43887 1 1546953618
+/
+194.58.113.224
+0 2 2 29808 1 1547654729
+/
+87.120.36.157
+0 1 1 8498 1 1547731018
+/
+199.127.226.150
+0 1 1 8498 1 1547600172
+/
+103.236.201.110
+0 1 1 8498 1 1547864018
+/
+95.221.176.85
+0 11 11 124980 1 1547352508
+/
+95.108.225.211
+0 32 32 9713200 1 1546953561
+/
+66.70.217.179
+0 1 1 8498 1 1547035682
+/
+185.220.100.252
+0 1 1 8498 1 1547229530
+/
+62.133.163.228
+0 32 32 10202199 1 1547733337
+/
+145.255.28.34
+0 77 76 42217404 1 1547640489
+/studio.html
+51.77.177.194
+0 1 1 8498 1 1547602186
+/
+209.17.96.42
+0 1 1 212 1 1546586070
+/
+96.47.231.219
+0 1 0 329 0 0
+-
+217.118.93.148
+0 3 3 12713221 0 0
+-
+89.236.34.117
+0 1 1 8498 1 1547863993
+/
+209.17.96.50
+0 1 1 212 1 1546404853
+/
+209.17.96.234
+0 1 1 212 1 1546936816
+/
+157.55.39.121
+0 4 4 41304 0 0
+-
+209.17.96.58
+0 1 1 212 1 1547541515
+/
+173.244.209.5
+0 1 1 8498 1 1547580421
+/
+87.250.224.129
+0 3 2 18626 0 0
+-
+94.242.55.130
+0 1 0 272 0 0
+-
+157.55.39.130
+0 1 1 10710 1 1547203240
+/studio.html
+173.252.127.2
+0 1 1 154 0 0
+-
+52.53.201.78
+0 10 10 84980 10 1548028543
+/
+5.251.135.244
+0 1 1 8498 1 1546747956
+/
+185.235.129.215
+0 2 2 59192 2 1547328818
+/
+64.246.165.10
+0 2 2 8753 1 1546994126
+/
+216.162.47.74
+0 1 1 8498 1 1546830375
+/
+46.254.17.186
+0 1 1 8498 1 1546817460
+/
+51.15.106.67
+0 1 1 8498 1 1547958839
+/
+185.220.101.10
+0 1 1 8498 1 1547160790
+/
+185.220.101.12
+0 2 2 16996 2 1547715237
+/
+185.220.101.13
+0 1 1 8498 1 1548077995
+/
+185.220.101.15
+0 1 1 8498 1 1547639910
+/
+193.90.12.118
+0 1 1 8498 1 1547775330
+/
+5.45.207.41
+0 2 2 3062 0 0
+-
+185.229.190.131
+0 2 2 29596 1 1548037520
+/
+157.55.39.150
+0 1 1 8739 0 0
+-
+185.220.101.21
+0 1 1 8498 1 1547744931
+/
+185.10.68.105
+0 1 1 8498 1 1547603321
+/
+157.55.39.153
+0 1 1 7580 0 0
+-
+185.220.101.22
+0 2 2 16996 2 1547581415
+/
+37.57.128.246
+0 27 1 37378 1 1547443785
+-
+13.57.233.99
+0 7 7 1162 7 1548089119
+/
+185.220.101.26
+0 1 1 8498 1 1547943666
+/
+185.220.101.27
+0 1 1 8498 1 1547651057
+/
+166.70.207.2
+0 1 1 8498 1 1547779815
+/
+66.249.89.55
+0 1 1 92 1 1546473907
+/google5d3a4d9f5c432db0.html
+66.249.89.57
+0 1 0 285 1 1546473906
+-
+207.46.13.97
+0 2 2 7682 0 0
+-
+185.220.101.30
+0 1 1 8498 1 1548050131
+/
+185.220.101.32
+0 1 1 8498 1 1547885329
+/
+157.55.39.164
+0 1 1 10710 1 1547937288
+/studio.html
+185.220.101.34
+0 2 2 16996 2 1548083054
+/
+54.36.149.100
+0 2 2 308 0 0
+-
+185.100.86.100
+0 1 1 8498 1 1547916906
+/
+54.36.149.101
+0 1 1 154 0 0
+-
+66.249.93.220
+0 21 21 7956251 0 0
+-
+66.249.93.221
+0 21 21 10170047 1 1548091310
+/
+66.249.93.222
+0 18 18 1292606 0 0
+-
+89.144.12.17
+0 2 2 16996 2 1547512574
+/
+157.55.39.171
+0 1 1 5031 1 1546900545
+/factory.html
+185.220.101.46
+0 1 1 8498 1 1548017161
+/
+128.199.49.113
+0 6 6 110488 1 1547939399
+/studio.html
+185.220.101.48
+0 1 1 8498 1 1547901120
+/
+5.45.207.73
+0 3 2 8768 2 1547657176
+/
+5.45.207.77
+0 1 1 2807 0 0
+-
+5.188.210.53
+0 2 2 59192 2 1546669185
+/
+148.251.223.21
+0 8 8 37835 2 1546443264
+/
+87.118.116.90
+0 1 1 8498 1 1548052477
+/
+156.202.35.75
+0 1 0 329 0 0
+-
+185.220.101.50
+0 1 1 8498 1 1547765533
+/
+5.228.23.105
+0 1 1 559811 0 0
+-
+185.220.101.53
+0 2 2 16996 2 1547631062
+/
+178.175.148.15
+0 1 1 29596 1 1547623662
+/
+157.55.39.4
+0 2 1 154 1 1547994648
+/
+77.247.181.162
+0 2 2 16996 2 1547747169
+/
+185.129.62.63
+0 1 1 8498 1 1547900330
+/
+141.8.183.1
+0 2 2 8753 1 1547511720
+/
+89.146.123.75
+0 1 1 374423 0 0
+-
+109.70.100.18
+0 1 1 8498 1 1547134581
+/
+23.129.64.105
+0 1 1 8498 1 1547686782
+/
+85.248.227.165
+0 1 1 8498 1 1547138608
+/
+31.13.144.68
+0 33 33 23114400 1 1548005952
+/
+54.36.148.100
+0 1 1 8498 1 1546684820
+/
+54.36.148.101
+0 1 1 8498 1 1546360622
+/
+109.70.100.21
+0 1 1 8498 1 1547601251
+/
+66.249.79.160
+0 1 1 10710 1 1548076348
+/studio.html
+178.140.228.207
+0 1 1 8498 1 1548090028
+/
+185.234.217.119
+0 2 0 658 0 0
+-
+173.252.87.10
+0 1 1 1361 0 0
+-
+173.252.87.13
+0 1 1 8498 1 1547295199
+/
+173.252.87.15
+0 7 7 4530498 0 0
+-
+130.149.80.199
+0 1 1 8498 1 1547983321
+/
+54.36.222.37
+0 2 2 16996 2 1547613432
+/
+185.234.217.128
+0 2 0 658 0 0
+-
+212.109.217.105
+0 10 10 295960 10 1548020869
+/
+85.10.199.185
+0 2 2 29851 1 1546496184
+/
+185.234.217.130
+0 2 0 658 0 0
+-
+34.216.64.185
+0 1 1 8498 1 1547368336
+/
+66.249.79.188
+0 1 0 271 0 0
+-
+205.185.127.219
+0 1 1 8498 1 1547139315
+/
+91.121.112.181
+0 1 1 8498 1 1547501391
+/
+54.36.148.133
+0 1 1 1752 1 1547233994
+/res/tour/Apartment1.html
+66.249.79.190
+0 2 1 425 0 0
+-
+199.249.230.68
+0 1 1 8498 1 1547971735
+/
+51.15.231.66
+0 1 1 8498 1 1547282213
+/
+185.100.86.182
+0 1 1 8498 1 1547620549
+/
+52.114.77.26
+0 2 2 31818 1 1547559253
+/
+66.249.66.136
+0 2 2 8919 1 1547975784
+/
+199.249.230.70
+0 1 1 8498 1 1547365335
+/
+66.249.66.138
+0 2 2 16078 1 1547899232
+/
+199.249.230.78
+0 1 1 8498 1 1547517795
+/
+54.36.148.26
+0 1 1 2066 1 1546333148
+/scholae.html
+54.36.148.153
+0 1 1 2712 1 1547238965
+/res/tour2/office.html
+54.36.148.29
+0 1 1 8498 1 1547585366
+/
+66.249.66.140
+0 2 2 8652 1 1547845688
+/
+199.249.230.82
+0 1 1 8498 1 1547490104
+/
+199.249.230.84
+0 2 2 16996 2 1548065510
+/
+163.172.215.253
+0 2 2 16996 2 1548037197
+/
+65.19.167.130
+0 1 1 8498 1 1547747211
+/
+65.19.167.131
+0 2 2 16996 2 1547771833
+/
+89.76.239.204
+0 1 1 29596 1 1548022095
+/
+3.85.140.249
+0 4 4 59616 1 1546636964
+/
+46.191.159.41
+0 1 0 271 0 0
+-
+185.12.124.78
+0 13 13 110474 13 1547990818
+/
+66.102.9.150
+0 28 28 14573535 1 1548075319
+/factory.html
+66.102.9.152
+0 30 29 24806578 1 1548075326
+/
+66.102.9.154
+0 23 23 7494890 1 1547634982
+/
+185.234.218.47
+0 2 0 658 0 0
+-
+178.154.200.3
+0 1 1 1450658 0 0
+-
+51.15.124.1
+0 1 1 8498 1 1547771287
+/
+212.129.3.60
+0 1 1 8498 1 1547996302
+/
+185.32.124.226
+0 1 1 8498 1 1548073868
+/
+77.88.46.155
+0 1 0 283 1 1547765088
+-
+54.36.9.139
+0 1 1 29596 1 1547294215
+/
+185.147.80.155
+0 1 1 8498 1 1547601161
+/
+212.193.117.245
+0 8 8 37835 3 1546365126
+/res/tour2/office.html
+138.68.180.18
+0 6 6 37515 1 1547453060
+/res/tour2/office.html
+18.85.22.239
+0 2 2 16996 2 1547744964
+/
+176.53.161.120
+0 2 1 29922 2 1547840282
+-
+185.43.209.12
+0 1 1 29596 1 1546911364
+/
+66.249.65.169
+0 1 0 279 0 0
+-
+40.77.167.129
+0 1 1 7580 0 0
+-
+66.249.65.171
+0 1 0 269 0 0
+-
+178.17.166.150
+0 1 1 8498 1 1546991950
+/
+40.77.167.131
+0 5 5 1498779 1 1548047746
+/
+66.249.65.184
+0 5 4 21999 2 1547593613
+/studio.html
+148.251.179.108
+0 12 12 40571 3 1546733935
+/res/tour/Apartment1.html
+66.249.65.186
+0 3 2 35826 0 0
+-
+157.55.39.18
+0 1 1 154 0 0
+-
+157.55.39.20
+0 1 1 154 0 0
+-
+176.10.99.200
+0 1 1 8498 1 1547903357
+/
+157.55.39.25
+0 1 1 154 0 0
+-
+157.55.39.26
+0 1 1 154 0 0
+-
+157.55.39.27
+0 1 1 154 0 0
+-
+145.255.2.211
+0 35 35 23279857 1 1546642546
+/
+157.55.39.30
+0 1 1 154 0 0
+-
+40.77.167.161
+0 1 1 2066 1 1547290159
+/scholae.html
+157.55.39.35
+0 1 1 154 0 0
+-
+178.205.37.38
+0 1 1 29596 1 1547480605
+/
+62.133.191.254
+0 102 101 70894465 3 1548075436
+/
+46.48.13.161
+0 1 1 8498 1 1547382310
+/
+144.76.7.79
+0 4 4 25653 1 1547446942
+/scholae.html
+66.249.64.17
+0 2 0 548 0 0
+-
+157.55.39.45
+0 1 1 154 0 0
+-
+157.55.39.46
+0 2 2 308 0 0
+-
+157.55.39.47
+0 1 1 154 0 0
+-
+178.128.229.150
+0 4 4 0 1 1547204324
+/
+178.140.209.87
+0 11 11 124980 1 1546724600
+/
+188.40.80.134
+0 2 2 16996 2 1547576920
+/
+207.46.13.122
+0 1 1 10710 1 1547288084
+/studio.html
+37.9.113.10
+0 2 2 26372 0 0
+-
+209.17.97.106
+0 1 1 212 1 1546375895
+/
+141.8.142.169
+0 3 3 44383 0 0
+-
+66.249.64.42
+0 12 12 90935 0 0
+-
+66.249.64.44
+0 7 6 23663 1 1547013858
+/
+66.249.64.46
+0 7 7 219091 0 0
+-
+109.174.112.55
+0 1 1 8498 1 1546526996
+/
+195.123.221.122
+0 1 1 8498 1 1547527020
+/
+157.55.39.200
+0 4 4 44369 0 0
+-
+185.107.47.215
+0 1 1 8498 1 1547400244
+/
+156.203.70.24
+0 2 0 669 1 1547470029
+-
+78.109.23.2
+0 1 1 8498 1 1548045479
+/
+39.98.52.133
+0 1 0 280 0 0
+-
+51.15.59.9
+0 1 1 8498 1 1547817039
+/
+209.17.97.122
+0 1 1 29596 1 1547856177
+/
+185.244.214.115
+0 3 0 995 1 1547753382
+-
+23.94.22.209
+0 1 0 329 0 0
+-
+37.9.113.103
+0 4 4 27961 3 1548079983
+/
+94.41.43.253
+0 155 153 80646946 1 1547559300
+/studio.html
+157.55.39.229
+0 1 1 7918 0 0
+-
+185.100.87.206
+0 3 3 25494 3 1548088247
+/
+185.100.87.207
+0 2 2 16996 2 1547388523
+/
+66.249.69.236
+0 2 0 548 0 0
+-
+195.176.3.23
+0 1 1 8498 1 1547880876
+/
+# End Of Table - sites (monthly)
+# -sites- (daily)
+141.8.142.25
+0 1 1 8498 1 1548119038
+/
+37.9.113.192
+0 1 1 255 0 0
+-
+# End Of Table - sites (daily)
+# -referrers- 
+http://brainlegion.ru/robots.txt
+0 2
+http://brainlegion.ru/frontend/assets/js/libs/formstyler.js
+0 2
+http://brainlegion.ru/admin
+0 2
+- (Direct Request)
+0 495
+http://brainlegion.ru/fckeditor/editor/filemanager/connectors/uploadtest.html
+0 1
+https://yandex.ru/maps/
+0 2
+http://brainlegion.ru/scholae.html
+0 5
+http://www.brainlegion.ru/index.html
+0 7
+http://www.brainlegion.ru/res/fontello/css/fontello.css
+0 4
+http://brainlegion.ru/static/common.css
+0 2
+http://brainlegion.ru/
+0 513
+http://brainlegion.ru/index.html
+0 13
+http://brainlegion.ru/indy/indy.css
+0 2
+http://brainlegion.ru/administrator/index.php
+0 1
+http://hundejo.com/
+0 11
+http://www.brainlegion.ru/scholae.html
+0 7
+http://brainlegion.ru/blog/
+0 1
+http://brainlegion.ru
+0 2
+http://brainlegion.ru/res/tour/Apartment1.html
+0 2
+https://www.facebook.com/
+0 1
+http://brainlegion.ru/netcat/
+0 2
+https://yandex.ru/maps/172/ufa/
+0 3
+http://bike-promotion.ru
+0 2
+http://brainlegion.ru/wp-login.php
+0 15
+http://www.brainlegion.ru/res/styles.css
+0 8
+http://brainlegion.ru/res/fontello/css/fontello.css
+0 21
+http://brainlegion.ru/skins/simpla_blue/style.css
+0 2
+http://brainlegion.ru/etm/indy.css
+0 2
+http://brainlegion.ru/cms/
+0 2
+https://yandex.ru/search/
+0 6
+http://brainlegion.ru/modules
+0 2
+http://brainlegion.ru/manager
+0 2
+http://brainlegion.ru/engine/classes/js/dle_js.js
+0 2
+http://brainlegion.ru/cms/lang/ru_utf8/css/sbIndex.css
+0 2
+https://www.yandex.ru/
+0 1
+http://www.brainlegion.ru/studio.html
+0 18
+http://brainlegion.ru/factory.html
+0 9
+https://www.google.com/
+0 5
+http://pizza-imperia.com/
+0 23
+http://pizza-tycoon.com/
+0 13
+http://2vulcan-bit.cc.casino-search.ru/
+0 1
+http://burger-imperia.com/
+0 79
+http://brainlegion.ru/modules/mod_stats.xml
+0 2
+http://www.brainlegion.ru/res/tour/Apartment1.html
+0 2
+http://topbux.ru/8611
+0 1
+http://www.brainlegion.ru/factory.html
+0 2
+https://yandex.ru/clck/jsredir
+0 7
+https://brainlegion.ru/
+0 1
+http://brainlegion.ru/mscms/
+0 2
+http://brainlegion.ru/studio.html
+0 182
+http://brainlegion.ru/admin/fckeditor/editor/filemanager/connectors/uploadtest.html
+0 1
+https://yandex.ru/
+0 3
+http://brainlegion.ru/res/tour2/office.html
+0 9
+http://brainlegion.ru/static/cartreminder.js
+0 2
+http://www.brainlegion.ru/
+0 133
+http://brainlegion.ru/res/styles.css
+0 24
+# End Of Table - referrers
+# -agents- 
+Mozilla/5.0 (X11; U; Linux i686; en-US) AppleWebKit/534.3 (KHTML, like Gecko) Chrome/6.0.458.0 Safari/534.3
+0 1
+Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Sa
+0 7
+Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0; Touch; MAARJS)
+0 11
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36
+0 1
+Opera/9.80 (Windows NT 5.1; U; ru) Presto/2.2.15 Version/10.01
+0 1
+Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36
+0 1
+Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)
+0 189
+Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/530.8 (KHTML, like Gecko) Chrome/2.0.177.0 Safari/530.8
+0 1
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 YaBrowser/18.11.1.805 Yowser/2.5 Saf
+0 33
+Opera/9.80 (Windows NT 5.1; U; ru) Presto/2.9.168 Version/11.50
+0 7
+Mozilla/5.0 (Windows NT 6.1; rv:38.0) Gecko/20100101 Firefox/38.0 (IndeedBot 1.1)
+0 30
+Googlebot-Image/1.0
+0 12
+Mozilla/5.0 (Linux; Android 8.1.0; Redmi 5 Plus) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 YaBrowser/18.11.
+0 33
+Mozilla/5.0 (Windows NT 6.1; rv:8.0) Gecko/20100101 Firefox/8.0
+0 1
+Opera/9.80 (Windows NT 6.0) Presto/2.12.388 Version/12.14
+0 1
+Mozilla/5.0 (iPhone; CPU iPhone OS 8_1 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12B411 Safar
+0 13
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36 Avast/70.1.973
+0 77
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36
+0 2
+Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0; Touch; MASMJS)
+0 1
+Mozilla/5.0 (compatible; openstat.ru/Bot)
+0 8
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36
+0 1
+Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.170 Safari/537.36 OPR/53.0.2
+0 1
+Mozilla/5.0 (compatible; MJ12bot/v1.4.8; http://mj12bot.com/)
+0 15
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.170 Safari/537.36 OPR/53.0.2907.9
+0 1
+Mozilla/5.0 (compatible; Google-Site-Verification/1.0)
+0 2
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36
+0 6
+Mozilla/4.0 (compatible; MSIE 9.0; Windows NT 6.1; 125LA; .NET CLR 2.0.50727; .NET CLR 3.0.04506.648; .NET CLR 3.5.21022)
+0 12
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+0 27
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 YaBrowser/18.11.1.805 Yowser
+0 64
+Mozilla/5.0 (compatible; YandexImages/3.0; +http://yandex.com/bots)
+0 16
+Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90)
+0 2
+Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Googlebot/2.1; +http://www.google.com/bot.html) Safari/537.36
+0 63
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko; Google Page Speed Insights) Chrome/41.0.2272.118 Safar
+0 30
+Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0; MASBJS)
+0 11
+Mozilla/5.0 (compatible; WebDataStats/1.0 ; +https://webdatastats.com/policy.html)
+0 34
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 Kinza/4.9.1
+0 1
+Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2376.69 Safari/537.36
+0 2
+Mozilla/5.0 (Windows; U; Windows NT 5.0; en-US) AppleWebKit/525.13 (KHTML, like Gecko) Chrome/0.2.149.27 Safari/525.13
+0 1
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3198.0 Safari/537.36 OPR/49.0.2711.0
+0 4
+Mozilla/5.0 (iPhone; CPU iPhone OS 8_3 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) CriOS/42.0.2311.47 Mobile/12F70
+0 1
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.89 Safari/537.36
+0 127
+Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36
+0 33
+Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)
+0 40
+Mozilla/5.0 (compatible; SemrushBot/3~bl; +http://www.semrush.com/bot.html)
+0 11
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+0 1
+Mozilla/5.0 (Windows NT 10.0; rv:64.0) Gecko/20100101 Firefox/64.0
+0 2
+Mozilla/5.0 (compatible; Nimbostratus-Bot/v1.3.2; http://cloudsystemnetworks.com)
+0 8
+facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)
+0 1
+Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.96 Mobile S
+0 27
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36
+0 1
+Mozilla/5.0 (compatible; statdom.ru/Bot; +http://statdom.ru/bot.html)
+0 8
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 YaBrowser/18.11.1.805 Yowser/
+0 146
+Mozilla/5.0 (Windows NT 6.3; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0
+0 1
+Mozilla/5.0 (Windows NT 6.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.116 Safari/537.36
+0 6
+Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36
+0 40
+Mozilla/5.0 (compatible; StatOnlineRuBot/1.0)
+0 2
+Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.85 Safari/537.36
+0 24
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 YaBrowser/18.4.1.871 Yowser/
+0 3
+Mozilla/5.0 (Linux; Android 7.0; FRD-L09) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.99 Mobile Safari/537.36
+0 82
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36 Kinza/4.8.2
+0 1
+Mozilla/5.0 (X11; U; Linux x86_64; ru-RU) AppleWebKit/537.36 (KHTML, like Gecko)  Chrome/30.0.1599.114 Safari/537.36 Puffin/5
+0 1
+Mozilla/5.0 (compatible; YandexVideoParser/1.0; +http://yandex.com/bots)
+0 21
+git/2.11.0
+0 1
+Mozilla/5.0 (Windows NT 6.1; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0
+0 1
+Mozilla/5.0 (Windows NT 6.1; rv:19.0) Gecko/20100101 Firefox/19.0
+0 5
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/11.0.696.34 Safari/534.24
+0 1
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36
+0 17
+Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36 OPR/49.0.27
+0 1
+Xenu Link Sleuth/1.3.8
+0 1
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:47.0) Gecko/20100101 Firefox/47.0
+0 1
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36
+0 117
+Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)
+0 50
+Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0
+0 2
+Opera/9.80 (Windows NT 6.1; U; ru) Presto/2.8.131 Version/11.10
+0 3
+Mozilla/5.0 (compatible; BackupLand/1.0; https://go.backupland.com/; Domain check for viruses;)
+0 13
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36
+0 2
+Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:42.0) Gecko/20100101 Firefox/42.0
+0 1
+Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko; Google Page Speed Insights) 
+0 30
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10.10; rv:59.0) Gecko/20100101 Firefox/59.0
+0 2
+Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36
+0 3
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Safari/537.36
+0 1
+Mozilla/5.0 (compatible; BLEXBot/1.0; +http://webmeup-crawler.com/)
+0 12
+SafeDNSBot (https://www.safedns.com/searchbot)
+0 6
+Mozilla/5.0 (Windows NT 6.1; WOW64) SkypeUriPreview Preview/0.5
+0 2
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36
+0 1
+Mozilla/5.0 (Macintosh; PPC Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+0 1
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36 Kinza/4.7.2
+0 1
+Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0; MANM)
+0 11
+Mozilla/5.0 (Windows NT 6.1; WOW64; rv:64.0) Gecko/20100101 Firefox/64.0
+0 38
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36
+0 1
+Mozilla/5.0 (compatible; AhrefsBot/6.1; +http://ahrefs.com/robot/)
+0 17
+Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+0 2
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.75 Safari/537.36 Google Favicon
+0 2
+Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36
+0 1
+Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36
+0 1
+# End Of Table - agents
+# -search strings- 
+# End Of Table - search strings
+# -usernames- 
+# End Of Table - usernames

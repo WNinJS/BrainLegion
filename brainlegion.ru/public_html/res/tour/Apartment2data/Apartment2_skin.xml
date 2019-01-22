@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<krpano version="1.17">
+
+    
+  <!-- Spot Style - Default Point Spot Style 1 -->
+  <style name="IconDefaultPointSpotStyle1"
+         url="%FIRSTXML%/spots/hotspot_direction_sequence_user_defaultpoint0.png"
+         visible="false"
+
+         frame="0"
+         lastframe="15"
+         framewidth="88"
+         frameheight="31"
+         stopspotsequence="false"
+         onloaded="setdefaultanimatedspotframe();startspotanimation(0.1);"
+
+         onhover="onhoverIconDefaultPointSpotStyle1"
+         onout="onoutIconDefaultPointSpotStyle1"
+         />
+  <action name="onhoverIconDefaultPointSpotStyle1">
+    showtooltip(hotspot);
+  </action>
+  <action name="onoutIconDefaultPointSpotStyle1">
+    hideTooltip();
+
+
+
+  </action>
+
+  <!-- ******************* -->
+  <!-- Loading Information -->
+  <!-- ******************* -->
+
+  <events name="loaderinformationevent" onxmlcomplete="loaderinformationupdate();" keep="true" devices="flash" />
+
+  <action name="loaderinformationupdate" devices="flash">
+    if (progress.progress == 1,
+      delayedcall(0.5, set(layer[loaderinformationtextfield].visible, false); );
+     ,
+         set(layer[loaderinformationtextfield].visible, true);
+    );
+    mul(progresstext, get(progress.progress),100);
+    roundval(progresstext);
+    txtadd(progresstext, get(progresstext), %);
+    set(layer[loaderinformationtextfield].html, get(progresstext));
+    ifnot(progress.progress GE 1, delayedcall(0.01, loaderinformationupdate() ));
+  </action>
+
+  <layer name="loaderinformationtextfield"
+         devices="flash"
+         keep="true"
+         zorder="0"
+         url="%FIRSTXML%/graphics/textfield.swf"
+         align="center"
+         x="0"
+         y="0"
+         borderwidth="0"
+         background="false"
+         autoheight="true"
+         capture="false"
+         handcursor="false"
+         selectable="false"
+         alpha="1"
+         visible="true"
+         css="
+              text-align:center;
+              color:#ffffff;
+              font-family:Arial;
+              font-weight:bold;
+              font-size:16px;
+             "
+  />
+</krpano>
