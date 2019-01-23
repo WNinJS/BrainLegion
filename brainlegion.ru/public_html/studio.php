@@ -161,55 +161,27 @@
             <div class="carousel-inner">
 
               <!-- Slider`s elements -->
-              <!-- ГАЗИНУР, тут нужно сделать, чтобы эти изображения брались с базы данных, они нажатием открывают подробную инфу в модалке -->
-              <div class="carousel-item active">
-                <img class="img-fluid img-thumb" src="res/img/portfolio/hotel/1.jpg" data-toggle="modal" data-target="#hotel" alt="Card image cap">
-              </div>
-              <div class="carousel-item">
-                <img class="img-fluid img-thumb" src="res/img/portfolio/interior/1.jpg" data-toggle="modal" data-target="#interior" alt="Card image cap">
-              </div>
-              <div class="carousel-item">
-                <img class="img-fluid img-thumb" src="res/img/portfolio/furniture/1.jpg" data-toggle="modal" data-target="#furniture" alt="Card image cap">
-              </div>
-              <div class="carousel-item">
-                <img class="img-fluid img-thumb" src="res/img/portfolio/buildings/1.jpg" data-toggle="modal" data-target="#buildings" alt="Card image cap">
-              </div>
-              <div class="carousel-item">
-                <img class="img-fluid img-thumb" src="res/img/portfolio/devices/1.jpg" data-toggle="modal" data-target="#devices" alt="Card image cap">
-              </div>
-              <div class="carousel-item">
-                <img class="img-fluid img-thumb" src="res/img/portfolio/oil-tank/1.jpg" data-toggle="modal" data-target="#oil-tank" alt="Card image cap">
-              </div>
-              <div class="carousel-item">
-                <img class="img-fluid img-thumb" src="res/img/portfolio/explosion/1.jpg" data-toggle="modal" data-target="#explosion" alt="Card image cap">
-              </div>
-              <div class="carousel-item">
-                <img class="img-fluid img-thumb" src="res/img/portfolio/factory/1.jpg" data-toggle="modal" data-target="#factory" alt="Card image cap">
-              </div>
-              <div class="carousel-item">
-                <img class="img-fluid img-thumb" src="res/img/portfolio/bricks/1.jpg" data-toggle="modal" data-target="#bricks" alt="Card image cap">
-              </div>
-              <div class="carousel-item">
-                <img class="img-fluid img-thumb" src="res/img/portfolio/conference-room/1.jpg" data-toggle="modal" data-target="#conference-room" alt="Card image cap">
-              </div>
-              <div class="carousel-item">
-                <img class="img-fluid img-thumb" src="res/img/portfolio/oil/1.jpg" data-toggle="modal" data-target="#oil" alt="Card image cap">
-              </div>
-              <div class="carousel-item">
-                <img class="img-fluid img-thumb" src="res/img/portfolio/plane/1.jpg" data-toggle="modal" data-target="#plane" alt="Card image cap">
-              </div>
-              <div class="carousel-item">
-                <img class="img-fluid img-thumb" src="res/img/portfolio/mixing/1.jpg" data-toggle="modal" data-target="#mixing" alt="Card image cap">
-              </div>
-              <div class="carousel-item">
-                <img class="img-fluid img-thumb" src="res/img/portfolio/machine/1.jpg" data-toggle="modal" data-target="#machine" alt="Card image cap">
-              </div>
-              <div class="carousel-item">
-                <img class="img-fluid img-thumb" src="res/img/portfolio/chairs/1.jpg" data-toggle="modal" data-target="#chairs" alt="Card image cap">
-              </div>
-              <div class="carousel-item">
-                <img class="img-fluid img-thumb" src="res/img/portfolio/army/1.jpg" data-toggle="modal" data-target="#army" alt="Card image cap">
-              </div>
+              <?
+                $allDataAboutPortfolio = getFromOneTable('portfolio'); // Данный массив содержит все материалы о портфолио
+                // Цикл выводит все изображения портфолио
+                for($counter = 0; $counter < count($allDataAboutPortfolio); $counter++)
+                {
+                  if($allDataAboutPortfolio[$counter]['info'] != NULL)
+                  {
+                    if($counter == 0)
+                    {
+                      echo '<div class="carousel-item active">';
+                    }
+                    else
+                    {
+                      echo '<div class="carousel-item">';
+                    }
+                    echo '<img class="img-fluid img-thumb" src="'.$allDataAboutPortfolio[$counter]['address'].'" data-toggle="modal" data-target="#'.$allDataAboutPortfolio[$counter]['type'].'" alt="Card image cap">
+                        </div>';
+                  }
+                }
+              ?>
+
             </div>
 
             <!-- Arrows Next and Prev of Slider -->
@@ -375,403 +347,53 @@
       </div>
     </section><!-- Footer Section -->
 
+    <?
+      // Этот цикл выводит все модальные окна на наше побережье
+      for($counter = 0; $counter < count($allDataAboutPortfolio); $counter++)
+      {
+        // Если это изображение является полной(т.е вложенной инофрмацией)
+        if($allDataAboutPortfolio[$counter]['info'] != NULL)
+        {
+          echo '<div class="modal fade" id="'.$allDataAboutPortfolio[$counter]['type'].'" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title align-items-center" id="exampleModalLabel">'.$allDataAboutPortfolio[$counter]['title'].'</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <p>'.$allDataAboutPortfolio[$counter]['info'].'</p>';
+          // Если в данном контенте присуствует видео, то добавляется видео, а если нет то изображение.
+          if($allDataAboutPortfolio[$counter]['video'] == NULL)
+          {
+            $imagesFromOneType = getFromOneTableWithCondition('portfolio', 'type', $allDataAboutPortfolio[$counter]['type']);
+            for($counterImages = 0; $counterImages < count($imagesFromOneType); $counterImages++)
+            {
+              if($imagesFromOneType[$counterImages]['info'] == NULL)
+              {
+                echo '<img src="'.$imagesFromOneType[$counterImages]['address'].'" alt="ALT" class="img-fluid"> <p class="mt-4"></p>';
+              }
+            }
+          }
+          else
+          {
+            echo '<div class="video-portfolio-youtube">
+                    <iframe src="'.$allDataAboutPortfolio[$counter]['video'].'" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                  </div>';
+          }
 
-    <!-- Portfolio Modals -->
-    <!-- ГАЗИНУР, это модалки от слайдеров, здесь содержится подробная инфа, также нужно чтобы выводилась из БД -->
-    <div class="modal fade" id="hotel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title align-items-center" id="exampleModalLabel">3D моделирование и фотореалистичная визуализация гостиницы</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p>Представлены 3D визуализации экстерьера гостиницы в нескольких ракурсах. Высокая детализация визуализации позволила показать потенциальному заказчику будущую атмосферу строящейся гостиницы.</p>
-            <img src="res/img/portfolio/hotel/1.jpg" alt="ALT" class="img-fluid"> <p class="mt-4"></p>
-            <img src="res/img/portfolio/hotel/2.jpg" alt="ALT" class="img-fluid"> <p class="mt-4"></p>
-            <img src="res/img/portfolio/hotel/3.jpg" alt="ALT" class="img-fluid"> <p class="mt-4"></p>
-            <img src="res/img/portfolio/hotel/4.jpg" alt="ALT" class="img-fluid"> <p class="mt-4"></p>
-            <img src="res/img/portfolio/hotel/5.jpg" alt="ALT" class="img-fluid"> <p class="mt-4"></p>
-            <img src="res/img/portfolio/hotel/6.jpg" alt="ALT" class="img-fluid"> <p class="mt-4"></p>
-            <img src="res/img/portfolio/hotel/7.jpg" alt="ALT" class="img-fluid"> <p class="mt-4"></p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary pointer" data-dismiss="modal">Закрыть</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Portfolio Modals -->
-    <!-- ГАЗИНУР, это модалки от слайдеров, здесь содержится подробная инфа, также нужно чтобы выводилась из БД -->
-    <div class="modal fade" id="interior" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title align-items-center" id="exampleModalLabel">3D визуализация интерьера квартиры в многоквартирном  доме</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p>Дизайн выполнен в классическом стиле. Цель визуализации — продемонстрировать интерьер квартиры для потенциальных покупателей.</p>
-            <img src="res/img/portfolio/interior/1.jpg" alt="ALT" class="img-fluid"> <p class="mt-4"></p>
-            <img src="res/img/portfolio/interior/2.jpg" alt="ALT" class="img-fluid"> <p class="mt-4"></p>
-            <img src="res/img/portfolio/interior/3.jpg" alt="ALT" class="img-fluid"> <p class="mt-4"></p>
-            <img src="res/img/portfolio/interior/4.jpg" alt="ALT" class="img-fluid"> <p class="mt-4"></p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary pointer" data-dismiss="modal">Закрыть</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Portfolio Modals -->
-    <!-- ГАЗИНУР, это модалки от слайдеров, здесь содержится подробная инфа, также нужно чтобы выводилась из БД -->
-    <div class="modal fade" id="furniture" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title align-items-center" id="exampleModalLabel">3D моделирование и визуализации мебели</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p>Создание коллекции 3D моделей мебели в различных форматах для последующего использования дизайнерами в своих проектах. 3D моделей мебели выполнена с максимально возможной прорисовкой деталей с последующей фото реалистичной визуализацией.</p>
-            <img src="res/img/portfolio/furniture/1.jpg" alt="ALT" class="img-fluid"> <p class="mt-4"></p>
-            <img src="res/img/portfolio/furniture/2.jpg" alt="ALT" class="img-fluid"> <p class="mt-4"></p>
-            <img src="res/img/portfolio/furniture/3.jpg" alt="ALT" class="img-fluid"> <p class="mt-4"></p>
-            <img src="res/img/portfolio/furniture/4.jpg" alt="ALT" class="img-fluid"> <p class="mt-4"></p>
-            <img src="res/img/portfolio/furniture/5.jpg" alt="ALT" class="img-fluid"> <p class="mt-4"></p>
-            <img src="res/img/portfolio/furniture/6.jpg" alt="ALT" class="img-fluid"> <p class="mt-4"></p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary pointer" data-dismiss="modal">Закрыть</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Portfolio Modals -->
-    <!-- ГАЗИНУР, это модалки от слайдеров, здесь содержится подробная инфа, также нужно чтобы выводилась из БД -->
-    <div class="modal fade" id="buildings" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title align-items-center" id="exampleModalLabel">3D визуализация общественного здания</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p>Архитектура экстерьера магазина выделяется тщательной проработкой лепных элементов</p>
-            <img src="res/img/portfolio/buildings/1.jpg" alt="ALT" class="img-fluid"> <p class="mt-4"></p>
-            <img src="res/img/portfolio/buildings/2.png" alt="ALT" class="img-fluid"> <p class="mt-4"></p>
-            <img src="res/img/portfolio/buildings/3.jpg" alt="ALT" class="img-fluid"> <p class="mt-4"></p>
-            <img src="res/img/portfolio/buildings/4.jpg" alt="ALT" class="img-fluid"> <p class="mt-4"></p>
-            <img src="res/img/portfolio/buildings/5.jpg" alt="ALT" class="img-fluid"> <p class="mt-4"></p>
-            <img src="res/img/portfolio/buildings/6.jpg" alt="ALT" class="img-fluid"> <p class="mt-4"></p>
-            <img src="res/img/portfolio/buildings/7.jpg" alt="ALT" class="img-fluid"> <p class="mt-4"></p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary pointer" data-dismiss="modal">Закрыть</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Portfolio Modals -->
-    <!-- ГАЗИНУР, это модалки от слайдеров, здесь содержится подробная инфа, также нужно чтобы выводилась из БД -->
-    <div class="modal fade" id="devices" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title align-items-center" id="exampleModalLabel">3D модели технологического оборудования</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p>В коллекции представлено различное оборудование: тепловое, холодильное, нейтральное, морозильное, для линии раздачи и т. д. Все модели выполнены в высоком разрешении для демонстрации преимуществ оборудования.</p>
-            <img src="res/img/portfolio/devices/1.jpg" alt="ALT" class="img-fluid"> <p class="mt-4"></p>
-            <img src="res/img/portfolio/devices/2.jpg" alt="ALT" class="img-fluid"> <p class="mt-4"></p>
-            <img src="res/img/portfolio/devices/3.jpg" alt="ALT" class="img-fluid"> <p class="mt-4"></p>
-            <img src="res/img/portfolio/devices/4.jpg" alt="ALT" class="img-fluid"> <p class="mt-4"></p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary pointer" data-dismiss="modal">Закрыть</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Portfolio Modals -->
-    <!-- ГАЗИНУР, это модалки от слайдеров, здесь содержится подробная инфа, также нужно чтобы выводилась из БД -->
-    <div class="modal fade" id="oil-tank" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title align-items-center" id="exampleModalLabel">3D видеоролик обслуживания нефтяного материала</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p>Видеоролик демонстрирует 3D визуализацию обслуживание нефтяного резервуара .Фото реалистичная визуализация и созданный на основе нее 3D видеоролик помогает реализовать и понять ее построение и работу.</p>
-            <div class="video-portfolio-youtube">
-              <iframe src="https://www.youtube.com/embed/upNyoCemoao" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          echo '</div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary pointer" data-dismiss="modal">Закрыть</button>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary pointer" data-dismiss="modal">Закрыть</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Portfolio Modals -->
-    <!-- ГАЗИНУР, это модалки от слайдеров, здесь содержится подробная инфа, также нужно чтобы выводилась из БД -->
-    <div class="modal fade" id="explosion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-             <h5 class="modal-title align-items-center" id="exampleModalLabel">3D анимация разрушаемого объекта</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p>Видеоролик демонстрирует 3D анимацию разрушение кирпичной стены.</p>
-            <div class="video-portfolio-youtube">
-              <iframe src="https://www.youtube.com/embed/okTB_vynf9s" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary pointer" data-dismiss="modal">Закрыть</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Portfolio Modals -->
-    <!-- ГАЗИНУР, это модалки от слайдеров, здесь содержится подробная инфа, также нужно чтобы выводилась из БД -->
-    <div class="modal fade" id="mixing" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-              <h5 class="modal-title align-items-center" id="exampleModalLabel">3D видеоролик визуализации процесса смешивания </h5>
-               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p>Видеоролик демонстрирует 3D визуализацию смешивания двух различных жидкостей.</p>
-            <div class="video-portfolio-youtube">
-              <iframe src="https://www.youtube.com/embed/-bskhME4Lts" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary pointer" data-dismiss="modal">Закрыть</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Portfolio Modals -->
-    <!-- ГАЗИНУР, это модалки от слайдеров, здесь содержится подробная инфа, также нужно чтобы выводилась из БД -->
-    <div class="modal fade" id="factory" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title align-items-center" id="exampleModalLabel">3D видеоролик визуализации нефтеперерабатывающего завода</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p>3D визуализация нефтеперерабатывающего завода. Детальная проработка резервуаров, зданий и прилегающей территории позволила продемонстрировать преимущества спонсирования и постройке данного завода.</p>
-            <div class="video-portfolio-youtube">
-              <iframe src="https://www.youtube.com/embed/9wZeR_GkzSE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary pointer" data-dismiss="modal">Закрыть</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Portfolio Modals -->
-    <!-- ГАЗИНУР, это модалки от слайдеров, здесь содержится подробная инфа, также нужно чтобы выводилась из БД -->
-    <div class="modal fade" id="conference-room" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-           <h5 class="modal-title align-items-center" id="exampleModalLabel">3D видеоролик визуализации конференц-зала</h5>
-             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p>3D визуализация комфортабельного конференц-зала для офиса крупной российской компании. Строгий, но уютный интерьер дает возможность провести деловую встречу в максимально комфортной обстановке.</p>
-            <div class="video-portfolio-youtube">
-              <iframe src="https://www.youtube.com/embed/JHWz5IIbF_k" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary pointer" data-dismiss="modal">Закрыть</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Portfolio Modals -->
-    <!-- ГАЗИНУР, это модалки от слайдеров, здесь содержится подробная инфа, также нужно чтобы выводилась из БД -->
-    <div class="modal fade" id="oil" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-          <h5 class="modal-title align-items-center" id="exampleModalLabel">3D видеоролик визуализации различных видов жидкостей</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p>3D визуализация экстерьера различных видов масел. Визуализация выполнена для демонстрации вида различных жидкостей в данном ландшафте.</p>
-            <div class="video-portfolio-youtube">
-              <iframe src="https://www.youtube.com/embed/h6b2FR6ZR58" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary pointer" data-dismiss="modal">Закрыть</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Portfolio Modals -->
-    <!-- ГАЗИНУР, это модалки от слайдеров, здесь содержится подробная инфа, также нужно чтобы выводилась из БД -->
-    <div class="modal fade" id="plane" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-             <h5 class="modal-title align-items-center" id="exampleModalLabel">3D видеоролик презентации реактивного самолета</h5>
-               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="video-portfolio-youtube">
-              <iframe src="https://www.youtube.com/embed/6fY_XkAh0NI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
-            <p class="mt-4">3D презентация реактивного самолета. 3D модель самолета выполнена с нуля, детально смоделирован фюзеляж , крылья, двигатель и все другие детали самолета.</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary pointer" data-dismiss="modal">Закрыть</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Portfolio Modals -->
-    <!-- ГАЗИНУР, это модалки от слайдеров, здесь содержится подробная инфа, также нужно чтобы выводилась из БД -->
-    <div class="modal fade" id="machine" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title align-items-center" id="exampleModalLabel">3D видеоролик визуализации технологического оборудования</h5>
-             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p>Видеоролик демонстрирует 3D визуализацию комплекса селективного нанесения влагозащитного покрытия на печатные узлы. Фото реалистичная визуализация и созданный на основе нее 3D видеоролик помогает решить многие вопросы в создании и понимании работы комплекса.</p>
-            <div class="video-portfolio-youtube">
-              <iframe src="https://www.youtube.com/embed/8ecbyKR9WMo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary pointer" data-dismiss="modal">Закрыть</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Portfolio Modals -->
-    <!-- ГАЗИНУР, это модалки от слайдеров, здесь содержится подробная инфа, также нужно чтобы выводилась из БД -->
-    <div class="modal fade" id="army" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-             <h5 class="modal-title align-items-center" id="exampleModalLabel">3D видеоролик визуализации военной техники</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p>Видеоролик демонстрирует 3D визуализацию различных видов военной техники. 3D модели выполнены с нуля и детально смоделированы.</p>
-            <div class="video-portfolio-youtube">
-              <iframe src="https://www.youtube.com/embed/4kYdfxu9EwI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary pointer" data-dismiss="modal">Закрыть</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Portfolio Modals -->
-    <!-- ГАЗИНУР, это модалки от слайдеров, здесь содержится подробная инфа, также нужно чтобы выводилась из БД -->
-    <div class="modal fade" id="chairs" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-           <h5 class="modal-title align-items-center" id="exampleModalLabel">3D видеоролик физического взаимодействия двух материалов</h5>
-             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p>Видеоролик демонстрирует 3D анимацию взаимодействия двух различных материалов.</p>
-            <div class="video-portfolio-youtube">
-              <iframe src="https://www.youtube.com/embed/ur_sR49zC3g" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary pointer" data-dismiss="modal">Закрыть</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Portfolio Modals -->
-    <!-- ГАЗИНУР, это модалки от слайдеров, здесь содержится подробная инфа, также нужно чтобы выводилась из БД -->
-    <div class="modal fade" id="bricks" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title align-items-center" id="exampleModalLabel">3D видеоролик физического взаимодействия двух материалов</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p>Видеоролик демонстрирует 3D анимацию взаимодействия двух объектов.</p>
-            <div class="video-portfolio-youtube">
-              <iframe src="https://www.youtube.com/embed/RLODDUOl5B0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary pointer" data-dismiss="modal">Закрыть</button>
-          </div>
-        </div>
-      </div>
-    </div>
+          </div>';
+        }
+      }
+    ?>
 
 
     <!-- Bootstrap js -->
