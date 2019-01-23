@@ -43,7 +43,7 @@
                 <a class="nav-link text-purple" href="studio.php"><span>Studio</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-purple" href="factory.html"><span>Factory</span></a>
+                <a class="nav-link text-purple" href="factory.php"><span>Factory</span></a>
               </li>
             </ul>
           </div>
@@ -156,22 +156,22 @@
                     <!-- Factory -->
                     <div class="card-container col-sm-12 col-md-6 col-lg-4 p-2">
                       <div class="card card-half-transparent h-100">
-                        <a href="factory.html" class="card-img-logo "><img src="res/img/logos/brainlegion_factory.svg" class="img-fluid card-logo-style"  alt=""></a>
+                        <a href="factory.php" class="card-img-logo "><img src="res/img/logos/brainlegion_factory.svg" class="img-fluid card-logo-style"  alt=""></a>
                         <div class="card-body d-flex flex-column text-center">
                           <h4 class="card-title text-center"><b>BL Factory</b></h4>
                           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur culpa officia, eos commodi illo numquam! Tenetur facere itaque et, veniam reprehenderit rerum consequuntur cumque ut maiores quos mollitia, excepturi suscipit atque, sapiente ipsa explicabo sint dolore earum, repudiandae fugiat minus officia ipsam odit. Iure corporis, ea officiis est eaque temporibus, quibusdam similique consequatur id distinctio quas rem possimus vel, reiciendis quasi molestias. Fuga, ad tempore corrupti suscipit libero natus? Ipsam!</p>
-                          <a href="factory.html" class="mt-auto text-center"><p class="btn btn-purple-outline">Подробнее</p></a>
+                          <a href="factory.php" class="mt-auto text-center"><p class="btn btn-purple-outline">Подробнее</p></a>
                         </div>
                       </div>
                     </div>
                     <!-- Scholae -->
                     <div class="card-container col-sm-12 col-md-6 col-lg-4 p-2">
                       <div class="card card-half-transparent h-100">
-                        <a href="scholae.html" class="card-img-logo "><img src="res/img/logos/brainlegion_scholae.svg" class="img-fluid card-logo-style"  alt=""></a>
+                        <a href="scholae.php" class="card-img-logo "><img src="res/img/logos/brainlegion_scholae.svg" class="img-fluid card-logo-style"  alt=""></a>
                         <div class="card-body d-flex flex-column text-center">
                           <h4 class="card-title text-center"><b>BL Scholae</b></h4>
                           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur culpa officia, eos commodi illo numquam! Tenetur facere itaque et, veniam reprehenderit rerum consequuntur cumque ut maiores quos mollitia, excepturi suscipit atque, sapiente ipsa explicabo sint dolore earum, repudiandae fugiat minus officia ipsam odit. Iure corporis, ea officiis est eaque temporibus, quibusdam similique consequatur id distinctio quas rem possimus vel, reiciendis quasi molestias. Fuga, ad tempore corrupti suscipit libero natus? Ipsam!</p>
-                          <a href="scholae.html" class="mt-auto text-center"><p class="btn btn-purple-outline">Подробнее</p></a>
+                          <a href="scholae.php" class="mt-auto text-center"><p class="btn btn-purple-outline">Подробнее</p></a>
                         </div>
                       </div>
                     </div>
@@ -262,10 +262,10 @@
                                       <a class="nav-link p-0" href="studio.php">Studio</a>
                                     </li>
                                     <li class="nav-item pr-3">
-                                      <a class="nav-link p-0" href="scholae.html">Scholae</a>
+                                      <a class="nav-link p-0" href="scholae.php">Scholae</a>
                                     </li>
                                     <li class="nav-item pr-3">
-                                      <a class="nav-link p-0" href="factory.html">Factory</a>
+                                      <a class="nav-link p-0" href="factory.php">Factory</a>
                                     </li>
                                   </ul>
                                   <!-- Title & Snippet -->
