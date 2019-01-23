@@ -34,7 +34,7 @@
         <nav class="navbar px-md-5 navbar-expand-lg navbar-light">
 
           <!-- Logo -->
-          <a href="index.html" class="navbar-brand ">
+          <a href="index.php" class="navbar-brand ">
             <img src="res/img/logos/brainlegion_studio.svg" alt="FILL" class="img-fluid img-logo">
           </a>
 
@@ -47,7 +47,7 @@
           <div class="collapse navbar-collapse text-right" id="navbar-toggler">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link text-purple" href="index.html"><span>На главную</span></a>
+                <a class="nav-link text-purple" href="index.php"><span>На главную</span></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link text-purple" href="#competences"><span>Услуги</span></a>
@@ -291,16 +291,16 @@
             <!-- Footer Menu -->
             <ul class="nav mb-4" id="footer-menu">
               <li class="nav-item pr-3">
-                <a class="nav-link p-0" href="index.html">Главная</a>
+                <a class="nav-link p-0" href="index.php">Главная</a>
               </li>
               <li class="nav-item pr-3">
-                <a class="nav-link p-0" href="studio.html">Studio</a>
+                <a class="nav-link p-0" href="studio.php">Studio</a>
               </li>
               <li class="nav-item pr-3">
-                <a class="nav-link p-0" href="scholae.html">Scholae</a>
+                <a class="nav-link p-0" href="scholae.php">Scholae</a>
               </li>
               <li class="nav-item pr-3">
-                <a class="nav-link p-0" href="factory.html">Factory</a>
+                <a class="nav-link p-0" href="factory.php">Factory</a>
               </li>
             </ul>
 
@@ -332,7 +332,7 @@
             <!-- Copyrights -->
             <div id="copyrights">
               <p>Все права защищены </p>
-              <p>© <a class="link-footer" href="index.html">Brainlegion.ru</a>, 2018</p>
+              <p>© <a class="link-footer" href="index.php">Brainlegion.ru</a>, 2018</p>
             </div>
 
           </div><!-- Left Side -->
