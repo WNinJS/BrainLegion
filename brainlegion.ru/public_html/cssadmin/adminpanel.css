@@ -1,0 +1,50 @@
+html{
+	height: 100vh;
+}
+
+body{
+    height: 100vh;
+}
+
+.container-fluid {
+	width: 100%;
+	height: 100%;
+    background-image: url("../res/img/backs/dust_scratches.png");
+}
+
+/*DropDown Menu*/
+#dropdown-menu {
+    margin: 0;
+    padding: 8px 48px;
+    border: none;
+
+}
+.dropdown-menu ul {
+    margin: 0 48px;
+    padding: 0;
+    width: 316px;    
+    list-style: none;
+    display: none;
+    
+}
+.dropdown-menu ul li a {
+    display: block;
+    width: 100%;
+    padding: .5rem 1rem;
+    text-decoration: none;
+    text-align: center;
+    font-size: 120%;
+}
+.dropdown-menu .title {
+    cursor: pointer;
+}
+.dropdown-menu .title::after {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;    
+}
+.dropdown-menu.open ul {
+    display: block;
+    border: none;
+}
