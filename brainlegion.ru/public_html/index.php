@@ -29,7 +29,7 @@
       <div class="container-fluid px-0">
         <nav class="navbar fixed-top-desktop px-md-5 navbar-expand-lg navbar-light" id="top-menu">
           <!-- Logo -->
-          <a href="index.html" class="navbar-brand">
+          <a href="index.php" class="navbar-brand">
             <img src="res/img/logos/brainlegion_main.svg" alt="FILL" class="img-fluid img-logo">
           </a>
           <!-- Menu Button for Mobile -->
@@ -145,11 +145,11 @@
                     <!-- Studio -->
                     <div class="card-container col-sm-12 col-md-6 col-lg-4 p-2">
                       <div class="card card-half-transparent h-100">
-                        <a href="studio.html" class="card-img-logo "><img src="res/img/logos/brainlegion_studio.svg" class="img-fluid card-logo-style"  alt=""></a>
+                        <a href="studio.php" class="card-img-logo "><img src="res/img/logos/brainlegion_studio.svg" class="img-fluid card-logo-style"  alt=""></a>
                         <div class="card-body d-flex flex-column text-center">
                           <h4 class="card-title text-center"><b>BL Studio</b></h4>
                           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur culpa officia, eos commodi illo numquam! Tenetur facere itaque et, veniam reprehenderit rerum consequuntur cumque ut maiores quos mollitia, excepturi suscipit atque, sapiente ipsa explicabo sint dolore earum, repudiandae fugiat minus officia ipsam odit. Iure corporis, ea officiis est eaque temporibus, quibusdam similique consequatur id distinctio quas rem possimus vel, reiciendis quasi molestias. Fuga, ad tempore corrupti suscipit libero natus? Ipsam!</p>
-                          <a href="studio.html" class="mt-auto text-center"><p class="btn btn-purple-outline">Подробнее</p></a>
+                          <a href="studio.php" class="mt-auto text-center"><p class="btn btn-purple-outline">Подробнее</p></a>
                         </div>
                       </div>
                     </div>
@@ -256,10 +256,10 @@
                                   <!-- Footer Menu -->
                                   <ul class="nav mb-4" id="footer-menu">
                                     <li class="nav-item pr-3">
-                                      <a class="nav-link p-0" href="index.html">Главная</a>
+                                      <a class="nav-link p-0" href="index.php">Главная</a>
                                     </li>
                                     <li class="nav-item pr-3">
-                                      <a class="nav-link p-0" href="studio.html">Studio</a>
+                                      <a class="nav-link p-0" href="studio.php">Studio</a>
                                     </li>
                                     <li class="nav-item pr-3">
                                       <a class="nav-link p-0" href="scholae.html">Scholae</a>
@@ -293,7 +293,7 @@
                                   <!-- Copyrights -->
                                   <div id="copyrights">
                                     <p>Все права защищены </p>
-                                    <p>© <a class="link-footer" href="index.html">Brainlegion.ru</a>, 2018</p>
+                                    <p>© <a class="link-footer" href="index.php">Brainlegion.ru</a>, 2018</p>
                                   </div>
                                   </div><!-- Left Side -->
                                   <!-- Right Side -->
