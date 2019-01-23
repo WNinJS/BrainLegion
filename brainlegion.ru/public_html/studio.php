@@ -1,3 +1,6 @@
+<?
+  require_once 'functions/functions.php';
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -96,131 +99,48 @@
         <!-- <h2 class="text-center">Мероприятия под ключ</h2> -->
 
         <!-- Competency Row -->
-        <!-- ГАЗИНУР, тут нужно сделать, чтобы эти карточки брались с базы данных -->
-        <div class="row mx-auto py-2">
-          <div class="card-container col-sm-12 col-md-6 col-lg-4 p-2">
-            <div class="card card-half-transparent h-100">
-              <div class="text-center card-body d-flex flex-column">
-                <h4 class="card-title text-center"><b>3D  визуализация модели</b></h4>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam nesciunt laboriosam natus. Vero aperiam, repudiandae deleniti ut ea quia impedit mollitia corrupti. Debitis doloremque saepe modi, nulla alias quasi dignissimos, numquam veritatis accusantium eligendi, quis iusto dolor odit blanditiis autem repellat tempore officia, unde libero fugit. Illum nam recusandae iusto velit. Et ullam quidem, modi eligendi vero tempora sint. Quaerat obcaecati illo quo, cupiditate corporis perferendis doloremque odit iusto voluptatum?</p>
-                <a href="#" class="mt-auto text-center"><p class="btn btn-purple-outline btn-purple" data-ordertype="3d">Заказать</p></a>
-              </div>
-            </div>
-          </div>
+        <?
+          $allDataAboutServices = getFromOneTable('services'); // Этот массив содержит все данные об услугах
+          for($counter = 0; $counter < count($allDataAboutServices); $counter++)
+          {
+            // Если блок по счету является первым из трех, то заводим его в горизонтальный контейнер
+            if($counter % 3 == 0)
+            {
+              echo '<div class="row mx-auto mt-4 py-2 justify-content-center">';
+            }
 
-          <div class="card-container col-sm-12 col-md-6 col-lg-4 p-2">
-            <div class="card card-half-transparent h-100">
-              <div class="text-center card-body d-flex flex-column">
-                <h4 class="card-title text-center"><b>3D  визуализация интерьера</b></h4>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam nesciunt laboriosam natus. Vero aperiam, repudiandae deleniti ut ea quia impedit mollitia corrupti. Debitis doloremque saepe modi, nulla alias quasi dignissimos, numquam veritatis accusantium eligendi, quis iusto dolor odit blanditiis autem repellat tempore officia, unde libero fugit. Illum nam recusandae iusto velit. Et ullam quidem, modi eligendi vero tempora sint. Quaerat obcaecati illo quo, cupiditate corporis perferendis doloremque odit iusto voluptatum?</p>
-                <div class="mt-auto d-flex justify-content-around">
-                <a href="res/tour/Apartment1.html" class="link"><p class="btn btn-purple-outline btn-purple">Пример дизайна</p></a>
-                <a href="#" class="mt-auto text-center"><p class="btn btn-purple-outline" data-ordertype="3d">Заказать</p></a>
+            // Выводится в блок название и информация о б услуге
+            echo '<div class="card-container col-sm-12 col-md-6 col-lg-4 p-2">
+                    <div class="card card-half-transparent h-100">
+                      <div class="text-center card-body d-flex flex-column">
+                        <h4 class="card-title text-center"><b>'.$allDataAboutServices[$counter]['title'].'</b></h4>
+                        <p class="card-text">'.$allDataAboutServices[$counter]['description'].'</p>';
+
+            // Если есть ссылка на дизайн, то добавляется еще одна кнопка
+            if($allDataAboutServices[$counter]['link'] == NULL)
+            {
+              echo '<a href="#takeTheOrder" class="mt-auto text-center"><p class="btn btn-purple-outline btn-purple" data-ordertype="3d">Заказать</p></a>';
+            }
+            else
+            {
+              echo '<div class="mt-auto d-flex justify-content-around">
+                      <a href="'.$allDataAboutServices[$counter]['link'].'" class="link"><p class="btn btn-purple-outline btn-purple">Пример дизайна</p></a>
+                      <a href="#" class="mt-auto text-center"><p class="btn btn-purple-outline" data-ordertype="3d">Заказать</p></a>
+                    </div>';
+            }
+
+            // Закрывающие теги
+            echo '</div>
                 </div>
-              </div>
-            </div>
-          </div>
+              </div>';
 
-          <div class="card-container col-sm-12 col-md-6 col-lg-4 p-2">
-            <div class="card card-half-transparent h-100">
-              <div class="text-center card-body d-flex flex-column">
-                <h4 class="card-title text-center"><b>3D  визуализация экстерьера</b></h4>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam nesciunt laboriosam natus. Vero aperiam, repudiandae deleniti ut ea quia impedit mollitia corrupti. Debitis doloremque saepe modi, nulla alias quasi dignissimos, numquam veritatis accusantium eligendi, quis iusto dolor odit blanditiis autem repellat tempore officia, unde libero fugit. Illum nam recusandae iusto velit. Et ullam quidem, modi eligendi vero tempora sint. Quaerat obcaecati illo quo, cupiditate corporis perferendis doloremque odit iusto voluptatum?</p>
-                <a href="#" class="mt-auto text-center"><p class="btn btn-purple-outline" data-ordertype="3d">Заказать</p></a>
-              </div>
-            </div>
-          </div>
-        </div><!--Competency Row -->
-
-        <!-- ГАЗИНУР, тут нужно сделать, чтобы эти карточки брались с базы данных -->
-        <!-- Competency Row -->
-        <div class="row mx-auto mt-4 py-2 justify-content-center">
-
-          <div class="card-container col-sm-12 col-md-6 col-lg-4 p-2">
-            <div class="card card-half-transparent h-100">
-              <div class="text-center card-body d-flex flex-column">
-                <h4 class="card-title text-center"><b>3D  визуализация  анимации</b></h4>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam nesciunt laboriosam natus. Vero aperiam, repudiandae deleniti ut ea quia impedit mollitia corrupti. Debitis doloremque saepe modi, nulla alias quasi dignissimos, numquam veritatis accusantium eligendi, quis iusto dolor odit blanditiis autem repellat tempore officia, unde libero fugit. Illum nam recusandae iusto velit. Et ullam quidem, modi eligendi vero tempora sint. Quaerat obcaecati illo quo, cupiditate corporis perferendis doloremque odit iusto voluptatum?</p>
-                <a href="#" class="mt-auto text-center"><p class="btn btn-purple-outline" data-ordertype="3d">Заказать</p></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="card-container col-sm-12 col-md-6 col-lg-4 p-2">
-            <div class="card card-half-transparent h-100">
-              <div class="text-center card-body d-flex flex-column">
-                <h4 class="card-title text-center"><b>3D  визуализация виртуального тура</b></h4>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam nesciunt laboriosam natus. Vero aperiam, repudiandae deleniti ut ea quia impedit mollitia corrupti. Debitis doloremque saepe modi, nulla alias quasi dignissimos, numquam veritatis accusantium eligendi, quis iusto dolor odit blanditiis autem repellat tempore officia, unde libero fugit. Illum nam recusandae iusto velit. Et ullam quidem, modi eligendi vero tempora sint. Quaerat obcaecati illo quo, cupiditate corporis perferendis doloremque odit iusto voluptatum?</p>
-                <div class="mt-auto d-flex justify-content-around">
-                  <a href="res/tour/Apartment1.html" class="link"><p class="btn btn-purple-outline">Пример 3D-тура</p></a>
-                  <a href="#" class="mt-auto text-center"><p class="btn btn-purple-outline" data-ordertype="virt-tour">Заказать</p></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="card-container col-sm-12 col-md-6 col-lg-4 p-2">
-            <div class="card card-half-transparent h-100">
-              <div class="text-center card-body d-flex flex-column">
-                <h4 class="card-title text-center"><b>3D  визуализация ландшафта</b></h4>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam nesciunt laboriosam natus. Vero aperiam, repudiandae deleniti ut ea quia impedit mollitia corrupti. Debitis doloremque saepe modi, nulla alias quasi dignissimos, numquam veritatis accusantium eligendi, quis iusto dolor odit blanditiis autem repellat tempore officia, unde libero fugit. Illum nam recusandae iusto velit. Et ullam quidem, modi eligendi vero tempora sint. Quaerat obcaecati illo quo, cupiditate corporis perferendis doloremque odit iusto voluptatum?</p>
-                <a href="#" class="mt-auto text-center"><p class="btn btn-purple-outline" data-ordertype="3d">Заказать</p></a>
-              </div>
-            </div>
-          </div>
-
-        </div><!--Competency Row -->
-        
-        <!-- ГАЗИНУР, тут нужно сделать, чтобы эти карточки брались с базы данных -->
-        <!-- Competency Row -->
-        <div class="row mx-auto mt-4 py-2 justify-content-center">
-
-          <div class="card-container col-sm-12 col-md-6 col-lg-4 p-2">
-            <div class="card card-half-transparent h-100">
-              <div class="text-center card-body d-flex flex-column">
-                <h4 class="card-title text-center"><b>Макетирование</b></h4>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam nesciunt laboriosam natus. Vero aperiam, repudiandae deleniti ut ea quia impedit mollitia corrupti. Debitis doloremque saepe modi, nulla alias quasi dignissimos, numquam veritatis accusantium eligendi, quis iusto dolor odit blanditiis autem repellat tempore officia, unde libero fugit. Illum nam recusandae iusto velit. Et ullam quidem, modi eligendi vero tempora sint. Quaerat obcaecati illo quo, cupiditate corporis perferendis doloremque odit iusto voluptatum?</p>
-                <a href="#" class="mt-auto text-center"><p class="btn btn-purple-outline" data-ordertype="mockups">Заказать</p></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="card-container col-sm-12 col-md-6 col-lg-4 p-2">
-            <div class="card card-half-transparent h-100">
-              <div class="text-center card-body d-flex flex-column">
-                <h4 class="card-title text-center"><b>VR/AR контент</b></h4>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam nesciunt laboriosam natus. Vero aperiam, repudiandae deleniti ut ea quia impedit mollitia corrupti. Debitis doloremque saepe modi, nulla alias quasi dignissimos, numquam veritatis accusantium eligendi, quis iusto dolor odit blanditiis autem repellat tempore officia, unde libero fugit. Illum nam recusandae iusto velit. Et ullam quidem, modi eligendi vero tempora sint. Quaerat obcaecati illo quo, cupiditate corporis perferendis doloremque odit iusto voluptatum?</p>
-                <a href="#" class="mt-auto text-center"><p class="btn btn-purple-outline" data-ordertype="vr">Заказать</p></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="card-container col-sm-12 col-md-6 col-lg-4 p-2">
-            <div class="card card-half-transparent h-100">
-              <div class="text-center card-body d-flex flex-column">
-                <h4 class="card-title text-center"><b>Организация и проведение мероприятий</b></h4>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam nesciunt laboriosam natus. Vero aperiam, repudiandae deleniti ut ea quia impedit mollitia corrupti. Debitis doloremque saepe modi, nulla alias quasi dignissimos, numquam veritatis accusantium eligendi, quis iusto dolor odit blanditiis autem repellat tempore officia, unde libero fugit. Illum nam recusandae iusto velit. Et ullam quidem, modi eligendi vero tempora sint. Quaerat obcaecati illo quo, cupiditate corporis perferendis doloremque odit iusto voluptatum?</p>
-                <a href="#" class="mt-auto text-center"><p class="btn btn-purple-outline" data-ordertype="events">Заказать</p></a>
-              </div>
-            </div>
-          </div>
-        </div><!--Competency Row -->
-        
-        <!-- ГАЗИНУР, тут нужно сделать, чтобы эти карточки брались с базы данных -->
-        <!-- Competency Row -->
-        <div class="row mx-auto mt-4 py-2 align-items-center justify-content-center">
-
-          <div class="card-container col-sm-12 col-md-6 col-lg-4 p-2">
-            <div class="card card-half-transparent h-100">
-              <div class="text-center card-body d-flex flex-column">
-                <h4 class="card-title text-center"><b>Стратегическое проектирование</b></h4>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam nesciunt laboriosam natus. Vero aperiam, repudiandae deleniti ut ea quia impedit mollitia corrupti. Debitis doloremque saepe modi, nulla alias quasi dignissimos, numquam veritatis accusantium eligendi, quis iusto dolor odit blanditiis autem repellat tempore officia, unde libero fugit. Illum nam recusandae iusto velit. Et ullam quidem, modi eligendi vero tempora sint. Quaerat obcaecati illo quo, cupiditate corporis perferendis doloremque odit iusto voluptatum?</p>
-                <a href="#" class="mt-auto text-center"><p class="btn btn-purple-outline" data-ordertype="projecting">Заказать</p></a>
-              </div>
-            </div>
-          </div>
-
-        </div><!--Competency Row -->
+            // Если конттейнер последний по счету или явно последний блок, то закрывается последний тег
+            if($counter % 3 == 2 || $counter + 1 == count($allDataAboutServices))
+            {
+              echo '</div>';
+            }
+          }
+        ?>
 
       </div><!-- Competency -->
 
@@ -313,7 +233,7 @@
     <!-- Contact Section -->
     <section class="container-fluid py-5" id="contact">
 
-      <h1 class="text-center text-purple">Сделать заказ</h1>
+      <h1 id="takeTheOrder" class="text-center text-purple">Сделать заказ</h1>
 
       <!-- Contact Form -->
       <form method="post" enctype="multipart/form-data" class="d-flex flex-column container pt-4 justify-center align-items-center" id="contact-form">

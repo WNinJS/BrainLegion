@@ -1,10 +1,10 @@
 <?
-  $mysqli = new mysqli('localhost', 'root', '', 'brainLegion');
-  $mysqli->query("SET NAMES 'utf8'");
+  $GLOBALS['mysqli'] = new mysqli('localhost', 'root', '', 'brainLegion');
+  $GLOBALS['mysqli']->query("SET NAMES 'utf8'");
 
   function getFromOneTable($table)
   {
-    $exampleDB = $mysqli->query("SELECT * FROM `".$table."`");
+    $exampleDB = $GLOBALS['mysqli']->query("SELECT * FROM `".$table."`");
     $ourData;
     while(($row = $exampleDB->fetch_assoc()) != false)
     {
@@ -15,7 +15,7 @@
 
   function getFromOneTable_OneCurrentAttribute($table, $attribute)
   {
-    $exampleDB = $mysqli->query("SELECT `".$attribute."` FROM `".$table."`");
+    $exampleDB = $GLOBALS['mysqli']->query("SELECT `".$attribute."` FROM `".$table."`");
     $ourData;
     while(($row = $exampleDB->fetch_assoc()) != false)
     {
