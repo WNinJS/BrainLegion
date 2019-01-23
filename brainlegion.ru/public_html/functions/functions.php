@@ -23,4 +23,15 @@
     }
     return $ourData;
   }
+
+  function getFromOneTableWithCondition($table, $attribute, $condition)
+  {
+    $exampleDB = $GLOBALS['mysqli']->query("SELECT * FROM `".$table."` WHERE `".$attribute."` = '".$condition."'");
+    $ourData;
+    while(($row = $exampleDB->fetch_assoc()) != false)
+    {
+      $ourData[] = $row;
+    }
+    return $ourData;
+  }
 ?>
