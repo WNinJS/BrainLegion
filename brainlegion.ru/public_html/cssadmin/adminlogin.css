@@ -31,3 +31,7 @@ body{
 .pointer:hover {
   cursor: pointer;
 }
+
+.sizefixed {
+  min-width: 120px;
+}
