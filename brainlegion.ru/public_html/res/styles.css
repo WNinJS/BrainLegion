@@ -641,3 +641,31 @@ a.btn-primary:hover {
 #map {
   min-height: 20rem;
 }
+
+
+/* classes beardworf and media */
+.image {
+  height: 400px;
+  width: 350px;
+  background-image: url("img/gendalf.jpg");
+  background-size: cover;
+}
+
+
+@media screen and (max-width: 768px) {
+  .image {
+    height: 300px;
+    width: 250px;
+    background-image: url("img/gendalf.jpg");
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .image {
+    height: 250px;
+    width: 200px;
+    background-image: url("img/gendalf.jpg");
+    background-size: cover;
+  }
+}
