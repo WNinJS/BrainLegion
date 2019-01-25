@@ -1,0 +1,13 @@
+html{
+	height: 100vh;
+}
+
+body{
+    height: 100vh;
+}
+
+.container-fluid {
+    background-image: url("../res/img/backs/dust_scratches.png");
+}
+
+}
