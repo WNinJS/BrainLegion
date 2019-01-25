@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="res/fontello/css/fontello.css">
 
         <!-- Own Styles -->
-        <link rel="stylesheet" href="cssadmin/adminpanel.css">
+        <link rel="stylesheet" href="res/styles.css">
     </head>
 <body>
 
@@ -27,7 +27,7 @@
 
         <!-- Top Navigation -->
         <div class="container-fluid px-0">
-            <nav class="navbar fixed-top-desktop navbar-expand-lg navbar-light" id="top-menu">
+            <nav class="navbar navbar-expand-lg navbar-light" id="top-menu">
                 
                 <!-- Logo -->
                 <a href="adminpanel.php" class="navbar-brand">
@@ -66,14 +66,18 @@
         </div>
     </section>
     
-    <section class="jumbotron jumbotron-fluid jumbotron-light m-0 p-5">
-  <div class="container">
-    <h1 class="display-3">Fluid jumbotron</h1>
-    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-  </div>
-</section>
+    <section class="container-fluid mt-5 d-flex justify-content-center">
+        <div class="row d-flex justify-content-center text-center">
+            <div class="col-md-8 d-flex flex-column align-items-center">
 
+                <!-- ГАЗИНУР, изображение берется с базы данных, если его там нет, то будет просто изображение серое -->
+                <div class="image"></div>
+                <h1> Крис Метцен </h1>  <!-- ГАЗИНУР, имя админа, который вошел -->
+                <h4> 21:19 25.01.2019 </h4> <!-- ГАЗИНУР, настоящее время -->
+            </div>
+        </div>
 
+    </section>
 
     <!-- Bootstrap js -->
     <script src="res/jquery/jquery-3.2.1.min.js"></script>
