@@ -32,13 +32,13 @@
         <nav class="navbar px-md-5 navbar-expand-lg navbar-light">
 
           <!-- Logo -->
-          <a href="index.php" class="navbar-brand ">
+          <a href="index.php" class="navbar-brand">
             <img src="res/img/logos/brainlegion_factory.svg" alt="FILL" class="img-fluid img-logo">
           </a>
 
           <!-- Menu Button for Mobile -->
           <button class="navbar-toggler mr-3" type="button" data-toggle="collapse" data-target="#navbar-toggler" aria-controls="navbar-toggler" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon "></span>
+            <span class="navbar-toggler-icon"></span>
           </button>
 
           <!-- Menu Itself -->
@@ -55,7 +55,6 @@
               </li>
             </ul>
           </div>
-
         </nav>
       </div><!-- Top Navigation -->
 
