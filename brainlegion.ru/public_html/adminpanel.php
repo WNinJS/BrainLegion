@@ -23,30 +23,49 @@
 	</head>
 <body>
     <!-- Top Navigation -->
-    <div class="container-fluid px-0">
-        <nav class="navbar fixed-top-desktop px-md-5 navbar-expand-lg navbar-light" id="top-menu">
+    <div class="container-fluid px-0 id="top-menu">
+        <nav class="navbar fixed-top-desktop navbar-expand-lg navbar-light" id="top-menu">
             <!-- Logo -->
-            <div id="dropdown-menu" class="dropdown-menu collapse navbar-collapse">
-                <span class="title">
+            <a href="adminpanel.php" class="navbar-brand">
                 <img src="res/img/logos/brainlegion_main.svg" alt="FILL" class="img-fluid img-logo">
-                </span>
-                <ul class="dropdown-menu navbar-nav ">
-                    <li><a href="#" class="nav-link text-purple">Информация</a></li>
-                    <li><a href="#" class="nav-link text-purple">Главная</a></li>
-                    <li><a href="#" class="nav-link text-purple">Studio</a></li>
-                    <li><a href="#" class="nav-link text-purple">Factory</a></li>
-                    <li><a href="#" class="nav-link text-purple">Logout</a></li>
-                </ul>
-            </div>
+            </a>
+
             <!-- Menu Button for Mobile -->
             <button class="navbar-toggler mr-3" type="button" data-toggle="collapse" data-target="#navbar-toggler" aria-controls="navbar-toggler" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <!-- Menu Itself -->
-          
+            <div class="collapse navbar-collapse text-right" id="navbar-toggler">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-purple"><span>Информация</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-purple"><span>Главная</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-purple"><span>Studio</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-purple"><span>Factory</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-purple"><span>Logout</span></a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </div>
-    <!-- Top Navigation -->
+    <!-- Top Navigation
     <script src="res/js/dropMenu.js"></script>
+    -->
+
+
+    
+    <!-- Bootstrap js -->
+    <script src="res/jquery/jquery-3.2.1.min.js"></script>
+    <script src="res/popper/popper.js"></script>
+    <script src="res/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
