@@ -1,8 +1,8 @@
-html{
-	height: 100vh;
+html {
+    height: 100vh;
 }
 
-body{
+body {
     height: 100vh;
 }
 
@@ -10,4 +10,39 @@ body{
     background-image: url("../res/img/backs/dust_scratches.png");
 }
 
+.dropChanges {
+    margin-top: 1vw;
+    margin-left: 3vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.dropChangesInfoField {
+    max-width: 90vw;
+    margin: 0 5vw;
+}
+
+.fieldChanges {
+    display: flex;
+    flex-direction: row;
+}
+
+.btnSize {
+    min-width: 15vw;
+    box-shadow: non
+}
+
+@media screen and (max-width: 992px){
+    .fieldChanges {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width: 768px){
+    .fieldChanges {
+        display: flex;
+        flex-direction: column;
+    }
 }
