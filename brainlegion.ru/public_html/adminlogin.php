@@ -23,11 +23,11 @@
 <body>
 	<article class="container d-flex flex-column justify-content-center align-items-center h-100 w-100">
 		<div class="row d-flex flex-column align-items-center w-100 h-50">
-			<img src="res/img/logos/brainlegion_main.svg" class="col-7 col-sm-5" alt="picture">
-			<form method="POST" class="col-5 col-sm-5 d-flex flex-column align-items-center">
-				<input class="my-1 w-75" type="text"placeholder="Введите логин">
-				<input class="my-1 w-75" type="text" placeholder="Введите пароль">
-				<input type="submit" class="pointer btn btn-purple-outline my-1 w-75" value="Войти">
+			<img src="res/img/logos/brainlegion_main.svg" class="col-md-5 col-lg-6" alt="picture">
+			<form method="POST" class="col-md-6 col-lg-5 d-flex flex-column align-items-center">
+				<input class="my-1 sizefixed" type="text"placeholder="Введите логин">
+				<input class="my-1 sizefixed" type="text" placeholder="Введите пароль">
+				<input type="submit" class="pointer btn btn-purple-outline my-1 sizefixed" value="Войти">
 			</form>
 		</div>
 	</article>
