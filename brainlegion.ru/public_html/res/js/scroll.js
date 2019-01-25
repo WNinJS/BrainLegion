@@ -23,7 +23,7 @@ jQuery(window).scroll(function() {
 $(window).ready(() => {
   $("nav").on("click", "a", function(event) {
     let id = $(this).attr('href');
-    if (id !== "index.html") {
+    if (id !== "index.php") {
       event.preventDefault();
       let top = $(id).offset().top;
       $('body,html').animate({
