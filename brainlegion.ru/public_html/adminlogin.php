@@ -27,6 +27,7 @@
 			<form method="POST" class="col-md-6 col-lg-5 d-flex flex-column align-items-center">
 				<input class="my-1 sizefixed" type="text"placeholder="Введите логин">
 				<input class="my-1 sizefixed" type="text" placeholder="Введите пароль">
+			 <!-- ГАЗИНУР, тут вход находится, нужно проверить данные введеные с бд и если совпадает, то войти в админку -->
 				<input type="submit" class="pointer btn btn-purple-outline my-1 sizefixed" value="Войти">
 			</form>
 		</div>
