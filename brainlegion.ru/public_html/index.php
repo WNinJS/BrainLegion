@@ -3,39 +3,49 @@
   <head>
     <meta charset="utf-8">
     <title>BrainLegion Index</title>
+
     <!-- TODO: SEO -->
     <!-- TODO: Теги у картинок -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="res/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="res/bootstrap/css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="res/bootstrap/css/bootstrap-reboot.css">
+
     <!-- Fontello Fonts -->
     <link rel="stylesheet" href="res/fontello/css/fontello.css">
+
     <!-- Own Styles -->
     <link rel="stylesheet" href="res/styles.css">
+
     <!-- Favicons -->
     <link rel="icon" type="image/png" sizes="32x32" href="res/img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="res/img/favicon/favicon-16x16.png">
   </head>
   <body>
+
     <!-- Cover Section (Video Background) -->
     <section class="container-fluid px-0" id="cover-video">
       <video  id="video-background" poster="res/video/poster.png" autoplay muted loop style="margin-top: 122px;">
         <source  src="res/video/2.mp4" type="video/mp4" style="height: 100%; width: 100%">
       </video>
       <div id="video-background-filter" style="margin-top: 122px;"></div>
+
       <!-- Top Navigation -->
       <div class="container-fluid px-0">
         <nav class="navbar fixed-top-desktop px-md-5 navbar-expand-lg navbar-light" id="top-menu">
+
           <!-- Logo -->
           <a href="index.php" class="navbar-brand">
             <img src="res/img/logos/brainlegion_main.svg" alt="FILL" class="img-fluid img-logo">
           </a>
+
           <!-- Menu Button for Mobile -->
           <button class="navbar-toggler mr-3" type="button" data-toggle="collapse" data-target="#navbar-toggler" aria-controls="navbar-toggler" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
           </button>
+
           <!-- Menu Itself -->
           <div class="collapse navbar-collapse" id="navbar-toggler">
             <ul class="navbar-nav ml-auto text-right">
@@ -49,8 +59,10 @@
           </div>
         </nav>
         </div><!-- Top Navigation -->
+
         <!-- Cover Content -->
         <div class="container-fluid" id="cover-content">
+
           <!-- Text On Cover -->
           <div id="cover-text" class="container text-center text-light">
             <h1>Решаем задачи для вашего бизнеса</h1>
@@ -58,8 +70,10 @@
           </div>
           </div><!-- Cover Content -->
           </section><!-- Cover Section -->
+
           <!-- About Section -->
           <section class="container-fluid py-5" id="about">
+
             <!-- Snippet -->
             <div class="container py-2 text-center">
               <h1 class="text-center text-purple">О нас</h1>
@@ -73,8 +87,10 @@
             <!-- Workflow -->
             <div class="container mt-5 py-2">
               <h1 class="text-center text-purple">Как мы работаем</h1>
+
               <!-- Workflow Row -->
               <div class="mx-0 row justify-content-between">
+
                 <!-- Ticket -->
                 <div class="card-container col-sm-12 col-md-3 col-lg-2 p-2">
                   <div class="card no-border card-transparent">
@@ -84,6 +100,7 @@
                     </div>
                   </div>
                 </div>
+
                 <!-- Arrow -->
                 <div class="card-container col-md-1 col-lg-1 p-2 align-self-center d-none d-lg-block">
                   <div class="card no-border card-transparent">
@@ -92,6 +109,7 @@
                     </div>
                   </div>
                 </div>
+
                 <!-- Call -->
                 <div class="card-container col-sm-12 col-md-3 col-lg-2 p-2">
                   <div class="card no-border card-transparent">
@@ -101,6 +119,7 @@
                     </div>
                   </div>
                 </div>
+
                 <!-- Arrow -->
                 <div class="card-container col-md-1 col-lg-1 p-2 align-self-center d-none d-lg-block">
                   <div class="card no-border card-transparent">
@@ -109,6 +128,7 @@
                     </div>
                   </div>
                 </div>
+
                 <!-- Conversation -->
                 <div class="card-container col-sm-12 col-md-3 col-lg-2 p-2">
                   <div class="card no-border card-transparent">
@@ -118,6 +138,7 @@
                     </div>
                   </div>
                 </div>
+
                 <!-- Arrow -->
                 <div class="card-container col-md-1 col-lg-1 p-2 align-self-center d-none d-lg-block">
                   <div class="card no-border card-transparent">
@@ -126,6 +147,7 @@
                     </div>
                   </div>
                 </div>
+
                 <!-- Success -->
                 <div class="card-container col-sm-12 col-md-2 col-lg-2 p-2">
                   <div class="card no-border card-transparent">
@@ -137,11 +159,14 @@
                 </div>
                 </div><!-- Workflow Row -->
                 </div><!-- Workflow -->
+
                 <!-- Directions of Work -->
                 <div class="container mt-5 py-2">
                   <h1 class="text-center text-purple">Направления работы</h1>
+
                   <!-- Directions of Work Row -->
                   <div class="row mx-auto mt-4 py-2">
+
                     <!-- Studio -->
                     <div class="card-container col-sm-12 col-md-6 col-lg-4 p-2">
                       <div class="card card-half-transparent h-100">
@@ -153,6 +178,7 @@
                         </div>
                       </div>
                     </div>
+
                     <!-- Factory -->
                     <div class="card-container col-sm-12 col-md-6 col-lg-4 p-2">
                       <div class="card card-half-transparent h-100">
@@ -164,6 +190,7 @@
                         </div>
                       </div>
                     </div>
+
                     <!-- Scholae -->
                     <div class="card-container col-sm-12 col-md-6 col-lg-4 p-2">
                       <div class="card card-half-transparent h-100">
@@ -178,13 +205,17 @@
                     </div><!-- Directions of Work Row -->
                     </div><!-- Directions of Work -->
                     </section><!-- About Section -->
+
                     <!-- News Section -->
                     <section class="container-fluid py-5" id="news">
                       <h1 class="text-center text-purple">Новости</h1>
+
                       <!-- News -->
                       <div class="container mt-4 py-2">
+
                         <!-- News Row -->
                         <div class="row mx-auto mt-4 py-2">
+
                           <!-- Новость1 -->
                           <div class="card-container col-sm-12 col-md-6  col-lg-4 p-2">
                             <div class="card card-half-transparent h-100">
@@ -196,6 +227,7 @@
                               </div>
                             </div>
                           </div>
+
                           <!-- Новость2 -->
                           <div class="card-container col-sm-12 col-md-6 col-lg-4 p-2">
                             <div class="card card-half-transparent h-100">
@@ -207,6 +239,7 @@
                               </div>
                             </div>
                           </div>
+
                           <!-- Новость3 -->
                           <div class="card-container col-sm-12 col-md-6 col-lg-4 p-2">
                             <div class="card card-half-transparent h-100">
@@ -221,11 +254,14 @@
                           </div><!-- News Row -->
                           </div><!-- News -->
                           </section><!-- News Section -->
+
                           <!-- Contact Section -->
                           <section class="container-fluid py-5" id="contact">
                             <h1 class="text-center text-purple">Связаться с нами</h1>
+
                             <!-- Contact Form -->
                             <form method="post" enctype="multipart/form-data" class="d-flex flex-column container pt-4 justify-center align-items-center" id="contact-form">
+
                               <!-- Name & Subject -->
                               <div class="row mx-auto text-center d-flex flex-column align-items-center">
                                 <div class="form-group col-md-6">
@@ -240,7 +276,7 @@
                                 </div>
                               </div>
                               <div class="text-center">
-                                <button type="submit" id="submit" class="btn btn-purple-outline">Заказать звонок</button>
+                                <button type="submit" id="submit" class="btn btn-purple-outline pointer">Заказать звонок</button>
                                 <!-- <input type="submit" id="submit" class="btn btn-purple-outline" value="Заказать звонок"> -->
                                 <p id="contact-form-status" class="hidden mt-2">Статус сообщения</p>
                               </div>
