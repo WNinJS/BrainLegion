@@ -45,7 +45,7 @@
                         <a href="adminmain.php" class="nav-link text-purple"><span>Главная</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="adminstudio.php" class="nav-link text-purple"><span>Studio</span></a>
+                        <a href="adminstudio.php" class="nav-link disabled"><span>Studio</span></a>
                     </li>
                     <li class="nav-item">
                         <a href="adminfactory.php" class="nav-link text-purple"><span>Factory</span></a>
