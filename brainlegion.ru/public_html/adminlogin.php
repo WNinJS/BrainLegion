@@ -22,7 +22,7 @@
 	</head>
 <body>
 	<article class="container d-flex flex-column justify-content-center align-items-center h-100 w-100">
-		<div class="row d-flex flex-column align-items-center">
+		<div class="row d-flex flex-column justify-content-center align-items-center">
 			<img src="res/img/logos/brainlegion_main.svg" class="image" alt="picture">
 			<form method="POST" class="form d-flex flex-column align-items-center justify-center">
 				<input class="my-1 w-100" type="text"placeholder="Введите логин">
