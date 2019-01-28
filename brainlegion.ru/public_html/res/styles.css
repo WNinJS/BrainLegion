@@ -145,7 +145,8 @@ a.btn-primary:hover {
 }
 
 .btnsize {
-  max-width: 120px;
+  width: 130px;
+  height: 40px;
 }
 
 
