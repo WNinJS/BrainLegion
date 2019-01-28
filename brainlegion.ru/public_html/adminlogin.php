@@ -28,8 +28,8 @@
 		<div class="row d-flex flex-column justify-content-center align-items-center">
 			<img src="res/img/logos/brainlegion_main.svg" class="image img-thumb" alt="picture">
 			<form method="POST" class="form d-flex flex-column align-items-center justify-center">
-				<input name="login" class="my-1 w-100" type="text"placeholder="Введите логин">
-				<input name="password" class="my-1 w-100" type="password" placeholder="Введите пароль">
+				<input name="login" class="my-1 w-100" type="text" placeholder="Введите логин" required>
+				<input name="password" class="my-1 w-100" type="password" placeholder="Введите пароль" required>
 			 <!-- ГАЗИНУР, тут вход находится, нужно проверить данные введеные с бд и если совпадает, то войти в админку -->
 				<input name="logIn" type="submit" class="pointer btn btn-purple-outline my-1" value="Войти">
 			</form>
