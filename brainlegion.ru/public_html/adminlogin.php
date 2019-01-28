@@ -22,9 +22,9 @@
 	</head>
 <body>
 	<article class="container d-flex flex-column justify-content-center align-items-center h-100 w-100">
-		<div class="row d-flex flex-column align-items-center w-100 h-50">
-			<img src="res/img/logos/brainlegion_main.svg" class="col-5 col-sm-5 col-md-5 col-lg-5" alt="picture">
-			<form method="POST" class="col-6 col-sm-5 col-md-5 col-lg-5 d-flex flex-column align-items-center">
+		<div class="row d-flex flex-column align-items-center">
+			<img src="res/img/logos/brainlegion_main.svg" class="image" alt="picture">
+			<form method="POST" class="form d-flex flex-column align-items-center justify-center">
 				<input class="my-1 w-100" type="text"placeholder="Введите логин">
 				<input class="my-1 w-100" type="text" placeholder="Введите пароль">
 			 <!-- ГАЗИНУР, тут вход находится, нужно проверить данные введеные с бд и если совпадает, то войти в админку -->
