@@ -1,4 +1,5 @@
 <?
+  session_start();
   $GLOBALS['mysqli'] = new mysqli('localhost', 'root', '', 'brainLegion');
   $GLOBALS['mysqli']->query("SET NAMES 'utf8'");
 
