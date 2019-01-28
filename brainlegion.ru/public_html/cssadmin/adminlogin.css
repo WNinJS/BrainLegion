@@ -35,3 +35,42 @@ body{
 .sizefixed {
   min-width: 120px;
 }
+
+/* Media queries for adminlogin page*/
+
+.form{
+  height: 150px;
+  width: 350px;
+}
+.image {
+  height: 130px;
+  width: 350px;
+}
+
+@media screen and (max-width: 768px) {
+  .image {
+    height: 130px;
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .form {
+    height: 130px;
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .image {
+    height: 130px;
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .form{
+    height: 130px;
+    width: 200px;
+  }
+}
