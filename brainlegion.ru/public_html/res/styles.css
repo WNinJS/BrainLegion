@@ -19,7 +19,7 @@
    letter-spacing: 1px;
 }
 .btn-purple-outline:hover {
-   background-color: #241653;
+   background-color: #492DA8;
    border-color: #241653;
    color: white;
 }
@@ -36,9 +36,6 @@
    box-shadow: 0 0 0 .2rem rgba(59, 0, 255, .5) !important;
  }
 
- a:hover {
-   color: #241653 !important;
- }
 
  .form-control-purple:focus {
    border-color: #241653 !important;
@@ -145,6 +142,10 @@ a.btn-primary:hover {
   position: absolute;
   right: 0;
   top: 2rem;
+}
+
+.btnsize {
+  max-width: 120px;
 }
 
 
