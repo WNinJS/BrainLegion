@@ -46,3 +46,18 @@ body {
         flex-direction: column;
     }
 }
+.text-purple {
+   color: #492DA8 !important;
+ }
+
+.btn-purple-outline {
+  background-color: white;
+   border-color: #492DA8;
+   color: #492DA8;
+   letter-spacing: 1px;
+}
+.btn-purple-outline:hover {
+   background-color: #492DA8;
+   border-color: #241653;
+   color: white;
+}
