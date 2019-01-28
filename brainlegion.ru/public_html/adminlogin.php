@@ -1,3 +1,6 @@
+<?
+  require_once 'functions/functions.php';
+?>
 <!DOCTYPE html>
 <html>
  	<head>
@@ -25,15 +28,34 @@
 		<div class="row d-flex flex-column justify-content-center align-items-center">
 			<img src="res/img/logos/brainlegion_main.svg" class="image img-thumb" alt="picture">
 			<form method="POST" class="form d-flex flex-column align-items-center justify-center">
-				<input class="my-1 w-100" type="text"placeholder="Введите логин">
-				<input class="my-1 w-100" type="text" placeholder="Введите пароль">
+				<input name="login" class="my-1 w-100" type="text"placeholder="Введите логин">
+				<input name="password" class="my-1 w-100" type="password" placeholder="Введите пароль">
 			 <!-- ГАЗИНУР, тут вход находится, нужно проверить данные введеные с бд и если совпадает, то войти в админку -->
-				<input type="submit" class="pointer btn btn-purple-outline my-1" value="Войти">
+				<input name="logIn" type="submit" class="pointer btn btn-purple-outline my-1" value="Войти">
 			</form>
 		</div>
 	</article>
 </body>
 </html>
+
+<?
+  $allDataOfPost = $_POST;
+  $dataFromTableUsers = getFromOneTable('users');
+  if(isset($allDataOfPost['logIn']))
+  {
+    $dataBoutRightAdmin; //Это массив будет
+    for($i = 0; $i < count($dataFromTableUsers); $i++) //Данный цикл проверяет существуют ли такой логин, и походит лм он к паролю
+    {
+      if( $dataFromTableUsers[$i]['login'] == $allDataOfPost['login'] //Если сущетсвует такой логин
+          && password_verify($allDataOfPost['password'], $dataFromTableUsers[$i]['password']) == 1) // И дешифрованный пароль подходит
+      {
+        $_SESSION['admin'] = $dataFromTableUsers[$i]; // Сессия запоминает данные о пользователе
+        echo '<script>document.location.href="admininfo.php"</script>'; // Переход на главную страницу
+      }
+    }
+  }
+  $mysqli->close();
+?>
 
 
 <!--
@@ -44,6 +66,6 @@
 </form>
 
 <div class="col-sm-5 d-flex flex-column align-items-center">
-				
+
 			</div>
 -->
