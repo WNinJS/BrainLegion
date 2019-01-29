@@ -296,34 +296,14 @@
             }
             echo                    '</div></div>
                                         <div class="form-group d-flex flex-column">
-                                        <select name="selecter" class="custom-select mr-sm-2" id="inlineFormCustomSelect">';
-            if($allDataAboutPorfolio[$counter]['video'] == '')
-            {
-              echo '<option >Добавить</option>
-                    <option value="1" selected>Видео</option>
-                    <option value="2">Изображение</option>
-                    </select>';
-            }
-            else
-            {
-              echo '<option >Добавить</option>
-                    <option value="1" selected>Видео</option>
-                    <option value="2">Изображение</option>
-                    </select>';
-            }
-
-            if($_POST['selecter'] == '1')
-            {
-              echo '<input hidden class="my-3" type="text">
-                    <input type="file">';
-            }
-            else
-            {
-              echo '<input class="my-3" type="text">
-                    <input hidden type="file">';
-            }
-            echo                           '
-                                    </div>
+                                          <select name="selecter" class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                            <option selected>Добавить</option>
+                                            <option value="1" >Видео</option>
+                                            <option value="2">Изображение</option>
+                                          </select>
+                                          <input hidden class="my-3" type="text">
+                                          <input hidden type="file">
+                                        </div>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-purple-outline pointer" data-dismiss="modal">Закрыть</button>
