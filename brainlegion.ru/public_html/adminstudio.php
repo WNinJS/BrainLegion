@@ -54,9 +54,6 @@
                         <li class="nav-item">
                             <a href="adminstudio.php" class="nav-link disabled"><span>Studio</span></a>
                         </li>
-                        <li class="nav-item">
-                            <a href="adminfactory.php" class="nav-link text-purple"><span>Factory</span></a>
-                        </li>
 
                         <!-- Логаут и завершение сессии -->
                         <li class="nav-item">
@@ -82,22 +79,22 @@
                 </div>
 
                 <!-- Collapse Services -->
-                <div class="collapse" id="collapseServices">
+                <div class="collapse mx-auto" id="collapseServices">
                     <div class="card-container">
-                        <div class="card card-half-transparent h-100 d-flex flex-wrap flex-row align-items-center">
+                        <div class="card card-half-transparent mt-auto h-100 d-flex flex-wrap flex-row align-items-center">
 
                             <!-- тут добавляются, изменяются услуги, которые выводятся на страничке Studio.php -->
                             <?
                               $allDataAboutServices = getFromOneTable('services');
                               for($counter = 0; $counter < count($allDataAboutServices); $counter++)
                               {
-                                echo '<div class="card-body col-12 col-sm-6 col-md-4 d-flex flex-column text-center">
+                                echo '<div class="card-body col-12 col-sm-6 col-md-4 d-flex flex-column text-center heightCards">
                                         <h4><b>'.$allDataAboutServices[$counter]['title'].'</b></h4>
                                         <p class="card-text">'.$allDataAboutServices[$counter]['description'].'</p>
-                                        <div class="buttonServices d-flex flex-row justify-content-around">
-                                          <button type="button" class="btn btn-purple-outline btnsize pointer" data-toggle="modal" data-target="#modalService_'.$allDataAboutServices[$counter]['id'].'">Редактировать</button>
+                                        <div class="buttonServices d-flex flex-row justify-content-around mt-auto">
+                                          <button type="button" class="btn btn-purple-outline mt-auto btnsize pointer" data-toggle="modal" data-target="#modalService_'.$allDataAboutServices[$counter]['id'].'">Редактировать</button>
                                           <form method="POST">
-                                              <button name="serviceDelete'.$allDataAboutServices[$counter]['id'].'"class="btn btn-purple-outline btnsize pointer">Удалить</button>
+                                              <button name="serviceDelete'.$allDataAboutServices[$counter]['id'].'"class="btn btn-purple-outline btnsize mt-auto pointer">Удалить</button>
                                           </form>
                                         </div>
                                     </div>';
@@ -309,7 +306,7 @@
                                           </form>
 
                                           <input type="radio" id="image" name="r1" onclick="disp(document.getElementById(\'imageInput\'))"> Изображение
-                                          
+
                                           <!-- Скрытая форма для добавления видео -->
                                           <form name="image" id="imageInput" style="display: none;">
                                               <input type="text">
