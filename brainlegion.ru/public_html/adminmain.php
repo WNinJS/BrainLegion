@@ -23,7 +23,7 @@
     </head>
 <body style="background-color: white;">
     <!-- Top Navigation -->
-    <div class="container-fluid px-0 id="top-menu" style="background-color: white;">
+    <div class="container-fluid px-0 id="top-menu">
         <nav class="navbar  navbar-expand-lg navbar-light" id="top-menu">
             <!-- Logo -->
             <a href="adminpanel.php" class="navbar-brand">
@@ -55,8 +55,8 @@
             </div>
         </nav>
     </div>
-    <div class="container-fluid h-100 w-100" style="background-color: white;">
-        <div class="row d-flex flex-column р-100 w-100" style="background-color: white;"> 
+    <div class="container-fluid h-100 w-100">
+        <div class="row d-flex flex-column р-100 w-100" > 
         <p class="dropChanges">
                 <button class="btn btnSize btn-purple-outline pointer" data-toggle="collapse" href="#areaOfWork" aria-expanded="false" aria-controls="collapseExample">
                     Направления работы
@@ -254,7 +254,7 @@
     <!-- MODALS FOR NEWS 
         В них же записываются даннеы из БД с возможностью редактирования-->
 <!-- Новость 1 -->
-<div class="modal fade" id="New1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="background-color: white;">
+<div class="modal fade" id="New1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -299,7 +299,7 @@
   </div>
 </div>
 <!-- Новость 2 -->
-<div class="modal fade" id="New2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="background-color: white;">
+<div class="modal fade" id="New2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -344,7 +344,7 @@
   </div>
 </div>
 <!-- Новость3 -->
-<div class="modal fade" id="New3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="background-color: white;">
+<div class="modal fade" id="New3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -391,7 +391,7 @@
 
 <!-- MODALS FOR ADDING + -->
 <!-- Modal for adding work field -->
-   <div class="modal fade" id="addWorkField" tabindex="-1" role="dialog" aria-labelledby="modalPortfolio_addLabel" aria-hidden="true" style="background-color: white;">
+   <div class="modal fade" id="addWorkField" tabindex="-1" role="dialog" aria-labelledby="modalPortfolio_addLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -428,7 +428,7 @@
         </div>
     </div>
 <!-- MODAL FOR ADDING NEWS -->
-   <div class="modal fade" id="addNews" tabindex="-1" role="dialog" aria-labelledby="modalPortfolio_addLabel" aria-hidden="true" style="background-color: white;">
+   <div class="modal fade" id="addNews" tabindex="-1" role="dialog" aria-labelledby="modalPortfolio_addLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
