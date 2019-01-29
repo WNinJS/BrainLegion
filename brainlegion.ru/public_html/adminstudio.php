@@ -1,3 +1,6 @@
+<?
+  require 'functions/functions.php';
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -55,9 +58,9 @@
                             <a href="adminfactory.php" class="nav-link text-purple"><span>Factory</span></a>
                         </li>
 
-                        <!-- ГАЗИНУР, Логаут и завершение сессии -->
+                        <!-- Логаут и завершение сессии -->
                         <li class="nav-item">
-                            <a href="adminlogin.php" class="nav-link text-purple"><span>Logout</span></a>
+                            <a href="logOut.php" class="nav-link text-purple"><span>Logout</span></a>
                         </li>
                     </ul>
                 </div>
@@ -82,57 +85,24 @@
                 <div class="collapse" id="collapseServices">
                     <div class="card-container">
                         <div class="card card-half-transparent h-100 d-flex flex-wrap flex-row align-items-center">
-                            
-                            <!-- ГАЗИНУР, тут добавляются, изменяются услуги, которые выводятся на страничке Studio.php -->
-                            <div class="card-body col-12 col-sm-6 col-md-4 d-flex flex-column text-center">
-                                <!-- ГАЗИНУР, Заголовок из бд -->
-                                <h4><b> 3D визуализация модели </b></h4>
-                                <!-- ГАЗИНУР, Текст из бд -->
-                                <p class="card-text">Визуализация 3D моделей стала широко распространена в любой отрасли. 3D модели зданий, мебели, машин, персонажей и многих других объектов используются в рекламе, при разработке моделей для 3D принтеров, в автомобильной промышленности, в компьютерных играx. Во всех этих областях очень важно иметь высококачественные детализированные точные модели, что может предоставить наша студия.</p>
-    
-                                <div class="buttonServices d-flex flex-row justify-content-around">
-                                    <!-- Кнопка, вызывающая модальное окно (будет ниже) -->                            
-                                    <button type="button" class="btn btn-purple-outline btnsize pointer" data-toggle="modal" data-target="#modalService_1">Редактировать</button>
-                                    <!-- ГАЗИНУР, кнопка, удаляющая данные из БД -->
-                                    <form method="POST">
-                                        <button class="btn btn-purple-outline btnsize pointer">Удалить</button>
-                                    </form>
-                                </div>
-                            </div>
 
-                            <!-- ГАЗИНУР, тут добавляются, изменяются услуги, которые выводятся на страничке Studio.php -->
-                            <div class="card-body col-12 col-sm-6 col-md-4 d-flex flex-column text-center">
-                                <!-- ГАЗИНУР, Заголовок из бд -->
-                                <h4><b> 3D визуализация модели </b></h4>
-                                <!-- ГАЗИНУР, Текст из бд -->
-                                <p class="card-text">Визуализация 3D моделей стала широко распространена в любой отрасли. 3D модели зданий, мебели, машин, персонажей и многих других объектов используются в рекламе, при разработке моделей для 3D принтеров, в автомобильной промышленности, в компьютерных играx. Во всех этих областях очень важно иметь высококачественные детализированные точные модели, что может предоставить наша студия.</p>
-                        
-                                <div class="buttonServices d-flex flex-row justify-content-around text-center">
-                                    <!-- Кнопка, вызывающая модальное окно (будет ниже) -->                            
-                                    <button type="button" class="btn btn-purple-outline btnsize" data-toggle="modal" data-target="#modalService_1 pointer">Редактировать</button>
-                                    <!-- ГАЗИНУР, кнопка, удаляющая данные из БД -->
-                                    <form method="POST">
-                                        <button class="btn btn-purple-outline btnsize pointer">Удалить</button>
-                                    </form>
-                                </div>
-                            </div>
-
-                            <!-- ГАЗИНУР, тут добавляются, изменяются услуги, которые выводятся на страничке Studio.php -->
-                            <div class="card-body col-12 col-sm-6 col-md-4 d-flex flex-column text-center">
-                                <!-- ГАЗИНУР, Заголовок из бд -->
-                                <h4><b> 3D визуализация модели </b></h4>
-                                <!-- ГАЗИНУР, Текст из бд -->
-                                <p class="card-text">Визуализация 3D моделей стала широко распространена в любой отрасли. 3D модели зданий, мебели, машин, персонажей и многих других объектов используются в рекламе, при разработке моделей для 3D принтеров, в автомобильной промышленности, в компьютерных играx. Во всех этих областях очень важно иметь высококачественные детализированные точные модели, что может предоставить наша студия.</p>
-                                
-                                <div class="buttonServices d-flex flex-row justify-content-around text-center">
-                                    <!-- Кнопка, вызывающая модальное окно (будет ниже) -->                            
-                                    <button type="button" class="btn btn-purple-outline btnsize pointer" data-toggle="modal" data-target="#modalService_1 pointer">Редактировать</button>
-                                    <!-- ГАЗИНУР, кнопка, удаляющая данные из БД -->
-                                    <form method="POST">
-                                        <button class="btn btn-purple-outline btnsize pointer">Удалить</button>
-                                    </form>
-                                </div>
-                            </div>
+                            <!-- тут добавляются, изменяются услуги, которые выводятся на страничке Studio.php -->
+                            <?
+                              $allDataAboutServices = getFromOneTable('services');
+                              for($counter = 0; $counter < count($allDataAboutServices); $counter++)
+                              {
+                                echo '<div class="card-body col-12 col-sm-6 col-md-4 d-flex flex-column text-center">
+                                        <h4><b>'.$allDataAboutServices[$counter]['title'].'</b></h4>
+                                        <p class="card-text">'.$allDataAboutServices[$counter]['description'].'</p>
+                                        <div class="buttonServices d-flex flex-row justify-content-around">
+                                          <button type="button" class="btn btn-purple-outline btnsize pointer" data-toggle="modal" data-target="#modalService_'.$allDataAboutServices[$counter]['id'].'">Редактировать</button>
+                                          <form method="POST">
+                                              <button name="serviceDelete'.$allDataAboutServices[$counter]['id'].'"class="btn btn-purple-outline btnsize pointer">Удалить</button>
+                                          </form>
+                                        </div>
+                                    </div>';
+                              }
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -149,10 +119,16 @@
                 <div class="collapse" id="collapsePortfolio">
                     <div class="card-container">
                         <div class="card card-half-transparent h-100 d-flex flex-wrap flex-row align-items-center">
-                            <img class="col-12 col-sm-6 col-md-4 img-fluid img-thumb" src="res/img/portfolio/devices/1.jpg" alt="FILL" data-toggle="modal" data-target="#modalPortfolio">
-                            <img class="col-12 col-sm-6 col-md-4 img-fluid img-thumb" src="res/img/portfolio/bricks/1.jpg" alt="FILL" data-toggle="modal" data-target="#modalPortfolio">
-                            <img class="col-12 col-sm-6 col-md-4 img-fluid img-thumb" src="res/img/portfolio/buildings/1.jpg" alt="FILL" data-toggle="modal" data-target="#modalPortfolio">
-                            <img class="col-12 col-sm-6 col-md-4 img-fluid img-thumb" src="res/img/portfolio/chairs/1.jpg" alt="FILL" data-toggle="modal" data-target="#modalPortfolio">
+                          <?
+                            $allDataAboutPorfolio = getFromOneTable('portfolio');
+                            for($counter = 0; $counter < count($allDataAboutPorfolio); $counter++)
+                            {
+                              if($allDataAboutPorfolio[$counter]['info'] != NULL)
+                              {
+                                  echo '<img class="col-12 col-sm-6 col-md-4 img-fluid img-thumb" src="'.$allDataAboutPorfolio[$counter]['address'].'" alt="FILL" data-toggle="modal" data-target="#modalPortfolio'.$allDataAboutPorfolio[$counter]['id'].'">';
+                              }
+                            }
+                          ?>
                         </div>
                     </div>
                 </div>
@@ -160,41 +136,79 @@
         </div>
     </section>
 
-    <!-- ГАЗИНУР, модальные окна для "УСЛУГИ" находятся тут -->
-    <div class="modal fade" id="modalService_1" tabindex="-1" role="dialog" aria-labelledby="modalService_1Label" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Редактирование</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <form method="POST">
-                  <div class="modal-body">
-                      <div class="form-group">
-                        <label for="title" class="col-form-label">Заголовок услуги</label>
-                        <input type="text" class="form-control" id="title">
+    <!-- модальные окна для "УСЛУГИ" находятся тут -->
+    <?
+      for($counter = 0; $counter < count($allDataAboutServices); $counter++)
+      {
+        if($allDataAboutServices[$counter]['link'] == 'NULL')
+        {
+          $link = '';
+        }
+        else
+        {
+          $link = $allDataAboutServices[$counter]['link'];
+        }
+        echo '<div class="modal fade" id="modalService_'.$allDataAboutServices[$counter]['id'].'" tabindex="-1" role="dialog" aria-labelledby="modalService_'.$allDataAboutServices[$counter]['id'].'Label" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Редактирование</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
                       </div>
-                      <div class="form-group">
-                        <label for="discription" class="col-form-label">Описание услуги</label>
-                        <textarea class="form-control" id="discription"></textarea>
-                      </div>
-                      <div class="form-group">
-                        <label for="typeMessage" class="col-form-label">Ссылка на пример услуги(необязательно)</label>
-                        <input type="text" class="form-control" id="typeMessage">
-                      </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-purple-outline pointer" data-dismiss="modal">Закрыть</button>
-                    <button type="submit" class="btn btn-purple-outline pointer">Применить изменения</button>
-                  </div>
-              </form>
-            </div>
-        </div>
-    </div>
+                      <form method="POST">
+                          <div class="modal-body">
+                              <div class="form-group">
+                                <label for="title" class="col-form-label">Редактирование</label>
+                                <input name="title" type="text" class="form-control" id="title" value="'.$allDataAboutServices[$counter]['title'].'">
+                              </div>
+                              <div class="form-group">
+                                <label for="discription" class="col-form-label">Заголовок услуги</label>
+                                <textarea name="text" class="form-control" id="discription">'.$allDataAboutServices[$counter]['description'].'</textarea>
+                              </div>
+                              <div class="form-group">
+                                <label for="typeMessage" class="col-form-label">Ссылка на пример услуги(необязательно)</label>
+                                <input name="link" type="text" class="form-control" id="typeMessage" value="'.$link.'">
+                              </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-purple-outline pointer" data-dismiss="modal">Закрыть</button>
+                            <button name="editService'.$allDataAboutServices[$counter]['id'].'" type="submit" class="btn btn-purple-outline pointer">Применить изменения</button>
+                          </div>
+                      </form>
+                    </div>
+                </div>
+            </div>';
+      }
+      for($counter = 0; $counter < count($allDataAboutServices); $counter++)
+      {
+        $allDataAboutPost = $_POST;
+        if(isset($allDataAboutPost['editService'.$allDataAboutServices[$counter]['id']]))
+        {
+          $linkOfService;
+          if($allDataAboutPost['link'] == '')
+          {
+            $linkOfService = NULL;
+          }
+          else
+          {
+            $linkOfService = $allDataAboutPost['link'];
+          }
+          $GLOBALS['mysqli']->query("UPDATE `services` SET `title` = '".$allDataAboutPost['title']."',
+                                    `description` = '".$allDataAboutPost['text']."',
+                                    `link` = '".$linkOfService."' WHERE `services`.`id` = ".$allDataAboutServices[$counter]['id'].";");
+          echo '<script>document.location.href="adminstudio.php"</script>';
+        }
+        if(isset($allDataAboutPost['serviceDelete'.$allDataAboutServices[$counter]['id']]))
+        {
+          $GLOBALS['mysqli']->query("DELETE FROM `services` WHERE `services`.`id` = ".$allDataAboutServices[$counter]['id'].";");
+          echo '<script>document.location.href="adminstudio.php"</script>';
+        }
+      }
+    ?>
 
-    <!-- ГАЗИНУР, модальное окно для добавления новой услуги находится тут -->
+    <!--  Модальное окно для добавления новой услуги находится тут -->
     <div class="modal fade" id="modalService_add" tabindex="-1" role="dialog" aria-labelledby="modalService_addLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -208,94 +222,100 @@
                   <div class="modal-body">
                       <div class="form-group">
                         <label for="title" class="col-form-label">Заголовок услуги</label>
-                        <input type="text" class="form-control" id="title">
+                        <input name="titleForNewService" type="text" class="form-control" id="title">
                       </div>
                       <div class="form-group">
                         <label for="discription" class="col-form-label">Описание услуги</label>
-                        <textarea class="form-control" id="discription"></textarea>
+                        <textarea name="textForNewService" class="form-control" id="discription"></textarea>
                       </div>
                       <div class="form-group">
                         <label for="typeMessage" class="col-form-label">Ссылка на пример услуги(необязательно)</label>
-                        <input type="text" class="form-control" id="typeMessage">
+                        <input name="linkForNewService" type="text" class="form-control" id="typeMessage">
                       </div>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-purple-outline pointer" data-dismiss="modal">Закрыть</button>
-                    <button type="button" class="btn btn-purple-outline pointer">Добавить</button>
+                    <button name="addNewService" type="submit" class="btn btn-purple-outline pointer">Добавить</button>
                   </div>
-              </form>  
+              </form>
             </div>
         </div>
     </div>
+    <?
+      $allDataFromPostForNewService = $_POST;
+      if(isset($allDataFromPostForNewService['addNewService']))
+      {
+        $GLOBALS['mysqli']->query("INSERT INTO `services`(`title`, `description`, `link`)
+                                  VALUES ('".$allDataFromPostForNewService['titleForNewService']."',
+                                          '".$allDataFromPostForNewService['textForNewService']."',
+                                          '".$allDataFromPostForNewService['linkForNewService']."')");
+        echo '<script>document.location.href="adminstudio.php"</script>';
+      }
+      ?>
 
-    <!-- ГАЗИНУР, модальные окна для "ПОРТФОЛИО" находятся тут -->
-    <div class="modal fade" id="modalPortfolio" tabindex="-1" role="dialog" aria-labelledby="modalPortfolioLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-
-                    <h5 class="modal-title align-items-center" id="exampleModalLabel"> Редактирование </h5>
-                    <button type="button" class="close pointer" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-
-                <form>
-                    <div class="modal-body">
-
-                        <!-- ГАЗИНУР, тут берется заголовок с бд -->
-                        <div class="form-group">
-                            <label for="title" class="col-form-label">Заголовок портфолио</label>
-                            <input type="text" class="form-control" id="title">
-                        </div>
-
-                        <!-- ГАЗИНУР, тут берется описание с бд -->
-                        <div class="form-group">
-                            <label for="discriptionPortfolio" class="col-form-label">Описание услуги</label>
-                            <textarea class="form-control" id="discriptionPortfolio"></textarea>
-                        </div>
-
-                        <!-- ГАЗИНУР, тут берутся фотки или видосы с бд -->
-                        <div class="form-group">
-                            <div class="imagesPorfolio f-flex justify-content-center text-center">
-
-                                <!-- ГАЗИНУР, это блок с изображениями и кнопками, которые удаляют изображения с базы данных -->
-                                <div class="imgs d-flex justify-content-center">
-                                    <img src="res\img\portfolio\devices\1.jpg" alt="ALT" class="img-fluid pb-3 news-img-style">
-                                    <button type="button" class="close d-flex flex-column justify-content-start pointer" aria-label="Close">
-                                        <span>&times;</span>
-                                    </button>
-                                </div>
-
-                                <!-- ГАЗИНУР, это блок с изображениями и кнопками, которые удаляют изображения с базы данных -->
-                                <div class="imgs d-flex justify-content-center">
-                                    <img src="res\img\portfolio\devices\1.jpg" alt="ALT" class="img-fluid pb-3 news-img-style">
-                                    <button type="button" class="close d-flex flex-column justify-content-start pointer" aria-label="Close">
-                                        <span>&times;</span>
-                                    </button>
-                                </div>
+      <?
+        for($counter = 0; $counter < count($allDataAboutPorfolio); $counter++)
+        {
+          if($allDataAboutPorfolio[$counter]['info'] != NULL)
+          {
+            echo '<div class="modal fade" id="modalPortfolio'.$allDataAboutPorfolio[$counter]['id'].'" tabindex="-1" role="dialog" aria-labelledby="modalPortfolioLabel'.$allDataAboutPorfolio[$counter]['id'].'" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title align-items-center" id="exampleModalLabel"> Редактирование </h5>
+                                <button type="button" class="close pointer" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
                             </div>
+                            <form method="POST">
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label for="title" class="col-form-label">Заголовок портфолио</label>
+                                        <input type="text" class="form-control" id="title" value="'.$allDataAboutPorfolio[$counter]['title'].'">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="discriptionPortfolio" class="col-form-label">Описание услуги</label>
+                                        <textarea class="form-control" id="discriptionPortfolio">'.$allDataAboutPorfolio[$counter]['info'].'</textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="imagesPorfolio f-flex justify-content-center text-center">';
+            if($allDataAboutPorfolio[$counter]['video'] == '')
+            {
+              for($counterImages = 0; $counterImages < count($allDataAboutPorfolio); $counterImages++)
+              {
+                if($allDataAboutPorfolio[$counterImages]['type'] == $allDataAboutPorfolio[$counter]['type'] && $counter != $counterImages)
+                {
+                  echo '<div class="imgs d-flex justify-content-center">
+                          <img src="'.$allDataAboutPorfolio[$counterImages]['address'].'" alt="ALT" class="img-fluid pb-3 news-img-style">
+                          <button type="button" class="close d-flex flex-column justify-content-start pointer" aria-label="Close">
+                              <span>&times;</span>
+                          </button>
+                        </div>';
+                }
+              }
+            }
+            echo                    '</div></div>
+                                        <div class="form-group d-flex flex-column">
+                                          <select name="selecter" class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                            <option selected>Добавить</option>
+                                            <option value="1" >Видео</option>
+                                            <option value="2">Изображение</option>
+                                          </select>
+                                          <input hidden class="my-3" type="text">
+                                          <input hidden type="file">
+                                        </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-purple-outline pointer" data-dismiss="modal">Закрыть</button>
+                                    <button type="submit" class="btn btn-purple-outline pointer">Применить изменения</button>
+                                </div>
+                            </form>
                         </div>
-
-                        <!-- ГАЗИНУР, выбор заливать видео или изображения -->
-                        <div class="form-group d-flex flex-column">
-                            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                                <option selected>Добавить</option>
-                                <option value="1">Видео</option>
-                                <option value="2">Изображение</option>
-                            </select>
-                            <input hidden class="my-3" type="text">
-                            <input hidden type="file">
-                        </div>    
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-purple-outline pointer" data-dismiss="modal">Закрыть</button>
-                        <button type="submit" class="btn btn-purple-outline pointer">Применить изменения</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+                </div>';
+          }
+        }
+    ?>
 
     <!-- ГАЗИНУР, модальное окно для добавления новой работы в "ПОРТФОЛИО" находится тут -->
     <div class="modal fade" id="modalPortfolio_add" tabindex="-1" role="dialog" aria-labelledby="modalPortfolio_addLabel" aria-hidden="true">
@@ -332,7 +352,7 @@
                             </select>
                             <input hidden class="my-3" type="text">
                             <input hidden type="file">
-                        </div>     
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-purple-outline pointer" data-dismiss="modal">Закрыть</button>
