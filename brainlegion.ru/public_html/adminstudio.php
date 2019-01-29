@@ -296,13 +296,24 @@
             }
             echo                    '</div></div>
                                         <div class="form-group d-flex flex-column">
-                                          <select name="selecter" class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                                            <option selected>Добавить</option>
-                                            <option value="1" >Видео</option>
-                                            <option value="2">Изображение</option>
-                                          </select>
-                                          <input hidden class="my-3" type="text">
-                                          <input hidden type="file">
+                                          <input type="radio" id="video" name="r1" onclick="disp(document.getElementById(\'videoInput\'))"> Видео
+                                          
+
+                                          <form id="test">
+                                              
+                                          </form>
+
+                                          <!-- Скрытая форма для добавления видео -->
+                                          <form name="video" id="videoInput" style="display: none;">
+                                              <input type="file">
+                                          </form>
+
+                                          <input type="radio" id="image" name="r1" onclick="disp(document.getElementById(\'imageInput\'))"> Изображение
+                                          
+                                          <!-- Скрытая форма для добавления видео -->
+                                          <form name="image" id="imageInput" style="display: none;">
+                                              <input type="text">
+                                          </form>
                                         </div>
                                 </div>
                                 <div class="modal-footer">
@@ -365,6 +376,7 @@
         </div>
     </div>
 
+    <script src="res/js/showInputs.js"></script>
 
     <!-- Bootstrap js -->
     <script src="res/jquery/jquery-3.2.1.min.js"></script>
