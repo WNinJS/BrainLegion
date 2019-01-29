@@ -671,3 +671,7 @@ a.btn-primary:hover {
     background-size: cover;
   }
 }
+
+.heightCards {
+  min-height: 450px;
+}
