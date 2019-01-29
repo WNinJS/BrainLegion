@@ -1,3 +1,6 @@
+<?
+  require 'functions/functions.php';
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -47,91 +50,55 @@
                     <li class="nav-item">
                         <a href="adminstudio.php" class="nav-link text-purple"><span>Studio</span></a>
                     </li>
-                    <!-- ГАЗИНУР, Логаут и завершение сессии -->
+                    <!-- Логаут и завершение сессии -->
                     <li class="nav-item">
-                        <a href="adminlogin.php" class="nav-link text-purple"><span>Logout</span></a>
+                        <a href="logOut.php" class="nav-link text-purple"><span>Logout</span></a>
                     </li>
                 </ul>
             </div>
         </nav>
     </div>
     <div class="container-fluid h-100 w-100">
-        <div class="row d-flex flex-column р-100 w-100" > 
+        <div class="row d-flex flex-column р-100 w-100" >
         <p class="dropChanges">
                 <button class="btn btnSize btn-purple-outline pointer" data-toggle="collapse" href="#areaOfWork" aria-expanded="false" aria-controls="collapseExample">
                     Направления работы
                 </button>
 <!-- Газинур, кнопка добавления направления работы тут -->
-                <button class="my-0 mx-2 btn btn-purple-outline pointer" data-toggle="modal" data-target="#addWorkField" aria-expanded="false"> + 
+                <button class="my-0 mx-2 btn btn-purple-outline pointer" data-toggle="modal" data-target="#addWorkField" aria-expanded="false"> +
                 </button>
         </p>
 
 
 
             <div class="collapse" id="areaOfWork">
-                <div class="card card-block dropChangesInfoField fieldChanges">
-                    <!-- Studio -->
-                    <div class="card-container col-sm-12 col-md-12 col-lg-4 p-2">
-                        <div class="card card-half-transparent h-100 d-flex flex-column align-items-center">
-                            <a href="studio.php" class="card-img-logo "><img src="res/img/logos/brainlegion_studio.svg" class="img-fluid card-logo-style"  alt=""></a>
-                            <div class="card-body d-flex flex-column text-center">
-                                <h4 class="card-title text-center"><b>BL Studio</b></h4>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur culpa officia, eos commodi illo numquam! Tenetur facere itaque et, veniam reprehenderit rerum consequuntur cumque ut maiores quos mollitia, excepturi suscipit atque, sapiente ipsa explicabo sint dolore earum, repudiandae fugiat minus officia ipsam odit. Iure corporis, ea officiis est eaque temporibus, quibusdam similique consequatur id distinctio quas rem possimus vel, reiciendis quasi molestias. Fuga, ad tempore corrupti suscipit libero natus? Ipsam!</p>
-        <!--ГАЗИНУР, Кнопка удалить и вывод из БД-->                            
-                                <br>
-                                  <div class=" w-100 d-flex justify-content-around">
-                                    <button type="button" class="btn btn-purple-outline pointer" data-toggle="modal" data-target="#myModal">Редактировать
-                                    </button>
-                                    <form action="" method="POST">
-                                        <button type="submit" class="btn btn-purple-outline pointer">Удалить
+                <div class="card card-block dropChangesInfoField fieldChanges d-flex flex-wrap">
+                  <?
+                    $allDataFromWaysOfDev = getFromOneTable('waysOfDevelopment');
+                    for($counter = 0; $counter < count($allDataFromWaysOfDev); $counter++)
+                    {
+                      echo '<div class="card-container col-sm-12 col-md-12 col-lg-4 p-2">
+                              <div class="card card-half-transparent h-100 d-flex flex-column align-items-center">
+                                <a href="'.$allDataFromWaysOfDev[$counter]['link'].'" class="card-img-logo "><img src="'.$allDataFromWaysOfDev[$counter]['logo'].'" class="img-fluid card-logo-style"  alt=""></a>
+                                <div class="card-body d-flex flex-column text-center">
+                                    <h4 class="card-title text-center"><b>'.$allDataFromWaysOfDev[$counter]['title'].'</b></h4>
+                                    <p class="card-text">'.$allDataFromWaysOfDev[$counter]['description'].'</p>
+                                    <br>
+                                      <div class=" w-100 d-flex justify-content-around">
+                                        <button type="button" class="btn btn-purple-outline pointer" data-toggle="modal" data-target="#myModal'.$allDataFromWaysOfDev[$counter]['id'].'">Редактировать
                                         </button>
-                                    </form>
-                                  </div>
+                                        <form action="" method="POST">
+                                            <button name="deleteWay'.$allDataFromWaysOfDev[$counter]['id'].'" type="submit" class="btn btn-purple-outline pointer">Удалить
+                                            </button>
+                                        </form>
+                                      </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <!-- Factory -->
-                    <div class="card-container col-sm-12 col-md-12 col-lg-4 p-2">
-                        <div class="card card-half-transparent h-100 d-flex flex-column align-items-center">
-                            <a href="factory.php" class="card-img-logo "><img src="res/img/logos/brainlegion_factory.svg" class="img-fluid card-logo-style"  alt=""></a>
-                            <div class="card-body d-flex flex-column text-center ">
-                                <h4 class="card-title text-center"><b>BL Factory</b></h4>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur culpa officia, eos commodi illo numquam! Tenetur facere itaque et, veniam reprehenderit rerum consequuntur cumque ut maiores quos mollitia, excepturi suscipit atque, sapiente ipsa explicabo sint dolore earum, repudiandae fugiat minus officia ipsam odit. Iure corporis, ea officiis est eaque temporibus, quibusdam similique consequatur id distinctio quas rem possimus vel, reiciendis quasi molestias. Fuga, ad tempore corrupti suscipit libero natus? Ipsam!</p>
-        <!--ГАЗИНУР, Кнопка удалить и вывод из БД-->  
-                                <br>
-                                  <div class=" w-100 d-flex justify-content-around">
-                                    <button type="button" class="btn btn-purple-outline pointer" data-toggle="modal" data-target="#myModal1">Редактировать
-                                    </button>
-                                    <form action="" method="POST">
-                                        <button type="submit" class="btn btn-purple-outline pointer">Удалить
-                                        </button>
-                                    </form>
-                                  </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Scholae -->
-                    <div class="card-container col-sm-12 col-md-12 col-lg-4 p-2">
-                        <div class="card card-half-transparent h-100 d-flex flex-column align-items-center">
-                            <a href="scholae.php" class="card-img-logo "><img src="res/img/logos/brainlegion_scholae.svg" class="img-fluid card-logo-style"  alt=""></a>
-                            <div class="card-body d-flex flex-column text-center">
-                                <h4 class="card-title text-center"><b>BL Scholae</b></h4>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur culpa officia, eos commodi illo numquam! Tenetur facere itaque et, veniam reprehenderit rerum consequuntur cumque ut maiores quos mollitia, excepturi suscipit atque, sapiente ipsa explicabo sint dolore earum, repudiandae fugiat minus officia ipsam odit. Iure corporis, ea officiis est eaque temporibus, quibusdam similique consequatur id distinctio quas rem possimus vel, reiciendis quasi molestias. Fuga, ad tempore corrupti suscipit libero natus? Ipsam!</p>
-        <!--ГАЗИНУР, Кнопка удалить и вывод из БД-->                            
-                                 <br>
-                                  <div class=" w-100 d-flex justify-content-around">
-                                    <button type="button" class="btn btn-purple-outline pointer" data-toggle="modal" data-target="#myModal2">Редактировать</button>
-                                    <form action="" method="POST">
-                                        <button type="submit" class="btn btn-purple-outline pointer">Удалить
-                                        </button>
-                                    </form>
-                                  </div>
-                            </div>
-                        </div>
-                    </div>
+                        </div>';
+                    }
+                  ?>
                 </div>
-            </div>   
+            </div>
 
         <!-- NEWS TAB -->
             <p class="dropChanges">
@@ -139,7 +106,7 @@
                     Новости
                 </button>
                 <!-- Газинур, кнопка добавления новости тут -->
-                <button class="my-0 mx-2 btn btn-purple-outline pointer" data-toggle="modal" data-target="#addNews" aria-expanded="false"> + 
+                <button class="my-0 mx-2 btn btn-purple-outline pointer" data-toggle="modal" data-target="#addNews" aria-expanded="false"> +
                 </button>
             </p>
     <div class="collapse" id="news">
@@ -204,54 +171,80 @@
             </div>
         </div>
     </div>
-    </div>  
     </div>
     </div>
-    
-    
+    </div>
+
+
     <!-- Top Navigation
     <script src="res/js/dropMenu.js"></script>
     -->
 
 
-<!-- Модальное окно для BL STUDIO
-Газик, нужны такие же для других разделов-->
+<?
+  for($counter = 0; $counter < count($allDataFromWaysOfDev); $counter++)
+  {
+    echo '<div class="modal fade" id="myModal'.$allDataFromWaysOfDev[$counter]['id'].'" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Редактирование</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
 
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Редактирование</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <form action="" method="POST">
-              <div class="modal-body">
-                  <div class="form-group">
-                    <label for="title" class="col-form-label">Заголовок направленя</label>
-                    <input type="text" class="form-control" id="recipient-name">
+                  <form action="" method="POST">
+                  <div class="modal-body">
+                      <div class="form-group">
+                        <label for="title" class="col-form-label">Заголовок направления</label>
+                        <input name="titleForEditWay" type="text" class="form-control" id="recipient-name" value="'.$allDataFromWaysOfDev[$counter]['title'].'">
+                      </div>
+                      <div class="form-group">
+                        <label for="discription" class="col-form-label">Описание направления</label>
+                        <textarea name="textForEditWay" class="form-control" id="message-text">'.$allDataFromWaysOfDev[$counter]['description'].'</textarea>
+                      </div>
+                      <div class="form-group">
+                        <label >Выберите логотип направления</label>
+                        <input type="text" name="logoForEditWay" class="form-control" value="'.$allDataFromWaysOfDev[$counter]['logo'].'">
+                      </div>
+                      <div class="form-group">
+                        <label>Напишите на что будет ссылаться данная статья</label>
+                        <input type="text" name="linkForEditWay" value="'.$allDataFromWaysOfDev[$counter]['link'].'">
+                      </div>
                   </div>
-                  <div class="form-group">
-                    <label for="discription" class="col-form-label">Описание направления</label>
-                    <textarea class="form-control" id="message-text"></textarea>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-purple-outline pointer" data-dismiss="modal">Закрыть</button>
+                    <button name="editWay'.$allDataFromWaysOfDev[$counter]['id'].'" type="submit" class="btn btn-purple-outline pointer">Применить изменения</button>
                   </div>
-                  <div class="form-group">
-                    <label >Выберите логотип направления</label>
-                    <input type="file" name='logo'>                
-                  </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-purple-outline pointer" data-dismiss="modal">Закрыть</button>
-                <button type="submit" class="btn btn-purple-outline pointer">Применить изменения</button>
-              </div>                 
-              </form>
+                  </form>
+                </div>
             </div>
         </div>
-</div>
-</div>
+    </div>';
+  }
 
-    <!-- MODALS FOR NEWS 
+  for($counter = 0; $counter < count($allDataFromWaysOfDev); $counter++)
+  {
+    $dataFromPost = $_POST;
+    if(isset($dataFromPost['editWay'.$allDataFromWaysOfDev[$counter]['id']]))
+    {
+      $GLOBALS['mysqli']->query("UPDATE `waysOfDevelopment` SET `title` = '".$dataFromPost['titleForEditWay']."',
+                                `description` = '".$dataFromPost['textForEditWay']."',
+                                `logo` = '".$dataFromPost['logoForEditWay']."',
+                                `link` = '".$dataFromPost['linkForEditWay']."' WHERE `waysOfDevelopment`.`id` = ".$allDataFromWaysOfDev[$counter]['id'].";");
+      echo '<script>document.location.href="adminmain.php"</script>';
+    }
+
+    if(isset($dataFromPost['deleteWay'.$allDataFromWaysOfDev[$counter]['id']]))
+    {
+      $GLOBALS['mysqli']->query("DELETE FROM `waysOfDevelopment` WHERE `waysOfDevelopment`.`id` = ".$allDataFromWaysOfDev[$counter]['id'].";");
+      echo '<script>document.location.href="adminmain.php"</script>';
+    }
+  }
+?>
+
+    <!-- MODALS FOR NEWS
         В них же записываются даннеы из БД с возможностью редактирования-->
 <!-- Новость 1 -->
 <div class="modal fade" id="New1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
@@ -287,8 +280,8 @@
                   <div class="form-group">
                     <label >Изображение</label>
                     <br>
-                    <input type="file" name='logo'>                
-                  </div>     
+                    <input type="file" name='logo'>
+                  </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-purple-outline pointer" data-dismiss="modal">Закрыть</button>
@@ -332,8 +325,8 @@
                   <div class="form-group">
                     <label >Изображение</label>
                     <br>
-                    <input type="file" name='logo'>                
-                  </div>      
+                    <input type="file" name='logo'>
+                  </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-purple-outline pointer" data-dismiss="modal">Закрыть</button>
@@ -377,8 +370,8 @@
                   <div class="form-group">
                     <label >Изображение</label>
                     <br>
-                    <input type="file" name='logo'>                
-                  </div>       
+                    <input type="file" name='logo'>
+                  </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-purple-outline pointer" data-dismiss="modal">Закрыть</button>
@@ -403,30 +396,48 @@
                 <form method="POST">
                     <div class="modal-body">
 
-                        <!-- ГАЗИНУР, тут заголовок, который добавляется в бд -->
+                        <!-- тут заголовок, который добавляется в бд -->
                         <div class="form-group">
                             <label for="title" class="col-form-label">Название направления</label>
-                            <input type="text" class="form-control" id="title">
+                            <input type="text" name="titleForAddWay" class="form-control" id="title">
                         </div>
 
-                        <!-- ГАЗИНУР, тут описание добавляется в бд -->
+                        <!-- тут описание добавляется в бд -->
                         <div class="form-group">
                             <label for="discriptionPortfolio" class="col-form-label">Описание направления</label>
-                            <textarea class="form-control" id="discriptionPortfolio"></textarea>
-                            <label for="">Логотип направления</label>
-                            <br>
-                            <input type="file">
-                        </div>    
+                            <textarea class="form-control" name="textForAddWay" id="discriptionPortfolio"></textarea>
+                        </div>
+                        <div class="form-group">
+                          <label >Выберите логотип направления</label>
+                          <input type="text" name="logoForAddWay" class="form-control" >
+                        </div>
+                        <div class="form-group">
+                          <label>Напишите на что будет ссылаться данная статья</label>
+                          <input type="text" name="linkForAddWay" class="form-control" >
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-purple-outline pointer" data-dismiss="modal">Закрыть</button>
                         <!-- По нажатию на эту кнопку все данные отсюда добавляются в бд и отображаются на сайте -->
-                        <button type="submit" class="btn btn-purple-outline pointer">Добавить</button>
+                        <button type="submit" name="addWay" class="btn btn-purple-outline pointer">Добавить</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
+
+    <?
+      if(isset($_POST['addWay']))
+      {
+        $GLOBALS['mysqli']->query("INSERT INTO `waysOfDevelopment`(`title`, `description`, `logo`, `link`)
+                                  VALUES ('".$_POST['titleForAddWay']."',
+                                          '".$_POST['textForAddWay']."',
+                                          '".$_POST['logoForAddWay']."',
+                                          '".$_POST['linkForAddWay']."')");
+        echo '<script>document.location.href="adminmain.php"</script>';
+      }
+    ?>
+
 <!-- MODAL FOR ADDING NEWS -->
    <div class="modal fade" id="addNews" tabindex="-1" role="dialog" aria-labelledby="modalPortfolio_addLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
@@ -453,7 +464,7 @@
                             <label for="">Изображение</label>
                             <br>
                             <input type="file">
-                        </div>    
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-purple-outline pointer" data-dismiss="modal">Закрыть</button>
