@@ -2,10 +2,10 @@
 -- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
--- Хост: 127.0.0.1:3307
--- Время создания: Янв 23 2019 г., 14:33
--- Версия сервера: 5.7.23
--- Версия PHP: 7.2.10
+-- Host: 127.0.0.1:3307
+-- Generation Time: Jan 30, 2019 at 05:43 PM
+-- Server version: 5.7.23
+-- PHP Version: 7.2.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- База данных: `brainlegion`
+-- Database: `brainlegion`
 --
 CREATE DATABASE IF NOT EXISTS `brainlegion` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `brainlegion`;
@@ -27,7 +27,7 @@ USE `brainlegion`;
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `geneinfo`
+-- Table structure for table `geneinfo`
 --
 
 DROP TABLE IF EXISTS `geneinfo`;
@@ -39,10 +39,10 @@ CREATE TABLE `geneinfo` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Дамп данных таблицы `geneinfo`
+-- Dumping data for table `geneinfo`
 --
 
-INSERT INTO `geneinfo` (`id`, `name`, `locus`, `alleles`) VALUES
+INSERT DELAYED INTO `geneinfo` (`id`, `name`, `locus`, `alleles`) VALUES
 (1, 'ACNT3', 'c.1858C>T, p.Arg577Ter', '1-С 2-Т'),
 (2, 'IL6', '174C>G', '1-С 2-G'),
 (3, 'AGT', 'Met235Thr, T704C', '1-T 2-C'),
@@ -170,7 +170,7 @@ INSERT INTO `geneinfo` (`id`, `name`, `locus`, `alleles`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `geneorders`
+-- Table structure for table `geneorders`
 --
 
 DROP TABLE IF EXISTS `geneorders`;
@@ -182,10 +182,10 @@ CREATE TABLE `geneorders` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Дамп данных таблицы `geneorders`
+-- Dumping data for table `geneorders`
 --
 
-INSERT INTO `geneorders` (`id`, `gene_id`, `order_id`, `value`) VALUES
+INSERT DELAYED INTO `geneorders` (`id`, `gene_id`, `order_id`, `value`) VALUES
 (1, 12, 1, 'CC'),
 (2, 28, 1, 'AG'),
 (3, 31, 1, 'CC'),
@@ -391,7 +391,7 @@ INSERT INTO `geneorders` (`id`, `gene_id`, `order_id`, `value`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `genetest`
+-- Table structure for table `genetest`
 --
 
 DROP TABLE IF EXISTS `genetest`;
@@ -402,10 +402,10 @@ CREATE TABLE `genetest` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Дамп данных таблицы `genetest`
+-- Dumping data for table `genetest`
 --
 
-INSERT INTO `genetest` (`id`, `test_code`, `gene_id`) VALUES
+INSERT DELAYED INTO `genetest` (`id`, `test_code`, `gene_id`) VALUES
 (1, 'ДТ.1.1', 8),
 (2, 'ДТ.1.1', 29),
 (3, 'ДТ.1.1', 32),
@@ -608,7 +608,39 @@ INSERT INTO `genetest` (`id`, `test_code`, `gene_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `orders`
+-- Table structure for table `news`
+--
+
+DROP TABLE IF EXISTS `news`;
+CREATE TABLE `news` (
+  `id` int(4) NOT NULL,
+  `title` varchar(250) NOT NULL,
+  `description` text NOT NULL,
+  `contacts` varchar(250) NOT NULL,
+  `img` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `news`
+--
+
+INSERT DELAYED INTO `news` (`id`, `title`, `description`, `contacts`, `img`) VALUES
+(1, 'Детская форсайт-школа', 'С 21 по 23 апреля в г. Анапа в центре профессий «Парк Будущего» для участников профильной смены «Инженеры будущего: 3D технологии в образовании» в рамках смены «Город Мастеров» была организована форсайт-школа. Данное мероприятие посетили около 100 учеников младших классов со всей России.\r\n\r\nФорсайт – это социальная технология (сессия), формат коммуникации, который дает участникам возможность договориться по поводу образа будущего, а также, определив желаемый образ будущего, договориться о действиях в его контексте.\r\n\r\nВ течение трех дней участники «проектировали будущее» по руководством команды специалистов из Москвы и Уфы. Команда модераторов BrainLegion приняла участие в работе и оказали содействие в организации мероприятия.', '#BrainLegion #BrainLegion_Уфа #паркбудущего #3Dтехнологии #форсайт\r\n\r\n', 'res\\img\\news\\24.jpg'),
+(2, 'Что такое 3D-визуализация?\r\n', '3D-визуализация – является неотъемлемой составляющей архитектурного проектирования, позволяющая графически создать экстерьер здания и интерьер помещений максимальной реалистичности. Результатом разработки становится объемное изображение предмета или объекта с реалистичными размерами, фактурой, цветом и освещением. Любой из этих параметров может быть в последствие изменен в течение нескольких минут.\r\n\r\nПрофессионально сделанная визуализация позволит вам ознакомиться с дизайнерским решением. Она сможет наиболее достоверно продемонстрировать важные моменты, воспроизвести свет в различных положениях, точно организовать дизайн света и цветовые комбинации. Художественная подача от наших дизайнеров великолепно отражает атмосферу и свежий взгляд на интерьер. Вы сможете посмотреть объект с различных углов, с различным освещением, задать время суток и другие параметры.\r\n\r\nМы представляем услуги по созданию интерьеров и экстерьеров от 3D-визуализации до их реализации в жизнь. Если у Вас есть только идея, то мы сами продумаем дизайн-проект до мелочей, предложим несколько эскизов и реализуем задумку в кратчайшие сроки. При необходимости осуществляем авторский надзор или ремонтные работы «под ключ», привлекая самых компетентных специалистов. Успейте до конца мая заказать дизайн-проект по специальной сниженной цене.', 'Подробнее на сайте или по телефону: +7 937 326-11-85\r\n\r\n', 'res\\img\\news\\дом.png'),
+(3, 'Получите подарок при заказе 3D-тура\r\n', 'На сегодняшний день качество виртуальных 3D-туров зачастую оставляет желать лучшего. А о том, что виртуальный тур – это не просто красивая визуализация, а реальный инструмент продаж, большинство дизайнеров даже не догадываются. Качественно разработанная 3D-панорама может значительно увеличивать конверсию и продажи вашего бизнеса. Один из ярких примеров – астраханская база отдыха «Золотой лотос», которая заработала 1 000 000 рублей за неделю, благодаря грамотно созданному виртуальному туру.\r\n\r\nТрёхмерное изображение панорамы позволяет создать ощущение реальности и присутствия непосредственно \"внутри\" объекта. Также в виртуальный тур можно интегрировать звуковое сопровождение, видео и многое другое. Возможность поворота на 360 градусов даёт полный обзор помещения. Все так, как если бы человек находился реально в самом помещении. Виртуальный тур поможет на все 100% увидеть и оценить привлекательность вашего объекта. При просмотре панорам ваши клиенты смогут приближать интересующие их объекты, перемещаться из одного помещения в другое и, конечно, захотят посетить его.\r\n\r\nЕсли у Вас еще нет 3D тура, свяжитесь с нами. Мы будем рады создать высококачественную панораму для Вашего бизнеса. До конца мая у нас действует специальное предложение, по которому можно получить карту тура в подарок.', 'Подробнее на сайте или по телефону: +7 937 326-11-85', 'res/img/news/вирттур.jpg'),
+(4, '1', '', '', 'res\\img\\news\\21.jpg'),
+(5, '1', '', '', 'res\\img\\news\\22.jpg'),
+(6, '2', '', '', 'res\\img\\news\\кухня.jpg'),
+(7, '2', '', '', 'res\\img\\news\\спальня1.jpg'),
+(8, '2', '', '', 'res\\img\\news\\гостинная_2.jpg'),
+(9, '2', '', '', 'res\\img\\news\\дом2.jpg'),
+(10, '2', '', '', 'res\\img\\news\\дом3.jpg'),
+(11, '3', '', '', 'res/tour2/office.html');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `orders`
 --
 
 DROP TABLE IF EXISTS `orders`;
@@ -629,10 +661,10 @@ CREATE TABLE `orders` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Дамп данных таблицы `orders`
+-- Dumping data for table `orders`
 --
 
-INSERT INTO `orders` (`id`, `patient_id`, `order_no`, `date`, `user_id`, `cost`, `paymentmethod`, `discount`, `org_id`, `ready`, `state`, `tests_list`, `extra`) VALUES
+INSERT DELAYED INTO `orders` (`id`, `patient_id`, `order_no`, `date`, `user_id`, `cost`, `paymentmethod`, `discount`, `org_id`, `ready`, `state`, `tests_list`, `extra`) VALUES
 (1, 5, 'A-01', '2018-04-05', 1, 3700, 'Нал.', 10, 1, 1, 'Готов к отправке', 'ДТ.1.4', ''),
 (2, 7, 'A-02', '2018-04-05', 1, 3700, 'Нал.', 0, 2, 1, 'Не готов к отправке', 'ДТ.1.4', ''),
 (3, 6, 'A-03', '2018-04-05', 1, 2700, 'Нал.', 0, 2, 1, 'Не готов к отправке', 'ДТ.1.2', ''),
@@ -665,7 +697,7 @@ INSERT INTO `orders` (`id`, `patient_id`, `order_no`, `date`, `user_id`, `cost`,
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `organizations`
+-- Table structure for table `organizations`
 --
 
 DROP TABLE IF EXISTS `organizations`;
@@ -679,10 +711,10 @@ CREATE TABLE `organizations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Дамп данных таблицы `organizations`
+-- Dumping data for table `organizations`
 --
 
-INSERT INTO `organizations` (`id`, `position`, `name`, `contact`, `email`, `phone`) VALUES
+INSERT DELAYED INTO `organizations` (`id`, `position`, `name`, `contact`, `email`, `phone`) VALUES
 (1, '', 'Школа здоровья \"Regina Doctor\"', '', 'reginadoctor.info@gmail.com', ''),
 (2, 'Врач', 'Больница 21', ' Радик Зуфарович', '', '03'),
 (3, 'asdaq', 'asda', 'easdasdqwdas asd asdas', 'asda', 'asd'),
@@ -691,7 +723,7 @@ INSERT INTO `organizations` (`id`, `position`, `name`, `contact`, `email`, `phon
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `patients`
+-- Table structure for table `patients`
 --
 
 DROP TABLE IF EXISTS `patients`;
@@ -708,10 +740,10 @@ CREATE TABLE `patients` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Дамп данных таблицы `patients`
+-- Dumping data for table `patients`
 --
 
-INSERT INTO `patients` (`id`, `Name`, `birthday`, `height`, `weight`, `sex`, `regday`, `phone`, `email`) VALUES
+INSERT DELAYED INTO `patients` (`id`, `Name`, `birthday`, `height`, `weight`, `sex`, `regday`, `phone`, `email`) VALUES
 (6, 'Флэр Эшли Элизабет', '1986-04-05', 178, 64, 'муж.', '2018-03-30', '+12323435346', 'woooo@wwe.com'),
 (7, 'Кестнер-Варнадо Мерседес ', '1992-01-26', 165, 52, 'жен.', '2018-03-30', '', 'boss@wwe.com'),
 (10, 'Раузи Ронда Джин', '1987-02-01', 170, 61, 'жен.', '2018-04-11', '', ''),
@@ -721,7 +753,7 @@ INSERT INTO `patients` (`id`, `Name`, `birthday`, `height`, `weight`, `sex`, `re
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `portfolio`
+-- Table structure for table `portfolio`
 --
 
 DROP TABLE IF EXISTS `portfolio`;
@@ -735,10 +767,10 @@ CREATE TABLE `portfolio` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Дамп данных таблицы `portfolio`
+-- Dumping data for table `portfolio`
 --
 
-INSERT INTO `portfolio` (`id`, `type`, `address`, `title`, `info`, `video`) VALUES
+INSERT DELAYED INTO `portfolio` (`id`, `type`, `address`, `title`, `info`, `video`) VALUES
 (1, 'hotel', 'res/img/portfolio/hotel/1.jpg', '3D моделирование и фотореалистичная визуализация гостиницы', 'Представлены 3D визуализации экстерьера гостиницы в нескольких ракурсах. Высокая детализация визуализации позволила показать потенциальному заказчику будущую атмосферу строящейся гостиницы.', NULL),
 (2, 'interior', 'res/img/portfolio/interior/1.jpg', '3D визуализация интерьера квартиры в многоквартирном  доме', 'Дизайн выполнен в классическом стиле. Цель визуализации — продемонстрировать интерьер квартиры для потенциальных покупателей.', NULL),
 (3, 'furniture', 'res/img/portfolio/furniture/1.jpg', '3D моделирование и визуализации мебели', 'Создание коллекции 3D моделей мебели в различных форматах для последующего использования дизайнерами в своих проектах. 3D моделей мебели выполнена с максимально возможной прорисовкой деталей с последующей фото реалистичной визуализацией.', NULL),
@@ -777,7 +809,6 @@ INSERT INTO `portfolio` (`id`, `type`, `address`, `title`, `info`, `video`) VALU
 (36, 'devices', 'res/img/portfolio/devices/3.jpg', NULL, NULL, NULL),
 (37, 'devices', 'res/img/portfolio/devices/4.jpg', NULL, NULL, NULL),
 (38, 'buildings', 'res/img/portfolio/buildings/1.jpg', NULL, NULL, NULL),
-(39, 'buildings', 'res/img/portfolio/buildings/2.jpg', NULL, NULL, NULL),
 (40, 'buildings', 'res/img/portfolio/buildings/3.jpg', NULL, NULL, NULL),
 (41, 'buildings', 'res/img/portfolio/buildings/4.jpg', NULL, NULL, NULL),
 (42, 'buildings', 'res/img/portfolio/buildings/5.jpg', NULL, NULL, NULL),
@@ -787,7 +818,7 @@ INSERT INTO `portfolio` (`id`, `type`, `address`, `title`, `info`, `video`) VALU
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `schedule`
+-- Table structure for table `schedule`
 --
 
 DROP TABLE IF EXISTS `schedule`;
@@ -799,10 +830,10 @@ CREATE TABLE `schedule` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Дамп данных таблицы `schedule`
+-- Dumping data for table `schedule`
 --
 
-INSERT INTO `schedule` (`id`, `Date`, `Time`, `value`) VALUES
+INSERT DELAYED INTO `schedule` (`id`, `Date`, `Time`, `value`) VALUES
 (1, '2018-03-15', '08:00:00', '4'),
 (2, '2018-03-14', '09:30:00', '2'),
 (3, '2018-03-22', '08:30:00', '7'),
@@ -817,7 +848,7 @@ INSERT INTO `schedule` (`id`, `Date`, `Time`, `value`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `services`
+-- Table structure for table `services`
 --
 
 DROP TABLE IF EXISTS `services`;
@@ -829,10 +860,10 @@ CREATE TABLE `services` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Дамп данных таблицы `services`
+-- Dumping data for table `services`
 --
 
-INSERT INTO `services` (`id`, `title`, `description`, `link`) VALUES
+INSERT DELAYED INTO `services` (`id`, `title`, `description`, `link`) VALUES
 (1, '3D визуализация модели', 'Визуализация 3D моделей стала широко распространена в любой отрасли. 3D модели зданий, мебели, машин, персонажей и многих других объектов используются в рекламе, при разработке моделей для 3D принтеров, в автомобильной промышленности, в компьютерных играx. Во всех этих областях очень важно иметь высококачественные детализированные точные модели, что может предоставить наша студия.\r\n\r\n', NULL),
 (2, '3D визуализация интерьера', '3D моделирование интерьеров является необходимым этапом при проектировании жилых и нежилых помещений. Студия 3D визуализации BrainLegion выполняет моделирование интерьеров по вашим чертежам, дизайн проектам, а так же фото. Большим преимуществом при заказе 3D визуализации в компании BrainLegion служит то, что по вашему желанию моделируемый интерьер текстурируется с использованием реальных отделочных материалов, что позволит Вам увидеть точное изображение помещения до начала ремонтных работ.', 'res/tour/Apartment1.html'),
 (3, '3D визуализация экстерьера', 'Студия BrainLegion разрабатывает 3D визуализацию экстерьеров по Вашим эскизам, чертежам, по файлам специализированных программ проектирования, а так же по фото. Мы гарантируем детальную проработку Ваших проектов независимо от сложности сцены, таких как проект дома, коттеджа, магазина или целого микрорайона.', NULL),
@@ -847,7 +878,7 @@ INSERT INTO `services` (`id`, `title`, `description`, `link`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `tests`
+-- Table structure for table `tests`
 --
 
 DROP TABLE IF EXISTS `tests`;
@@ -860,10 +891,10 @@ CREATE TABLE `tests` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Дамп данных таблицы `tests`
+-- Dumping data for table `tests`
 --
 
-INSERT INTO `tests` (`test`, `price`, `id`, `type`, `test_code`) VALUES
+INSERT DELAYED INTO `tests` (`test`, `price`, `id`, `type`, `test_code`) VALUES
 ('Определение усвояемости жиров и углеводов', 3100, 1, 'Диета', 'ДТ.1.1'),
 ('Определение усвояемости соли (риск набора лишнего веса)', 2700, 2, 'Диета', 'ДТ.1.2'),
 ('Определение усвояемости фруктозы и глюкозы (риск набора лишнего веса)', 3800, 3, 'Диета', 'ДТ.1.3'),
@@ -946,166 +977,211 @@ INSERT INTO `tests` (`test`, `price`, `id`, `type`, `test_code`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `users`
+-- Table structure for table `users`
 --
 
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
-  `login` varchar(12) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `name` varchar(12) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `pswd` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `role` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `id` int(4) NOT NULL,
+  `login` varchar(12) NOT NULL,
+  `password` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Дамп данных таблицы `users`
+-- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `login`, `name`, `pswd`, `role`) VALUES
-(1, 'admin', 'Админ', '9a286406c252a3d14218228974e1f567', 'administrator'),
-(2, 'manager', 'Менеджер', '9a286406c252a3d14218228974e1f567', 'manager'),
-(3, 'user1', 'Юзер', 'cfcd208495d565ef66e7dff9f98764da', 'user');
+INSERT DELAYED INTO `users` (`id`, `login`, `password`) VALUES
+(3, 'admin', '$2y$10$iT.S6WVwe/JC8.QDYFTXz.36BicSD8DnVuOlp1O7C7NNXI71QFpVS');
+
+-- --------------------------------------------------------
 
 --
--- Индексы сохранённых таблиц
+-- Table structure for table `waysofdevelopment`
+--
+
+DROP TABLE IF EXISTS `waysofdevelopment`;
+CREATE TABLE `waysofdevelopment` (
+  `id` int(4) NOT NULL,
+  `title` varchar(100) NOT NULL,
+  `description` text NOT NULL,
+  `logo` varchar(250) NOT NULL,
+  `link` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `waysofdevelopment`
+--
+
+INSERT DELAYED INTO `waysofdevelopment` (`id`, `title`, `description`, `logo`, `link`) VALUES
+(1, 'BL Studio', 'Студия цифрового дизайна и креативных событий.\r\n\r\nВизуализация, 3D-панорамы и рекламные ролики любой сложности.\r\n\r\nОрганизация мероприятий «под ключ»: конференций, стратегических сессий, хакатонов и др.', 'res/img/logos/brainlegion_studio.svg', 'studio.php'),
+(2, 'BL Factory', 'Научно-инженерный комплекс для решения сложных задач бизнеса.\r\n\r\nIT-автоматизация бизнес-процессов, CRM-системы, Блокчейн и Смарт-контракты.\r\n\r\n3D-моделирование и расчеты, НИОКРТ «под ключ», прототипирование и макетирование.', 'res/img/logos/brainlegion_factory.svg', 'factory.php'),
+(3, 'BL Scholae\r\n', 'Современная обучающая площадка по компетенциям Цифровой экономики.\r\n\r\nПрактико-ориентированное обучение детей и молодежи, подготовка компетентных специалистов под разнообразные задачи бизнеса.\r\n\r\nАкселерация инновационных и социальных проектов, поиск инвестиций и партнеров.', 'res/img/logos/brainlegion_scholae.svg', 'scholae.php');
+
+--
+-- Indexes for dumped tables
 --
 
 --
--- Индексы таблицы `geneinfo`
+-- Indexes for table `geneinfo`
 --
 ALTER TABLE `geneinfo`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `geneorders`
+-- Indexes for table `geneorders`
 --
 ALTER TABLE `geneorders`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `genetest`
+-- Indexes for table `genetest`
 --
 ALTER TABLE `genetest`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `orders`
+-- Indexes for table `news`
+--
+ALTER TABLE `news`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `orders`
 --
 ALTER TABLE `orders`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `organizations`
+-- Indexes for table `organizations`
 --
 ALTER TABLE `organizations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `patients`
+-- Indexes for table `patients`
 --
 ALTER TABLE `patients`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `portfolio`
+-- Indexes for table `portfolio`
 --
 ALTER TABLE `portfolio`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `schedule`
+-- Indexes for table `schedule`
 --
 ALTER TABLE `schedule`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `services`
+-- Indexes for table `services`
 --
 ALTER TABLE `services`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `tests`
+-- Indexes for table `tests`
 --
 ALTER TABLE `tests`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `login` (`login`);
+
+--
+-- Indexes for table `waysofdevelopment`
+--
+ALTER TABLE `waysofdevelopment`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT для сохранённых таблиц
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT для таблицы `geneinfo`
+-- AUTO_INCREMENT for table `geneinfo`
 --
 ALTER TABLE `geneinfo`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=124;
 
 --
--- AUTO_INCREMENT для таблицы `geneorders`
+-- AUTO_INCREMENT for table `geneorders`
 --
 ALTER TABLE `geneorders`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=415;
 
 --
--- AUTO_INCREMENT для таблицы `genetest`
+-- AUTO_INCREMENT for table `genetest`
 --
 ALTER TABLE `genetest`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=203;
 
 --
--- AUTO_INCREMENT для таблицы `orders`
+-- AUTO_INCREMENT for table `news`
+--
+ALTER TABLE `news`
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
--- AUTO_INCREMENT для таблицы `organizations`
+-- AUTO_INCREMENT for table `organizations`
 --
 ALTER TABLE `organizations`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT для таблицы `patients`
+-- AUTO_INCREMENT for table `patients`
 --
 ALTER TABLE `patients`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- AUTO_INCREMENT для таблицы `portfolio`
+-- AUTO_INCREMENT for table `portfolio`
 --
 ALTER TABLE `portfolio`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
--- AUTO_INCREMENT для таблицы `schedule`
+-- AUTO_INCREMENT for table `schedule`
 --
 ALTER TABLE `schedule`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT для таблицы `services`
+-- AUTO_INCREMENT for table `services`
 --
 ALTER TABLE `services`
   MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT для таблицы `tests`
+-- AUTO_INCREMENT for table `tests`
 --
 ALTER TABLE `tests`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
 
 --
--- AUTO_INCREMENT для таблицы `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `waysofdevelopment`
+--
+ALTER TABLE `waysofdevelopment`
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
