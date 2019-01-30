@@ -25,9 +25,13 @@ body {
     flex-direction: row;
 }
 
-.btnSize {
-    min-width: 15vw;
-    box-shadow: non
+.btnsize {
+  width: 170px;
+  height: 40px;
+}
+
+.btnSizeAdd {
+    height: 40px;
 }
 
 @media screen and (max-width: 992px){
