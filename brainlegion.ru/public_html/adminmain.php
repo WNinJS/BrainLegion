@@ -55,14 +55,14 @@
             </div>
         </nav>
     </div>
-    <div class="container-fluid h-100 w-100">
-        <div class="row d-flex flex-column р-100 w-100" >
-        <p class="dropChanges">
-                <button class="btn btnSize btn-purple-outline pointer" data-toggle="collapse" href="#areaOfWork" aria-expanded="false" aria-controls="collapseExample">
+    <div class="container-fluid h-100 w-100 justify-content-center mt-5">
+        <div class="row d-flex flex-column р-100 w-100 justify-content-center m-0">
+        <p class="dropChanges m-0 mx-1">
+                <button class="btn btn-purple-outline pointer btnsize" data-toggle="collapse" href="#areaOfWork" aria-expanded="false" aria-controls="collapseExample">
                     Направления работы
                 </button>
 <!-- Газинур, кнопка добавления направления работы тут -->
-                <button class="my-0 mx-2 btn btn-purple-outline pointer" data-toggle="modal" data-target="#addWorkField" aria-expanded="false"> +
+                <button class="my-0 mx-2 btn btn-purple-outline pointer btnSizeAdd" data-toggle="modal" data-target="#addWorkField" aria-expanded="false"> +
                 </button>
         </p>
 
@@ -81,11 +81,11 @@
                                     <h4 class="card-title text-center"><b>'.$allDataFromWaysOfDev[$counter]['title'].'</b></h4>
                                     <p class="card-text">'.$allDataFromWaysOfDev[$counter]['description'].'</p>
                                     <br>
-                                      <div class=" w-100 d-flex justify-content-around">
-                                        <button type="button" class="btn btn-purple-outline pointer" data-toggle="modal" data-target="#myModal'.$allDataFromWaysOfDev[$counter]['id'].'">Редактировать
+                                      <div class=" w-100 d-flex justify-content-around mt-auto">
+                                        <button type="button" class="btn btn-purple-outline pointer mt-auto" data-toggle="modal" data-target="#myModal'.$allDataFromWaysOfDev[$counter]['id'].'">Редактировать
                                         </button>
                                         <form action="" method="POST">
-                                            <button name="deleteWay'.$allDataFromWaysOfDev[$counter]['id'].'" type="submit" class="btn btn-purple-outline pointer">Удалить
+                                            <button name="deleteWay'.$allDataFromWaysOfDev[$counter]['id'].'" type="submit" class="btn btn-purple-outline pointer mt-auto">Удалить
                                             </button>
                                         </form>
                                       </div>
@@ -98,12 +98,12 @@
             </div>
 
         <!-- NEWS TAB -->
-            <p class="dropChanges">
-                <button class="btn btn-primary btnSize btn-purple-outline btn-purple-outline:hover pointer" data-toggle="collapse" href="#news" aria-expanded="false" aria-controls="collapseExample">
+            <p class="dropChanges d-flex flex-start mx-1">
+                <button class="btn btn-purple-outline pointer btnsize" data-toggle="collapse" href="#news" aria-expanded="false" aria-controls="collapseExample">
                     Новости
                 </button>
                 <!-- Газинур, кнопка добавления новости тут -->
-                <button class="my-0 mx-2 btn btn-purple-outline pointer" data-toggle="modal" data-target="#addNews" aria-expanded="false"> +
+                <button class="my-0 mx-2 btn btn-purple-outline pointer btnSizeAdd" data-toggle="modal" data-target="#addNews" aria-expanded="false"> +
                 </button>
             </p>
     <div class="collapse" id="news">
