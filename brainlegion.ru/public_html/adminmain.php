@@ -81,11 +81,11 @@
                                     <h4 class="card-title text-center"><b>'.$allDataFromWaysOfDev[$counter]['title'].'</b></h4>
                                     <p class="card-text">'.$allDataFromWaysOfDev[$counter]['description'].'</p>
                                     <br>
-                                      <div class=" w-100 d-flex justify-content-around">
-                                        <button type="button" class="btn btn-purple-outline pointer" data-toggle="modal" data-target="#myModal'.$allDataFromWaysOfDev[$counter]['id'].'">Редактировать
+                                      <div class=" w-100 d-flex justify-content-around mt-auto">
+                                        <button type="button" class="btn btn-purple-outline pointer mt-auto" data-toggle="modal" data-target="#myModal'.$allDataFromWaysOfDev[$counter]['id'].'">Редактировать
                                         </button>
                                         <form action="" method="POST">
-                                            <button name="deleteWay'.$allDataFromWaysOfDev[$counter]['id'].'" type="submit" class="btn btn-purple-outline pointer">Удалить
+                                            <button name="deleteWay'.$allDataFromWaysOfDev[$counter]['id'].'" type="submit" class="btn btn-purple-outline pointer mt-auto">Удалить
                                             </button>
                                         </form>
                                       </div>
