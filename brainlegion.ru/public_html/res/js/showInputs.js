@@ -1,14 +1,22 @@
 function disp(form) {
-	if (form.id == "videoInput") 
+	for(var counter = 1; counter < 3; counter++)
 	{
-
-        form.style.display = "block";
-        document.getElementById('imageInput').style.display = "none";
-	}
-	else if (form.id == "imageInput")
-	{
-		form.style.display = "block";
-        document.getElementById('videoInput').style.display = "none";
+		var video = "videoInput" + counter;
+		var image = "imageInput" + counter;
+		if (form.id == video)
+		{
+	        form.style.display = "block";
+	        document.getElementById(image).style.display = "none";
+		}
+		else if (form.id == image)
+		{
+			form.style.display = "block";
+	        document.getElementById(video).style.display = "none";
+		}
 	}
 }
 
+/*
+
+
+*/
