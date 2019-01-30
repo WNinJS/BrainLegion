@@ -55,9 +55,9 @@
             </div>
         </nav>
     </div>
-    <div class="container-fluid h-100 w-100">
-        <div class="row d-flex flex-column р-100 w-100" >
-        <p class="dropChanges mx-1">
+    <div class="container-fluid h-100 w-100 justify-content-center mt-5">
+        <div class="row d-flex flex-column р-100 w-100 justify-content-center m-0">
+        <p class="dropChanges m-0 mx-1">
                 <button class="btn btn-purple-outline pointer btnsize" data-toggle="collapse" href="#areaOfWork" aria-expanded="false" aria-controls="collapseExample">
                     Направления работы
                 </button>
