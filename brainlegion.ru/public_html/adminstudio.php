@@ -288,24 +288,25 @@
                 }
               }
             }
+            $length = count($allDataAboutPorfolio);
             echo                    '</div></div>
                                         <div class="form-group d-flex flex-column">
-                                          <input type="radio" id="video" name="r1" onclick="disp(document.getElementById(\'videoInput\'))"> Видео
-                                          
+                                          <input type="radio" id="video" name="r1" onclick="disp(document.getElementById(\'videoInput'.$allDataAboutPorfolio[$counter]['id'].'\'))"> Видео
+
 
                                           <form id="test">
-                                              
+
                                           </form>
 
                                           <!-- Скрытая форма для добавления видео -->
-                                          <form name="video" id="videoInput" style="display: none;">
+                                          <form name="video" id="videoInput'.$allDataAboutPorfolio[$counter]['id'].'" style="display: none;">
                                               <input type="file">
                                           </form>
 
-                                          <input type="radio" id="image" name="r1" onclick="disp(document.getElementById(\'imageInput\'))"> Изображение
+                                          <input type="radio" id="image" name="r1" onclick="disp(document.getElementById(\'imageInput'.$allDataAboutPorfolio[$counter]['id'].'\'))"> Изображение
 
                                           <!-- Скрытая форма для добавления видео -->
-                                          <form name="image" id="imageInput" style="display: none;">
+                                          <form name="image" id="imageInput'.$allDataAboutPorfolio[$counter]['id'].'" style="display: none;">
                                               <input type="text">
                                           </form>
                                         </div>
