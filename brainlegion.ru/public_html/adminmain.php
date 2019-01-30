@@ -61,7 +61,7 @@
                 <button class="btn btn-purple-outline pointer btnsize" data-toggle="collapse" href="#areaOfWork" aria-expanded="false" aria-controls="collapseExample">
                     Направления работы
                 </button>
-<!-- Газинур, кнопка добавления направления работы тут -->
+<!-- кнопка добавления направления работы тут -->
                 <button class="my-0 mx-2 btn btn-purple-outline pointer btnSizeAdd" data-toggle="modal" data-target="#addWorkField" aria-expanded="false"> +
                 </button>
         </p>
@@ -102,7 +102,7 @@
                 <button class="btn btn-purple-outline pointer btnsize" data-toggle="collapse" href="#news" aria-expanded="false" aria-controls="collapseExample">
                     Новости
                 </button>
-                <!-- Газинур, кнопка добавления новости тут -->
+                <!-- кнопка добавления новости тут -->
                 <button class="my-0 mx-2 btn btn-purple-outline pointer btnSizeAdd" data-toggle="modal" data-target="#addNews" aria-expanded="false"> +
                 </button>
             </p>
@@ -112,59 +112,42 @@
             <div class="container mt-4 py-2">
                 <!-- News Row -->
                 <div class="row mx-auto mt-4 py-2">
-                <!-- Новость1 -->
-                <div class="card-container col-sm-12 col-md-6  col-lg-4 p-2">
-                <div class="card card-half-transparent h-100">
-                    <div class="card-body d-flex flex-column text-center">
-                        <img src="res\img\news\24.jpg" alt="ALT" class="img-fluid pb-3 news-img-style">
-                        <h4 class="card-title text-center"><b>Детская форсайт школа</b></h4>
-                        <p class="card-text">Команда модераторов BrainLegion приняла участие в работе и оказала содействие в организации форсайт школы «Инженеры будущего: 3D технологии в образовании».</p>
-                        <div class="text-center mt-auto d-flex justify-content-around">
-                            <button type="button" class="btn btn-purple-outline pointer" data-toggle="modal" data-target="#New1">
-                              Редактировать
-                            </button>
-                            <form action="" method="POST">
-                                <button class="btn btn-purple-outline pointer" type="submit">Удалить</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                <!-- Новость2 -->
-                <div class="card-container col-sm-12 col-md-6 col-lg-4 p-2">
-                <div class="card card-half-transparent h-100">
-                    <div class="card-body d-flex flex-column text-center">
-                        <img src="res\img\news\дом.png" alt="ALT" class="img-fluid pb-3 news-img-style">
-                        <h4 class="card-title text-center"><b>Что такое 3D-визуализация?</b></h4>
-                        <p class="card-text">3D-визуализация – является неотъемлемой составляющей архитектурного проектирования, позволяющая графически создать экстерьер здания и интерьер помещений максимальной реалистичности.</p>
-                        <div class="text-center mt-auto d-flex justify-content-around">
-                            <button type="button" class="btn btn-purple-outline pointer" data-toggle="modal" data-target="#New2">
-                              Редактировать
-                            </button>
-                            <form action="" method="POST">
-                                <button class="btn btn-purple-outline pointer" type="submit">Удалить</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                <!-- Новость3 -->
-                <div class="card-container col-sm-12 col-md-6 col-lg-4 p-2">
-                <div class="card card-half-transparent h-100">
-                    <div class="card-body d-flex flex-column text-center">
-                        <img src="res/img/news/вирттур.jpg" alt="ALT" class="img-fluid pb-3 news-img-style" >
-                        <h4 class="card-title text-center"><b>Получите подарок при заказе 3D-тура</b></h4>
-                        <p class="card-text">Мы будем рады создать высококачественную панораму для Вашего бизнеса. До конца мая у нас действует специальное предложение, по которому можно получить карту тура в подарок. </p>
-                        <div class="text-center mt-auto d-flex justify-content-around">
-                            <button type="button" class="btn btn-purple-outline pointer" data-toggle="modal" data-target="#New3">
-                              Редактировать
-                            </button>
-                            <form action="" method="POST">
-                                <button class="btn btn-purple-outline pointer" type="submit">Удалить</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+                <!-- Новости -->
+                <?
+                  $dataAboutNews = getFromOneTable('news');
+                  for($counter = 0; $counter < count($dataAboutNews); $counter++)
+                  {
+                    if($dataAboutNews[$counter]['description'] != '')
+                    {
+                      echo '<div class="card-container col-sm-12 col-md-6  col-lg-4 p-2">
+                              <div class="card card-half-transparent h-100">
+                                  <div class="card-body d-flex flex-column text-center">
+                                      <img src="'.$dataAboutNews[$counter]['img'].'" alt="ALT" class="img-fluid pb-3 news-img-style">
+                                      <h4 class="card-title text-center"><b>'.$dataAboutNews[$counter]['title'].'</b></h4>
+                                      <p class="card-text">'.substr($dataAboutNews[$counter]['description'], 0, strpos($dataAboutNews[$counter]['description'], ".") + 1).'</p>
+                                      <div class="text-center mt-auto d-flex justify-content-around">
+                                          <button type="button" class="btn btn-purple-outline pointer" data-toggle="modal" data-target="#New'.$dataAboutNews[$counter]['id'].'">
+                                            Редактировать
+                                          </button>
+                                          <form action="" method="POST">
+                                              <button name="deleteNews'.$dataAboutNews[$counter]['id'].'" class="btn btn-purple-outline pointer" type="submit">Удалить</button>
+                                          </form>
+                                      </div>
+                                  </div>
+                              </div>
+                              </div>';
+                    }
+                  }
+                  for($counter = 0; $counter < count($dataAboutNews); $counter++)
+                  {
+                    if(isset($_POST['deleteNews'.$dataAboutNews[$counter]['id']]))
+                    {
+                      $GLOBALS['mysqli']->query("DELETE FROM `news` WHERE `news`.`title` = '".$dataAboutNews[$counter]['id']."';");
+                      $GLOBALS['mysqli']->query("DELETE FROM `news` WHERE `news`.`id` = ".$dataAboutNews[$counter]['id'].";");
+                      echo '<script>document.location.href="adminmain.php"</script>';
+                    }
+                  }
+                ?>
             </div>
         </div>
     </div>
@@ -244,140 +227,69 @@
     <!-- MODALS FOR NEWS
         В них же записываются даннеы из БД с возможностью редактирования-->
 <!-- Новость 1 -->
-<div class="modal fade" id="New1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Редактирование новости</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <form action="" method="POST">
-      <div class="modal-body">
-                  <div class="form-group">
-                    <label for="title" class="col-form-label">Заголовок новости</label>
-                    <input type="text" class="form-control" id="recipient-name">
+
+<?
+  for($counter = 0; $counter < count($dataAboutNews); $counter++)
+  {
+    if($dataAboutNews[$counter]['description'] != '')
+    {
+      echo '<div class="modal fade" id="New'.$dataAboutNews[$counter]['id'].'" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Редактирование новости</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
                   </div>
-                  <div class="form-group">
-                    <label for="discription" class="col-form-label">Описание</label>
-                    <textarea class="form-control" id="message-text"></textarea>
+                  <form action="" method="POST">
+                  <div class="modal-body">
+                              <div class="form-group">
+                                <label for="title" class="col-form-label">Заголовок новости</label>
+                                <input name="titleForEditNew" type="text" class="form-control" id="recipient-name" value="'.$dataAboutNews[$counter]['title'].'">
+                              </div>
+                              <div class="form-group">
+                                <label for="title" class="col-form-label">Контакты</label>
+                                <input name="contactsForEditNew" type="text" class="form-control" id="recipient-name" value="'.$dataAboutNews[$counter]['contacts'].'">
+                              </div>
+                              <div class="form-group">
+                                <label for="discription" class="col-form-label">Описание</label>
+                                <textarea name="textForEditNew" class="form-control" id="message-text">'.$dataAboutNews[$counter]['description'].'</textarea>
+                              </div>
+                              <div class="form-group">
+                                  <div class="images">';
+        for($counterImages = 0; $counterImages < count($dataAboutNews); $counterImages++)
+        {
+          if($dataAboutNews[$counterImages]['title'] == $dataAboutNews[$counter]['id'])
+          {
+            echo '<div class="imgs d-flex justify-content-center">
+                    <img src="'.$dataAboutNews[$counterImages]['img'].'" alt="ALT" class="img-fluid pb-3 news-img-style">
+                    <button type="button" class="close d-flex flex-column justify-content-start pointer" aria-label="Close">
+                        <span>&times;</span>
+                    </button>
+                  </div>';
+          }
+        }
+        echo '                </div>
+                              </div>
+                              <div class="form-group">
+                                <label >Изображение</label>
+                                <br>
+                                <input type="file" name="logo" multiple>
+                              </div>
                   </div>
-                  <div class="form-group">
-                      <div class="images">
-                                <!-- ГАЗИНУР, это блок с изображениями и кнопками, которые удаляют изображения с базы данных -->
-                                <div class="imgs d-flex justify-content-center">
-                                    <img src="res\img\portfolio\devices\1.jpg" alt="ALT" class="img-fluid pb-3 news-img-style">
-                                    <button type="button" class="close d-flex flex-column justify-content-start pointer" aria-label="Close">
-                                        <span>&times;</span>
-                                    </button>
-                                </div>
-                      </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-purple-outline pointer" data-dismiss="modal">Закрыть</button>
+                    <button type="submit" class="btn btn-purple-outline pointer">Сохранить изменения</button>
                   </div>
-                  <div class="form-group">
-                    <label >Изображение</label>
-                    <br>
-                    <input type="file" name='logo'>
-                  </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-purple-outline pointer" data-dismiss="modal">Закрыть</button>
-        <button type="submit" class="btn btn-purple-outline pointer">Сохранить изменения</button>
-      </div>
-      </form>
-    </div>
-  </div>
-</div>
-<!-- Новость 2 -->
-<div class="modal fade" id="New2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Редактирование новости</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <form action="" method="POST">
-      <div class="modal-body">
-                  <div class="form-group">
-                    <label for="title" class="col-form-label">Заголовок новости</label>
-                    <input type="text" class="form-control" id="recipient-name">
-                  </div>
-                  <div class="form-group">
-                    <label for="discription" class="col-form-label">Описание</label>
-                    <textarea class="form-control" id="message-text"></textarea>
-                  </div>
-                  <div class="form-group">
-                      <div class="images">
-                                <!-- ГАЗИНУР, это блок с изображениями и кнопками, которые удаляют изображения с базы данных -->
-                                <div class="imgs d-flex justify-content-center">
-                                    <img src="res\img\portfolio\devices\1.jpg" alt="ALT" class="img-fluid pb-3 news-img-style">
-                                    <button type="button" class="close d-flex flex-column justify-content-start pointer" aria-label="Close">
-                                        <span>&times;</span>
-                                    </button>
-                                </div>
-                      </div>
-                  </div>
-                  <div class="form-group">
-                    <label >Изображение</label>
-                    <br>
-                    <input type="file" name='logo'>
-                  </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-purple-outline pointer" data-dismiss="modal">Закрыть</button>
-        <button type="submit" class="btn btn-purple-outline pointer">Сохранить изменения</button>
-      </div>
-      </form>
-    </div>
-  </div>
-</div>
-<!-- Новость3 -->
-<div class="modal fade" id="New3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Редактирование новости</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-        <form action="" method="POST">
-      <div class="modal-body">
-                  <div class="form-group">
-                    <label for="title" class="col-form-label">Заголовок новости</label>
-                    <input type="text" class="form-control" id="recipient-name">
-                  </div>
-                  <div class="form-group">
-                    <label for="discription" class="col-form-label">Описание</label>
-                    <textarea class="form-control" id="message-text"></textarea>
-                  </div>
-                  <div class="form-group">
-                      <div class="images">
-                                <!-- ГАЗИНУР, это блок с изображениями и кнопками, которые удаляют изображения с базы данных -->
-                                <div class="imgs d-flex justify-content-center">
-                                    <img src="res\img\portfolio\devices\1.jpg" alt="ALT" class="img-fluid pb-3 news-img-style">
-                                    <button type="button" class="close d-flex flex-column justify-content-start pointer" aria-label="Close">
-                                        <span>&times;</span>
-                                    </button>
-                                </div>
-                      </div>
-                  </div>
-                  <div class="form-group">
-                    <label >Изображение</label>
-                    <br>
-                    <input type="file" name='logo'>
-                  </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-purple-outline pointer" data-dismiss="modal">Закрыть</button>
-        <button type="submit" class="btn btn-purple-outline pointer">Сохранить изменения</button>
-      </div>
-      </form>
-    </div>
-  </div>
-</div>
+                  </form>
+                </div>
+              </div>
+            </div>';
+    }
+  }
+?>
+
 
 <!-- MODALS FOR ADDING + -->
 <!-- Modal for adding work field -->
@@ -445,33 +357,62 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form method="POST">
+                <form method="POST" >
                     <div class="modal-body">
 
-                        <!-- ГАЗИНУР, тут заголовок, который добавляется в бд -->
+                        <!-- тут заголовок, который добавляется в бд -->
                         <div class="form-group">
                             <label for="title" class="col-form-label">Название новости</label>
-                            <input type="text" class="form-control" id="title">
+                            <input name="titleForAddNew" type="text" class="form-control" id="title">
                         </div>
 
-                        <!-- ГАЗИНУР, тут описание добавляется в бд -->
+                        <div class="form-group">
+                            <label for="title" class="col-form-label">Контакты</label>
+                            <input name="contactsForAddNew" type="text" class="form-control" id="title">
+                        </div>
+
+                        <!-- тут описание добавляется в бд -->
                         <div class="form-group">
                             <label for="discriptionPortfolio" class="col-form-label">Описание новости</label>
-                            <textarea class="form-control" id="discriptionPortfolio"></textarea>
+                            <textarea name="textForNewNew" class="form-control" id="discriptionPortfolio"></textarea>
                             <label for="">Изображение</label>
                             <br>
-                            <input type="file">
+                            <input type="file" name="file[]" multiple>
                         </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-purple-outline pointer" data-dismiss="modal">Закрыть</button>
                         <!-- По нажатию на эту кнопку все данные отсюда добавляются в бд и отображаются на сайте -->
-                        <button type="submit" class="btn btn-purple-outline pointer">Добавить</button>
+                        <button name="addNews" type="submit" class="btn btn-purple-outline pointer">Добавить</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
+
+    <?
+      $postFromAddNew = $_POST;
+      if(isset($postFromAddNew['addNews']))
+      {
+        $GLOBALS['mysqli']->query("INSERT INTO `news` (`title`, `description`, `contacts`, `img`)
+                                  VALUES ('".$postFromAddNew['titleForAddNew']."',
+                                          '".$postFromAddNew['textForNewNew']."',
+                                          '".$postFromAddNew['contactsForAddNew']."',
+                                          'res/\img\/news/\\".$postFromAddNew['file'][0]."')");
+        $dataAboutTheNew = findSmthFromTable('news', 'title', $postFromAddNew['titleForAddNew']);
+        for($counter = 1; $counter < count($postFromAddNew['file']); $counter++)
+        {
+          $GLOBALS['mysqli']->query("INSERT INTO `news` (`title`, `description`, `contacts`, `img`)
+                                    VALUES ('".$dataAboutTheNew[0]['id']."',
+                                            '',
+                                            '',
+                                            'res/\img\/news/\\".$_POST['file'][$counter]."')");
+        }
+        echo '<script>document.location.href="adminmain.php"</script>';
+      }
+
+
+    ?>
 
     <!-- Bootstrap js -->
     <script src="res/jquery/jquery-3.2.1.min.js"></script>

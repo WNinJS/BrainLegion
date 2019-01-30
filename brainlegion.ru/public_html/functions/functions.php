@@ -35,4 +35,16 @@
     }
     return $ourData;
   }
+
+
+  function findSmthFromTable($table, $attribute, $value)
+  {
+    $exampleDB = $GLOBALS['mysqli']->query("SELECT * FROM `".$table."` WHERE `".$attribute."` = '".$value."'");
+    $ourData;
+    while(($row = $exampleDB->fetch_assoc()) != false)
+    {
+      $ourData[] = $row;
+    }
+    return $ourData;
+  }
 ?>
