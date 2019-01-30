@@ -57,12 +57,12 @@
     </div>
     <div class="container-fluid h-100 w-100">
         <div class="row d-flex flex-column р-100 w-100" >
-        <p class="dropChanges">
-                <button class="btn btnSize btn-purple-outline pointer" data-toggle="collapse" href="#areaOfWork" aria-expanded="false" aria-controls="collapseExample">
+        <p class="dropChanges mx-1">
+                <button class="btn btn-purple-outline pointer btnsize" data-toggle="collapse" href="#areaOfWork" aria-expanded="false" aria-controls="collapseExample">
                     Направления работы
                 </button>
 <!-- Газинур, кнопка добавления направления работы тут -->
-                <button class="my-0 mx-2 btn btn-purple-outline pointer" data-toggle="modal" data-target="#addWorkField" aria-expanded="false"> +
+                <button class="my-0 mx-2 btn btn-purple-outline pointer btnSizeAdd" data-toggle="modal" data-target="#addWorkField" aria-expanded="false"> +
                 </button>
         </p>
 
@@ -98,12 +98,12 @@
             </div>
 
         <!-- NEWS TAB -->
-            <p class="dropChanges">
-                <button class="btn btn-primary btnSize btn-purple-outline btn-purple-outline:hover pointer" data-toggle="collapse" href="#news" aria-expanded="false" aria-controls="collapseExample">
+            <p class="dropChanges d-flex flex-start mx-1">
+                <button class="btn btn-purple-outline pointer btnsize" data-toggle="collapse" href="#news" aria-expanded="false" aria-controls="collapseExample">
                     Новости
                 </button>
                 <!-- Газинур, кнопка добавления новости тут -->
-                <button class="my-0 mx-2 btn btn-purple-outline pointer" data-toggle="modal" data-target="#addNews" aria-expanded="false"> +
+                <button class="my-0 mx-2 btn btn-purple-outline pointer btnSizeAdd" data-toggle="modal" data-target="#addNews" aria-expanded="false"> +
                 </button>
             </p>
     <div class="collapse" id="news">
