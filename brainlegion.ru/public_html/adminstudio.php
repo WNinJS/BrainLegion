@@ -46,9 +46,6 @@
                 <div class="collapse navbar-collapse text-right" id="navbar-toggler">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a href="admininfo.php" class="nav-link text-purple"><span>Информация</span></a>
-                        </li>
-                        <li class="nav-item">
                             <a href="adminmain.php" class="nav-link text-purple"><span>Главная</span></a>
                         </li>
                         <li class="nav-item">
