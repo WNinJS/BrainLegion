@@ -1,5 +1,10 @@
 <?
   require 'functions/functions.php';
+
+  if(!isset($_SESSION['admin']))
+  {
+    echo '<script>document.location.href="index.php"</script>';
+  }
 ?>
 <!DOCTYPE html>
 <html>
