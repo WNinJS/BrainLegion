@@ -278,13 +278,19 @@
               for($counterImages = 0; $counterImages < count($allDataAboutPorfolio); $counterImages++)
               {
                 if($allDataAboutPorfolio[$counterImages]['type'] == $allDataAboutPorfolio[$counter]['type'] && $counter != $counterImages)
-                {
-                  echo '<div class="imgs d-flex justify-content-center">
-                          <img src="'.$allDataAboutPorfolio[$counterImages]['address'].'" alt="ALT" class="img-fluid pb-3 news-img-style">
-                          <button type="button" class="close d-flex flex-column justify-content-start pointer" aria-label="Close">
-                              <span>&times;</span>
-                          </button>
-                        </div>';
+                { /* ГАЗИНУР, тут удаление блоков по крестику */
+                  echo '
+                          <div class="imgs d-flex justify-content-center">
+
+                            <div id="picture1" style="display: block;">
+                              <img src="'.$allDataAboutPorfolio[$counterImages]['address'].'" alt="ALT" class="img-fluid pb-3 news-img-style">
+                            </div>
+
+                            <button type="button" class="close d-flex flex-column justify-content-start pointer" onclick="closeImg(document.getElementById(\'picture1\'))" aria-label="Close">
+                                <span>&times;</span>
+                            </button>
+
+                          </div>';
                 }
               }
             }
@@ -372,6 +378,7 @@
     </div>
 
     <script src="res/js/showInputs.js"></script>
+    <script src="res/js/deleteImages.js"></script>
 
     <!-- Bootstrap js -->
     <script src="res/jquery/jquery-3.2.1.min.js"></script>
