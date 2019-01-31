@@ -282,12 +282,12 @@
                   echo '
                           <div class="imgs d-flex justify-content-center">
 
-                            <div id="picture1" style="display: block;">
+                            <div id="picture'.$allDataAboutPorfolio[$counterImages]['id'].'" style="display: block;">
                               <img src="'.$allDataAboutPorfolio[$counterImages]['address'].'" alt="ALT" class="img-fluid pb-3 news-img-style">
                             </div>
 
-                            <button type="button" class="close d-flex flex-column justify-content-start pointer" onclick="closeImg(document.getElementById(\'picture1\'))" aria-label="Close">
-                                <span>&times;</span>
+                            <button type="button" style="display: block;" class="close d-flex flex-column justify-content-start pointer" onclick="closeImg(document.getElementById(\'picture'.$allDataAboutPorfolio[$counterImages]['id'].'\'), document.getElementById(\'button'.$allDataAboutPorfolio[$counterImages]['id'].'\'))" aria-label="Close">
+                                <span id="button'.$allDataAboutPorfolio[$counterImages]['id'].'">&times;</span>
                             </button>
 
                           </div>';
