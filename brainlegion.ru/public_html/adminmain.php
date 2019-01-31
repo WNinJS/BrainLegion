@@ -269,9 +269,8 @@
                     <div id="picture'.$dataAboutNews[$counterImages]['id'].'" style="display: block;">
                       <img src="'.$dataAboutNews[$counterImages]['img'].'" alt="ALT" class="img-fluid pb-3 news-img-style">
                     </div>
-
-                    <button type="button" class="close d-flex flex-column justify-content-start pointer" onclick="closeImg(document.getElementById(\'picture'.$dataAboutNews[$counterImages]['id'].'\'))" aria-label="Close">
-                        <span>&times;</span>
+                    <button type="button" class="close d-flex flex-column justify-content-start pointer" onclick="closeImg(document.getElementById(\'picture'.$dataAboutNews[$counterImages]['id'].'\'), document.getElementById(\'button'.$dataAboutNews[$counterImages]['id'].'\'))" aria-label="Close">
+                        <span id="button'.$dataAboutNews[$counterImages]['id'].'">&times;</span>
                     </button>
 
                   </div>';
