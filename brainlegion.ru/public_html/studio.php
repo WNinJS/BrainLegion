@@ -158,11 +158,32 @@
 
           <!-- Portfolio slider -->
           <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+          <?
+            $allDataAboutPortfolio = getFromOneTable('portfolio'); // Данный массив содержит все материалы о портфолио
+            for($counter = 0; $counter < count($allDataAboutPortfolio); $counter++)
+            {
+                  if($allDataAboutPortfolio[$counter]['info'] != NULL)
+                  {
+                    if($counter == 0)
+                    {
+                      echo '<li data-target="#carouselExampleIndicators" data-slide-to="'.$counter.'" class="active"></li>';
+                    }
+                    else
+                    {
+                      echo '<li data-target="#carouselExampleIndicators" data-slide-to="'.$counter.'"></li>';
+                    }
+                    
+                  }
+            }
+          ?>
+            </ol>
+
             <div class="carousel-inner">
 
               <!-- Slider`s elements -->
               <?
-                $allDataAboutPortfolio = getFromOneTable('portfolio'); // Данный массив содержит все материалы о портфолио
+                
                 // Цикл выводит все изображения портфолио
                 for($counter = 0; $counter < count($allDataAboutPortfolio); $counter++)
                 {
