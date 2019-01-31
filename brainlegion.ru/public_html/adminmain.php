@@ -265,11 +265,17 @@
           if($dataAboutNews[$counterImages]['title'] == $dataAboutNews[$counter]['id'])
           {
             echo '<div class="imgs d-flex justify-content-center">
-                    <img src="'.$dataAboutNews[$counterImages]['img'].'" alt="ALT" class="img-fluid pb-3 news-img-style">
-                    <button type="button" class="close d-flex flex-column justify-content-start pointer" aria-label="Close">
+
+                    <div id="picture'.$dataAboutNews[$counterImages]['id'].'" style="display: block;">
+                      <img src="'.$dataAboutNews[$counterImages]['img'].'" alt="ALT" class="img-fluid pb-3 news-img-style">
+                    </div>
+
+                    <button type="button" class="close d-flex flex-column justify-content-start pointer" onclick="closeImg(document.getElementById(\'picture'.$dataAboutNews[$counterImages]['id'].'\'))" aria-label="Close">
                         <span>&times;</span>
                     </button>
+
                   </div>';
+
             $files[$dataAboutNews[$counter]['id']][$counterForIndexImages] = $dataAboutNews[$counterImages]['img'];
             $counterForIndexImages++;
           }
@@ -448,7 +454,7 @@
     ?>
 
     <!-- Ours script -->
-    <script src="res/js/deleteImages"></script>
+    <script src="res/js/deleteImages.js"></script>
     <!-- Bootstrap js -->
     <script src="res/jquery/jquery-3.2.1.min.js"></script>
     <script src="res/popper/popper.js"></script>
