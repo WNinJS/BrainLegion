@@ -1,6 +1,4 @@
 
-
-
 function closeImg(div) {
 	for(var counter = 1; counter < 3; counter++)
 	{
