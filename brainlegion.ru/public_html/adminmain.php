@@ -447,6 +447,8 @@
 
     ?>
 
+    <!-- Ours script -->
+    <script src="res/js/deleteImages"></script>
     <!-- Bootstrap js -->
     <script src="res/jquery/jquery-3.2.1.min.js"></script>
     <script src="res/popper/popper.js"></script>
