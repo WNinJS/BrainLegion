@@ -229,6 +229,7 @@
 <!-- Новость 1 -->
 
 <?
+  $files;
   for($counter = 0; $counter < count($dataAboutNews); $counter++)
   {
     if($dataAboutNews[$counter]['description'] != '')
@@ -258,6 +259,7 @@
                               </div>
                               <div class="form-group">
                                   <div class="images">';
+        $counterForIndexImages = 0;
         for($counterImages = 0; $counterImages < count($dataAboutNews); $counterImages++)
         {
           if($dataAboutNews[$counterImages]['title'] == $dataAboutNews[$counter]['id'])
@@ -268,24 +270,55 @@
                         <span>&times;</span>
                     </button>
                   </div>';
+            $files[$dataAboutNews[$counter]['id']][$counterForIndexImages] = $dataAboutNews[$counterImages]['img'];
+            $counterForIndexImages++;
           }
         }
+        $counterForIndexImages = 0;
         echo '                </div>
                               </div>
                               <div class="form-group">
                                 <label >Изображение</label>
                                 <br>
-                                <input type="file" name="logo" multiple>
+                                <input type="file" name="imagesOfEditing[]" multiple>
                               </div>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-purple-outline pointer" data-dismiss="modal">Закрыть</button>
-                    <button type="submit" class="btn btn-purple-outline pointer">Сохранить изменения</button>
+                    <button name="editNew'.$dataAboutNews[$counter]['id'].'" type="submit" class="btn btn-purple-outline pointer">Сохранить изменения</button>
                   </div>
                   </form>
                 </div>
               </div>
             </div>';
+    }
+  }
+  $dataFromPostForEdit = $_POST;
+  for($counter = 0; $counter < count($dataAboutNews); $counter++)
+  {
+    if(isset($dataFromPostForEdit['editNew'.$dataAboutNews[$counter]['id']]))
+    {
+      $GLOBALS['mysqli']->query("UPDATE `news` SET `title` = '".$dataFromPostForEdit['titleForEditNew']."',
+                                `description` = '".$dataFromPostForEdit['textForEditNew']."',
+                                `contacts` = '".$dataFromPostForEdit['contactsForEditNew']."' WHERE `news`.`id` = ".$dataAboutNews[$counter]['id'].";");
+      $GLOBALS['mysqli']->query("DELETE FROM `news` WHERE `news`.`title` = '".$dataAboutNews[$counter]['id']."';");
+      for($counterImages = 0; $counterImages < count($files[$dataAboutNews[$counter]['id']]); $counterImages++)
+      {
+        $GLOBALS['mysqli']->query("INSERT INTO `news` (`title`, `description`, `contacts`, `img`)
+                                  VALUES ('".$dataAboutNews[$counter]['id']."',
+                                          '',
+                                          '',
+                                          '".$files[$dataAboutNews[$counter]['id']][$counterImages]."')");
+      }
+      for($counterImages = 0; $counterImages < count($dataFromPostForEdit['imagesOfEditing']); $counterImages++)
+      {
+        $GLOBALS['mysqli']->query("INSERT INTO `news` (`title`, `description`, `contacts`, `img`)
+                                  VALUES ('".$dataAboutNews[$counter]['id']."',
+                                          '',
+                                          '',
+                                          'res/\img\/news/\\".$_POST['imagesOfEditing'][$counterImages]."')");
+      }
+     echo '<script>document.location.href="adminmain.php"</script>';
     }
   }
 ?>
