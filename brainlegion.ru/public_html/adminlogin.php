@@ -50,7 +50,7 @@
           && password_verify($allDataOfPost['password'], $dataFromTableUsers[$i]['password']) == 1) // И дешифрованный пароль подходит
       {
         $_SESSION['admin'] = $dataFromTableUsers[$i]; // Сессия запоминает данные о пользователе
-        echo '<script>document.location.href="admininfo.php"</script>'; // Переход на главную страницу
+        echo '<script>document.location.href="adminmain.php"</script>'; // Переход на главную страницу
       }
     }
   }
