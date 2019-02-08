@@ -197,7 +197,10 @@
                     {
                       echo '<div class="carousel-item">';
                     }
-                    echo '<img class="img-fluid img-thumb" src="'.$allDataAboutPortfolio[$counter]['address'].'" data-toggle="modal" data-target="#'.$allDataAboutPortfolio[$counter]['type'].'" alt="Card image cap">
+                      echo '
+                    <h2>'.$allDataAboutPortfolio[$counter]['type'].'</h2>
+                    <img class="img-fluid img-thumb" src="'.$allDataAboutPortfolio[$counter]['address'].'" data-toggle="modal" data-target="#'.$allDataAboutPortfolio[$counter]['type'].'" alt="Card image cap"> 
+                         <br>
                         </div>';
                   }
                 }
