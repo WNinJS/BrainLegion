@@ -76,7 +76,7 @@
                 <div class="ServicesAddandEdit d-flex flex-start">
                     <button class="mx-2 my-2 btn btn-purple-outline pointer btnsize" data-toggle="collapse" data-target="#collapseServices" aria-expanded="false" aria-controls="collapseServices"> Услуги </button>
 
-                    <!--ГАЗИНУР, кнопка открывает модальльное окно, где происходит добавление новой услуги-->
+                    <!-- кнопка открывает модальльное окно, где происходит добавление новой услуги-->
                     <button class="my-2 btn btn-purple-outline pointer" data-toggle="modal" data-target="#modalService_add" aria-expanded="false"> + </button>
                 </div>
 
@@ -362,11 +362,24 @@
                         <!-- ГАЗИНУР, тут фотки или видосы добавляются в бд -->
                         <!-- ГАЗИНУР, выбор заливать видео или изображения -->
                         <div class="form-group d-flex flex-column">
-                            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                                <option selected>Добавить</option>
-                                <option value="1">Видео</option>
-                                <option value="2">Изображение</option>
-                            </select>
+                            <input type="radio" id="video" name="r" onclick="disp(document.getElementById('videoInput0'))"> Видео
+
+                            <form id="test">
+
+                            </form>
+
+                            <!-- Скрытая форма для добавления видео -->
+                            <form name="video" id="videoInput0" style="display: none;">
+                                <input type="file"name="imagesFroAddPortfolio[]" multiple>
+                            </form>
+
+                            <input type="radio" id="image" name="r" onclick="disp(document.getElementById('imageInput0'))"> Изображение
+
+                            <!-- Скрытая форма для добавления видео -->
+                            <form name="image" id="imageInput0" style="display: none;">
+                                <input type="text" name="videoForAddPortfolio">
+                            </form>
+                          </div>
                             <input hidden class="my-3" type="text">
                             <input hidden type="file">
                         </div>
@@ -375,12 +388,25 @@
                         <button type="button" class="btn btn-purple-outline pointer" data-dismiss="modal">Закрыть</button>
 
                         <!-- По нажатию на эту кнопку все данные отсюда добавляются в бд и отображаются на сайте -->
-                        <button type="submit" class="btn btn-purple-outline pointer">Добавить</button>
+                        <button name="addPortfolio" type="submit" class="btn btn-purple-outline pointer">Добавить</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
+
+    <?
+      $dataFromPostForAddPortfolio = $_POST;
+      if(isset($dataFromPostForAddPortfolio['addPortfolio']))
+      {
+        // $GLOBALS['mysqli']->query("INSERT INTO `portfolio`(`title`, `description`, `link`)
+        //                           VALUES ('".$allDataFromPostForNewService['titleForNewService']."',
+        //                                   '".$allDataFromPostForNewService['textForNewService']."',
+        //                                   '".$allDataFromPostForNewService['linkForNewService']."')");
+        // echo '<script>document.location.href="adminstudio.php"</script>';
+      }
+    ?>
+
 
     <script src="res/js/showInputs.js"></script>
     <script src="res/js/deleteImages.js"></script>
