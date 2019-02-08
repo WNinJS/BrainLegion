@@ -361,7 +361,7 @@
                         </div>
                         <div class="form-group">
                           <label >Выберите логотип направления</label>
-                          <input type="text" name="logoForAddWay" class="form-control" >
+                          <input type="file" name="logoForAddWay" class="form-control" size="200" >
                         </div>
                         <div class="form-group">
                           <label>Напишите на что будет ссылаться данная статья</label>
@@ -379,12 +379,16 @@
     </div>
 
     <?
+
       if(isset($_POST['addWay']))
       {
+        $path = str_replace('\\', '/', substr(realpath($_POST["logoForAddWay"]), strrpos(realpath($_POST["logoForAddWay"]), '.ru') + 4));
+
+        print_r($path) ;
         $GLOBALS['mysqli']->query("INSERT INTO `waysOfDevelopment`(`title`, `description`, `logo`, `link`)
                                   VALUES ('".$_POST['titleForAddWay']."',
                                           '".$_POST['textForAddWay']."',
-                                          '".$_POST['logoForAddWay']."',
+                                          '".$path."',
                                           '".$_POST['linkForAddWay']."')");
         echo '<script>document.location.href="adminmain.php"</script>';
       }
