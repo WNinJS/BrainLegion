@@ -191,7 +191,7 @@
                       </div>
                       <div class="form-group">
                         <label >Выберите логотип направления</label>
-                        <input type="text" name="logoForEditWay" class="form-control" value="'.$allDataFromWaysOfDev[$counter]['logo'].'">
+                        <input type="file" name="logoForEditWay" class="form-control" value="'.$allDataFromWaysOfDev[$counter]['logo'].'">
                       </div>
                       <div class="form-group">
                         <label>Напишите на что будет ссылаться данная статья</label>
@@ -274,8 +274,8 @@
                     <div id="picture'.$dataAboutNews[$counterImages]['id'].'" style="display: block;">
                       <img src="'.$dataAboutNews[$counterImages]['img'].'" alt="ALT" class="img-fluid pb-3 news-img-style">
                     </div>
-                    <button type="button" class="close d-flex flex-column justify-content-start pointer" onclick="closeImg(document.getElementById(\'picture'.$dataAboutNews[$counterImages]['id'].'\'), document.getElementById(\'button'.$dataAboutNews[$counterImages]['id'].'\'))" aria-label="Close">
-                        <span id="button'.$dataAboutNews[$counterImages]['id'].'">&times;</span>
+                    <button id="'.$dataAboutNews[$counterImages]['id'].'" type="button" class="close d-flex flex-column justify-content-start pointer" onclick="deletePic(this)" aria-label="Close">
+                        <span>&times;</span>
                     </button>
 
                   </div>';
@@ -361,7 +361,7 @@
                         </div>
                         <div class="form-group">
                           <label >Выберите логотип направления</label>
-                          <input type="file" name="logoForAddWay" class="form-control" size="200" >
+                          <input type="file" name="logoForAddWay" class="form-control" >
                         </div>
                         <div class="form-group">
                           <label>Напишите на что будет ссылаться данная статья</label>
@@ -382,13 +382,10 @@
 
       if(isset($_POST['addWay']))
       {
-        $path = str_replace('\\', '/', substr(realpath($_POST["logoForAddWay"]), strrpos(realpath($_POST["logoForAddWay"]), '.ru') + 4));
-
-        print_r($path) ;
         $GLOBALS['mysqli']->query("INSERT INTO `waysOfDevelopment`(`title`, `description`, `logo`, `link`)
                                   VALUES ('".$_POST['titleForAddWay']."',
                                           '".$_POST['textForAddWay']."',
-                                          '".$path."',
+                                          'res/\img\/logos/\\".$_POST['logoForAddWay']."',
                                           '".$_POST['linkForAddWay']."')");
         echo '<script>document.location.href="adminmain.php"</script>';
       }
@@ -460,6 +457,20 @@
 
 
     ?>
+    <script type="text/javascript">
+      function deletePic(object)
+      {
+        var sex = object.id;
+        $.ajax({
+            type: 'POST',
+            url: 'functions/deletePic.php',
+            data: {sex: sex},
+            success: function(data){
+              $(object).parent().fadeOut().remove();
+            }
+          });
+      }
+    </script>
 
     <!-- Ours script -->
     <script src="res/js/deleteImages.js"></script>
