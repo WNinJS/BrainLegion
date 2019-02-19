@@ -311,14 +311,14 @@
 
                                           <!-- Скрытая форма для добавления видео -->
                                           <form name="video" id="videoInput'.$allDataAboutPorfolio[$counter]['id'].'" style="display: none;">
-                                              <input type="file">
+                                              <input type="text">
                                           </form>
 
                                           <input type="radio" id="image" name="r1" onclick="disp(document.getElementById(\'imageInput'.$allDataAboutPorfolio[$counter]['id'].'\'))"> Изображение
 
                                           <!-- Скрытая форма для добавления видео -->
                                           <form name="image" id="imageInput'.$allDataAboutPorfolio[$counter]['id'].'" style="display: none;">
-                                              <input type="text">
+                                              <input type="file" multiple>
                                           </form>
                                         </div>
                                 </div>
@@ -350,13 +350,13 @@
                         <!-- ГАЗИНУР, тут заголовок, который добавляется в бд -->
                         <div class="form-group">
                             <label for="title" class="col-form-label">Заголовок портфолио</label>
-                            <input type="text" class="form-control" id="title">
+                            <input name="titleForAddPotfolio" type="text" class="form-control" id="title">
                         </div>
 
                         <!-- ГАЗИНУР, тут описание добавляется в бд -->
                         <div class="form-group">
                             <label for="discriptionPortfolio" class="col-form-label">Описание услуги</label>
-                            <textarea class="form-control" id="discriptionPortfolio"></textarea>
+                            <textarea name="textForAddInfo" class="form-control" id="discriptionPortfolio"></textarea>
                         </div>
 
                         <!-- ГАЗИНУР, тут фотки или видосы добавляются в бд -->
@@ -370,14 +370,15 @@
 
                             <!-- Скрытая форма для добавления видео -->
                             <form name="video" id="videoInput0" style="display: none;">
-                                <input type="file"name="imagesFroAddPortfolio[]" multiple>
+                                <input type="text" name="videoForAddPortfolio">
                             </form>
 
                             <input type="radio" id="image" name="r" onclick="disp(document.getElementById('imageInput0'))"> Изображение
 
                             <!-- Скрытая форма для добавления видео -->
                             <form name="image" id="imageInput0" style="display: none;">
-                                <input type="text" name="videoForAddPortfolio">
+                                <input type="file" name="imagesForAddPortfolio[]" multiple>
+
                             </form>
                           </div>
                             <input hidden class="my-3" type="text">
@@ -399,11 +400,11 @@
       $dataFromPostForAddPortfolio = $_POST;
       if(isset($dataFromPostForAddPortfolio['addPortfolio']))
       {
-        // $GLOBALS['mysqli']->query("INSERT INTO `portfolio`(`title`, `description`, `link`)
-        //                           VALUES ('".$allDataFromPostForNewService['titleForNewService']."',
-        //                                   '".$allDataFromPostForNewService['textForNewService']."',
-        //                                   '".$allDataFromPostForNewService['linkForNewService']."')");
-        // echo '<script>document.location.href="adminstudio.php"</script>';
+        $GLOBALS['mysqli']->query("INSERT INTO `portfolio`(`type`, `address`, `title`, `info`, `video`)
+                                  VALUES ('".substr($dataFromPostForAddPortfolio['titleForAddPotfolio'], 0, strpos($dataFromPostForAddPortfolio['titleForAddPotfolio'], " ") + 1)."',
+                                          '".$dataFromPostForAddPortfolio['titleForAddPotfolio']."',
+                                          '".$dataFromPostForAddPortfolio['titleForAddPotfolio']."')");
+        echo '<script>document.location.href="adminstudio.php"</script>';
       }
     ?>
 
