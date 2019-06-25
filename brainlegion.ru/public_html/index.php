@@ -5,7 +5,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>BrainLegion Index</title>
+    <title>BrainLegion</title>
 
     <!-- TODO: SEO -->
     <!-- TODO: Теги у картинок -->
