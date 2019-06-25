@@ -118,7 +118,7 @@
                     <div class="card-container">
                         <div class="card card-half-transparent h-100 d-flex flex-wrap flex-row align-items-center">
                           <?
-                            $exampleDB = $GLOBALS['mysqli']->query("SELECT `portfolio`.`id`, `img`.`img` FROM `portfolio`, `img` WHERE `portfolio`.`id` = `img`.`idPort` and `type` = 'logo'");
+                            $exampleDB = $GLOBALS['mysqli']->query("SELECT * FROM `portfolio`, `img` WHERE `portfolio`.`id` = `img`.`idPort` and `type` = 'logo'");
                             $someDataBoutPortfolio;
                             while(($row = $exampleDB->fetch_assoc()) != false)
                             {
@@ -127,7 +127,6 @@
                             for($counter = 0; $counter < count($someDataBoutPortfolio); $counter++)
                             {
                                 echo '<img class="col-12 col-sm-6 col-md-4 img-fluid img-thumb" src="'.$someDataBoutPortfolio[$counter]['img'].'" alt="FILL" data-toggle="modal" data-target="#modalPortfolio'.$someDataBoutPortfolio[$counter]['id'].'">';
-
                             }
                           ?>
                         </div>
@@ -255,11 +254,9 @@
       ?>
 
       <?
-        for($counter = 0; $counter < count($allDataAboutPorfolio); $counter++)
+        for($counter = 0; $counter < count($someDataBoutPortfolio); $counter++)
         {
-          if($allDataAboutPorfolio[$counter]['info'] != NULL)
-          {
-            echo '<div class="modal fade" id="modalPortfolio'.$allDataAboutPorfolio[$counter]['id'].'" tabindex="-1" role="dialog" aria-labelledby="modalPortfolioLabel'.$allDataAboutPorfolio[$counter]['id'].'" aria-hidden="true">
+            echo '<div class="modal fade" id="modalPortfolio'.$someDataBoutPortfolio[$counter]['id'].'" tabindex="-1" role="dialog" aria-labelledby="modalPortfolioLabel'.$allDataAboutPorfolio[$counter]['id'].'" aria-hidden="true">
                     <div class="modal-dialog modal-lg" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -332,7 +329,6 @@
                         </div>
                     </div>
                 </div>';
-          }
         }
     ?>
 

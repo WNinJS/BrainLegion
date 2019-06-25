@@ -160,21 +160,22 @@
           <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
           <?
-            $allDataAboutPortfolio = getFromOneTable('portfolio'); // Данный массив содержит все материалы о портфолио
+            $exampleDB = $GLOBALS['mysqli']->query("SELECT * FROM `portfolio`, `img` WHERE `portfolio`.`id` = `img`.`idPort` and `type` = 'logo'");
+            $allDataAboutPortfolio;
+            while(($row = $exampleDB->fetch_assoc()) != false)
+            {
+              $allDataAboutPortfolio[] = $row;
+            }
             for($counter = 0; $counter < count($allDataAboutPortfolio); $counter++)
             {
-                  if($allDataAboutPortfolio[$counter]['info'] != NULL)
-                  {
-                    if($counter == 0)
-                    {
-                      echo '<li data-target="#carouselExampleIndicators" data-slide-to="'.$counter.'" class="active"></li>';
-                    }
-                    else
-                    {
-                      echo '<li data-target="#carouselExampleIndicators" data-slide-to="'.$counter.'"></li>';
-                    }
-                    
-                  }
+                if($counter == 0)
+                {
+                  echo '<li data-target="#carouselExampleIndicators" data-slide-to="'.$counter.'" class="active"></li>';
+                }
+                else
+                {
+                  echo '<li data-target="#carouselExampleIndicators" data-slide-to="'.$counter.'"></li>';
+                }
             }
           ?>
             </ol>
@@ -183,26 +184,22 @@
 
               <!-- Slider`s elements -->
               <?
-                
                 // Цикл выводит все изображения портфолио
                 for($counter = 0; $counter < count($allDataAboutPortfolio); $counter++)
                 {
-                  if($allDataAboutPortfolio[$counter]['info'] != NULL)
+                  if($counter == 0)
                   {
-                    if($counter == 0)
-                    {
-                      echo '<div class="carousel-item active">';
-                    }
-                    else
-                    {
-                      echo '<div class="carousel-item">';
-                    }
-                      echo '
-                    <h2>'.$allDataAboutPortfolio[$counter]['type'].'</h2>
-                    <img class="img-fluid img-thumb" src="'.$allDataAboutPortfolio[$counter]['address'].'" data-toggle="modal" data-target="#'.$allDataAboutPortfolio[$counter]['type'].'" alt="Card image cap"> 
-                         <br>
-                        </div>';
+                    echo '<div class="carousel-item active">';
                   }
+                  else
+                  {
+                    echo '<div class="carousel-item">';
+                  }
+                    echo '
+                  <h2>'.$allDataAboutPortfolio[$counter]['title'].'</h2>
+                  <img class="img-fluid img-thumb" src="'.$allDataAboutPortfolio[$counter]['img'].'" data-toggle="modal" data-target="#'.$allDataAboutPortfolio[$counter]['id'].'" alt="Card image cap">
+                       <br>
+                      </div>';
                 }
               ?>
 
@@ -376,9 +373,7 @@
       for($counter = 0; $counter < count($allDataAboutPortfolio); $counter++)
       {
         // Если это изображение является полной(т.е вложенной инофрмацией)
-        if($allDataAboutPortfolio[$counter]['info'] != NULL)
-        {
-          echo '<div class="modal fade" id="'.$allDataAboutPortfolio[$counter]['type'].'" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          echo '<div class="modal fade" id="'.$allDataAboutPortfolio[$counter]['id'].'" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                   <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
@@ -389,6 +384,7 @@
                       </div>
                       <div class="modal-body">
                         <p>'.$allDataAboutPortfolio[$counter]['info'].'</p>';
+            echo '<script>alert('.empty(getFromOneTableWithTwoCondition('img', 'type', 'idPort', 'video' ,$allDataAboutPortfolio[$counter]['id'])).')</script>';
           // Если в данном контенте присуствует видео, то добавляется видео, а если нет то изображение.
           if($allDataAboutPortfolio[$counter]['video'] == NULL)
           {
@@ -415,7 +411,6 @@
               </div>
             </div>
           </div>';
-        }
       }
     ?>
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Generation Time: Jun 25, 2019 at 11:23 AM
+-- Generation Time: Jun 25, 2019 at 02:21 PM
 -- Server version: 5.7.23
 -- PHP Version: 7.2.10
 
@@ -613,7 +613,7 @@ INSERT INTO `genetest` (`id`, `test_code`, `gene_id`) VALUES
 
 DROP TABLE IF EXISTS `img`;
 CREATE TABLE `img` (
-  `id` int(5) NOT NULL,
+  `idImg` int(5) NOT NULL,
   `img` varchar(255) NOT NULL,
   `type` varchar(10) NOT NULL,
   `idPort` int(5) NOT NULL
@@ -623,7 +623,7 @@ CREATE TABLE `img` (
 -- Dumping data for table `img`
 --
 
-INSERT INTO `img` (`id`, `img`, `type`, `idPort`) VALUES
+INSERT INTO `img` (`idImg`, `img`, `type`, `idPort`) VALUES
 (1, 'res/img/portfolio/hotel_1.jpg', 'logo', 1),
 (2, 'res/img/portfolio/hotel_2.jpg', 'image', 1),
 (3, 'res/img/portfolio/hotel_3.jpg', 'image', 1),
@@ -1083,7 +1083,7 @@ ALTER TABLE `genetest`
 -- Indexes for table `img`
 --
 ALTER TABLE `img`
-  ADD PRIMARY KEY (`id`),
+  ADD PRIMARY KEY (`idImg`),
   ADD KEY `idPort` (`idPort`);
 
 --
@@ -1173,7 +1173,7 @@ ALTER TABLE `genetest`
 -- AUTO_INCREMENT for table `img`
 --
 ALTER TABLE `img`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
+  MODIFY `idImg` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 
 --
 -- AUTO_INCREMENT for table `news`
