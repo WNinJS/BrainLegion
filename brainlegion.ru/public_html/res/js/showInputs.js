@@ -1,5 +1,5 @@
 function disp(form) {
-	for(var counter = 1; counter < 20; counter++)
+	for(var counter = 0; counter < 20; counter++)
 	{
 		var video = "videoInput" + counter;
 		var image = "imageInput" + counter;

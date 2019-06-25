@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Generation Time: Jan 30, 2019 at 05:43 PM
+-- Generation Time: Jun 25, 2019 at 11:23 AM
 -- Server version: 5.7.23
 -- PHP Version: 7.2.10
 
@@ -42,7 +42,7 @@ CREATE TABLE `geneinfo` (
 -- Dumping data for table `geneinfo`
 --
 
-INSERT DELAYED INTO `geneinfo` (`id`, `name`, `locus`, `alleles`) VALUES
+INSERT INTO `geneinfo` (`id`, `name`, `locus`, `alleles`) VALUES
 (1, 'ACNT3', 'c.1858C>T, p.Arg577Ter', '1-С 2-Т'),
 (2, 'IL6', '174C>G', '1-С 2-G'),
 (3, 'AGT', 'Met235Thr, T704C', '1-T 2-C'),
@@ -185,7 +185,7 @@ CREATE TABLE `geneorders` (
 -- Dumping data for table `geneorders`
 --
 
-INSERT DELAYED INTO `geneorders` (`id`, `gene_id`, `order_id`, `value`) VALUES
+INSERT INTO `geneorders` (`id`, `gene_id`, `order_id`, `value`) VALUES
 (1, 12, 1, 'CC'),
 (2, 28, 1, 'AG'),
 (3, 31, 1, 'CC'),
@@ -405,7 +405,7 @@ CREATE TABLE `genetest` (
 -- Dumping data for table `genetest`
 --
 
-INSERT DELAYED INTO `genetest` (`id`, `test_code`, `gene_id`) VALUES
+INSERT INTO `genetest` (`id`, `test_code`, `gene_id`) VALUES
 (1, 'ДТ.1.1', 8),
 (2, 'ДТ.1.1', 29),
 (3, 'ДТ.1.1', 32),
@@ -608,6 +608,76 @@ INSERT DELAYED INTO `genetest` (`id`, `test_code`, `gene_id`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `img`
+--
+
+DROP TABLE IF EXISTS `img`;
+CREATE TABLE `img` (
+  `id` int(5) NOT NULL,
+  `img` varchar(255) NOT NULL,
+  `type` varchar(10) NOT NULL,
+  `idPort` int(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `img`
+--
+
+INSERT INTO `img` (`id`, `img`, `type`, `idPort`) VALUES
+(1, 'res/img/portfolio/hotel_1.jpg', 'logo', 1),
+(2, 'res/img/portfolio/hotel_2.jpg', 'image', 1),
+(3, 'res/img/portfolio/hotel_3.jpg', 'image', 1),
+(4, 'res/img/portfolio/hotel_4.jpg', 'image', 1),
+(5, 'res/img/portfolio/hotel_5.jpg', 'image', 1),
+(6, 'res/img/portfolio/hotel_6.jpg', 'image', 1),
+(7, 'res/img/portfolio/hotel_7.jpg', 'image', 1),
+(8, 'res/img/portfolio/interior_1.jpg', 'logo', 2),
+(9, 'res/img/portfolio/interior_2.jpg', 'image', 2),
+(10, 'res/img/portfolio/interior_3.jpg', 'image', 2),
+(11, 'res/img/portfolio/interior_4.jpg', 'image', 2),
+(16, 'res/img/portfolio/furniture_1.jpg', 'logo', 3),
+(17, 'res/img/portfolio/furniture_2.jpg', 'image', 3),
+(18, 'res/img/portfolio/furniture_3.jpg', 'image', 3),
+(19, 'res/img/portfolio/furniture_4.jpg', 'image', 3),
+(20, 'res/img/portfolio/furniture_5.jpg', 'image', 3),
+(21, 'res/img/portfolio/furniture_6.jpg', 'image', 3),
+(22, 'res/img/portfolio/devices_1.jpg', 'logo', 5),
+(23, 'res/img/portfolio/devices_2.jpg', 'image', 5),
+(24, 'res/img/portfolio/devices_3.jpg', 'image', 5),
+(25, 'res/img/portfolio/devices_4.jpg', 'image', 5),
+(26, 'res/img/portfolio/buildings_1.jpg', 'logo', 4),
+(27, 'res/img/portfolio/buildings_2.jpg', 'image', 4),
+(28, 'res/img/portfolio/buildings_3.jpg', 'image', 4),
+(29, 'res/img/portfolio/buildings_4.jpg', 'image', 4),
+(30, 'res/img/portfolio/buildings_5.jpg', 'image', 4),
+(31, 'res/img/portfolio/buildings_6.jpg', 'image', 4),
+(32, 'res/img/portfolio/buildings_7.jpg', 'image', 4),
+(33, 'https://www.youtube.com/embed/upNyoCemoao', 'video', 6),
+(34, 'https://www.youtube.com/embed/okTB_vynf9s', 'video', 7),
+(37, 'https://www.youtube.com/embed/9wZeR_GkzSE', 'video', 8),
+(38, 'https://www.youtube.com/embed/RLODDUOl5B0', 'video', 9),
+(39, 'https://www.youtube.com/embed/JHWz5IIbF_k', 'video', 10),
+(40, 'https://www.youtube.com/embed/h6b2FR6ZR58', 'video', 11),
+(41, 'https://www.youtube.com/embed/6fY_XkAh0NI', 'video', 12),
+(42, 'https://www.youtube.com/embed/-bskhME4Lts', 'video', 13),
+(45, 'https://www.youtube.com/embed/8ecbyKR9WMo', 'video', 14),
+(46, 'https://www.youtube.com/embed/ur_sR49zC3g', 'video', 15),
+(47, 'https://www.youtube.com/embed/4kYdfxu9EwI', 'video', 16),
+(48, 'res/img/portfolio/tank_1.jpg', 'logo', 6),
+(49, 'res/img/portfolio/explosion_1.jpg', 'logo', 7),
+(50, 'res/img/portfolio/factory_1.jpg', 'logo', 8),
+(51, 'res/img/portfolio/bricks_1.jpg', 'logo', 9),
+(52, 'res/img/portfolio/plane_1.jpg', 'logo', 10),
+(53, 'res/img/portfolio/oil_1.jpg', 'logo', 11),
+(54, 'res/img/portfolio/plane_1.jpg', 'logo', 12),
+(55, 'res/img/portfolio/mixing_1.jpg', 'logo', 13),
+(56, 'res/img/portfolio/machine_1.jpg', 'logo', 14),
+(57, 'res/img/portfolio/chairs_1.jpg', 'logo', 15),
+(58, 'res/img/portfolio/army_1.jpg', 'logo', 16);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `news`
 --
 
@@ -624,18 +694,17 @@ CREATE TABLE `news` (
 -- Dumping data for table `news`
 --
 
-INSERT DELAYED INTO `news` (`id`, `title`, `description`, `contacts`, `img`) VALUES
+INSERT INTO `news` (`id`, `title`, `description`, `contacts`, `img`) VALUES
 (1, 'Детская форсайт-школа', 'С 21 по 23 апреля в г. Анапа в центре профессий «Парк Будущего» для участников профильной смены «Инженеры будущего: 3D технологии в образовании» в рамках смены «Город Мастеров» была организована форсайт-школа. Данное мероприятие посетили около 100 учеников младших классов со всей России.\r\n\r\nФорсайт – это социальная технология (сессия), формат коммуникации, который дает участникам возможность договориться по поводу образа будущего, а также, определив желаемый образ будущего, договориться о действиях в его контексте.\r\n\r\nВ течение трех дней участники «проектировали будущее» по руководством команды специалистов из Москвы и Уфы. Команда модераторов BrainLegion приняла участие в работе и оказали содействие в организации мероприятия.', '#BrainLegion #BrainLegion_Уфа #паркбудущего #3Dтехнологии #форсайт\r\n\r\n', 'res\\img\\news\\24.jpg'),
-(2, 'Что такое 3D-визуализация?\r\n', '3D-визуализация – является неотъемлемой составляющей архитектурного проектирования, позволяющая графически создать экстерьер здания и интерьер помещений максимальной реалистичности. Результатом разработки становится объемное изображение предмета или объекта с реалистичными размерами, фактурой, цветом и освещением. Любой из этих параметров может быть в последствие изменен в течение нескольких минут.\r\n\r\nПрофессионально сделанная визуализация позволит вам ознакомиться с дизайнерским решением. Она сможет наиболее достоверно продемонстрировать важные моменты, воспроизвести свет в различных положениях, точно организовать дизайн света и цветовые комбинации. Художественная подача от наших дизайнеров великолепно отражает атмосферу и свежий взгляд на интерьер. Вы сможете посмотреть объект с различных углов, с различным освещением, задать время суток и другие параметры.\r\n\r\nМы представляем услуги по созданию интерьеров и экстерьеров от 3D-визуализации до их реализации в жизнь. Если у Вас есть только идея, то мы сами продумаем дизайн-проект до мелочей, предложим несколько эскизов и реализуем задумку в кратчайшие сроки. При необходимости осуществляем авторский надзор или ремонтные работы «под ключ», привлекая самых компетентных специалистов. Успейте до конца мая заказать дизайн-проект по специальной сниженной цене.', 'Подробнее на сайте или по телефону: +7 937 326-11-85\r\n\r\n', 'res\\img\\news\\дом.png'),
+(2, 'Что такое 3D-визуализация?', '3D-визуализация – является неотъемлемой составляющей архитектурного проектирования, позволяющая графически создать экстерьер здания и интерьер помещений максимальной реалистичности. Результатом разработки становится объемное изображение предмета или объекта с реалистичными размерами, фактурой, цветом и освещением. Любой из этих параметров может быть в последствие изменен в течение нескольких минут.\r\n\r\nПрофессионально сделанная визуализация позволит вам ознакомиться с дизайнерским решением. Она сможет наиболее достоверно продемонстрировать важные моменты, воспроизвести свет в различных положениях, точно организовать дизайн света и цветовые комбинации. Художественная подача от наших дизайнеров великолепно отражает атмосферу и свежий взгляд на интерьер. Вы сможете посмотреть объект с различных углов, с различным освещением, задать время суток и другие параметры.\r\n\r\nМы представляем услуги по созданию интерьеров и экстерьеров от 3D-визуализации до их реализации в жизнь. Если у Вас есть только идея, то мы сами продумаем дизайн-проект до мелочей, предложим несколько эскизов и реализуем задумку в кратчайшие сроки. При необходимости осуществляем авторский надзор или ремонтные работы «под ключ», привлекая самых компетентных специалистов. Успейте до конца мая заказать дизайн-проект по специальной сниженной цене.', 'Подробнее на сайте или по телефону: +7 937 326-11-85', 'res\\img\\news\\дом.png'),
 (3, 'Получите подарок при заказе 3D-тура\r\n', 'На сегодняшний день качество виртуальных 3D-туров зачастую оставляет желать лучшего. А о том, что виртуальный тур – это не просто красивая визуализация, а реальный инструмент продаж, большинство дизайнеров даже не догадываются. Качественно разработанная 3D-панорама может значительно увеличивать конверсию и продажи вашего бизнеса. Один из ярких примеров – астраханская база отдыха «Золотой лотос», которая заработала 1 000 000 рублей за неделю, благодаря грамотно созданному виртуальному туру.\r\n\r\nТрёхмерное изображение панорамы позволяет создать ощущение реальности и присутствия непосредственно \"внутри\" объекта. Также в виртуальный тур можно интегрировать звуковое сопровождение, видео и многое другое. Возможность поворота на 360 градусов даёт полный обзор помещения. Все так, как если бы человек находился реально в самом помещении. Виртуальный тур поможет на все 100% увидеть и оценить привлекательность вашего объекта. При просмотре панорам ваши клиенты смогут приближать интересующие их объекты, перемещаться из одного помещения в другое и, конечно, захотят посетить его.\r\n\r\nЕсли у Вас еще нет 3D тура, свяжитесь с нами. Мы будем рады создать высококачественную панораму для Вашего бизнеса. До конца мая у нас действует специальное предложение, по которому можно получить карту тура в подарок.', 'Подробнее на сайте или по телефону: +7 937 326-11-85', 'res/img/news/вирттур.jpg'),
 (4, '1', '', '', 'res\\img\\news\\21.jpg'),
 (5, '1', '', '', 'res\\img\\news\\22.jpg'),
-(6, '2', '', '', 'res\\img\\news\\кухня.jpg'),
-(7, '2', '', '', 'res\\img\\news\\спальня1.jpg'),
-(8, '2', '', '', 'res\\img\\news\\гостинная_2.jpg'),
-(9, '2', '', '', 'res\\img\\news\\дом2.jpg'),
-(10, '2', '', '', 'res\\img\\news\\дом3.jpg'),
-(11, '3', '', '', 'res/tour2/office.html');
+(11, '3', '', '', 'res/tour2/office.html'),
+(22, '2', '', '', 'res/img/news/21.jpg'),
+(25, '2', '', '', 'res/img/news/гостинная_2.jpg'),
+(26, '2', '', '', 'res/img/news/дом.png'),
+(27, '2', '', '', 'res/img/news/дом2.jpg');
 
 -- --------------------------------------------------------
 
@@ -664,7 +733,7 @@ CREATE TABLE `orders` (
 -- Dumping data for table `orders`
 --
 
-INSERT DELAYED INTO `orders` (`id`, `patient_id`, `order_no`, `date`, `user_id`, `cost`, `paymentmethod`, `discount`, `org_id`, `ready`, `state`, `tests_list`, `extra`) VALUES
+INSERT INTO `orders` (`id`, `patient_id`, `order_no`, `date`, `user_id`, `cost`, `paymentmethod`, `discount`, `org_id`, `ready`, `state`, `tests_list`, `extra`) VALUES
 (1, 5, 'A-01', '2018-04-05', 1, 3700, 'Нал.', 10, 1, 1, 'Готов к отправке', 'ДТ.1.4', ''),
 (2, 7, 'A-02', '2018-04-05', 1, 3700, 'Нал.', 0, 2, 1, 'Не готов к отправке', 'ДТ.1.4', ''),
 (3, 6, 'A-03', '2018-04-05', 1, 2700, 'Нал.', 0, 2, 1, 'Не готов к отправке', 'ДТ.1.2', ''),
@@ -714,7 +783,7 @@ CREATE TABLE `organizations` (
 -- Dumping data for table `organizations`
 --
 
-INSERT DELAYED INTO `organizations` (`id`, `position`, `name`, `contact`, `email`, `phone`) VALUES
+INSERT INTO `organizations` (`id`, `position`, `name`, `contact`, `email`, `phone`) VALUES
 (1, '', 'Школа здоровья \"Regina Doctor\"', '', 'reginadoctor.info@gmail.com', ''),
 (2, 'Врач', 'Больница 21', ' Радик Зуфарович', '', '03'),
 (3, 'asdaq', 'asda', 'easdasdqwdas asd asdas', 'asda', 'asd'),
@@ -743,7 +812,7 @@ CREATE TABLE `patients` (
 -- Dumping data for table `patients`
 --
 
-INSERT DELAYED INTO `patients` (`id`, `Name`, `birthday`, `height`, `weight`, `sex`, `regday`, `phone`, `email`) VALUES
+INSERT INTO `patients` (`id`, `Name`, `birthday`, `height`, `weight`, `sex`, `regday`, `phone`, `email`) VALUES
 (6, 'Флэр Эшли Элизабет', '1986-04-05', 178, 64, 'муж.', '2018-03-30', '+12323435346', 'woooo@wwe.com'),
 (7, 'Кестнер-Варнадо Мерседес ', '1992-01-26', 165, 52, 'жен.', '2018-03-30', '', 'boss@wwe.com'),
 (10, 'Раузи Ронда Джин', '1987-02-01', 170, 61, 'жен.', '2018-04-11', '', ''),
@@ -759,61 +828,31 @@ INSERT DELAYED INTO `patients` (`id`, `Name`, `birthday`, `height`, `weight`, `s
 DROP TABLE IF EXISTS `portfolio`;
 CREATE TABLE `portfolio` (
   `id` int(5) NOT NULL,
-  `type` varchar(100) NOT NULL,
-  `address` varchar(200) NOT NULL,
   `title` varchar(200) DEFAULT NULL,
-  `info` text,
-  `video` varchar(250) DEFAULT NULL
+  `info` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `portfolio`
 --
 
-INSERT DELAYED INTO `portfolio` (`id`, `type`, `address`, `title`, `info`, `video`) VALUES
-(1, 'hotel', 'res/img/portfolio/hotel/1.jpg', '3D моделирование и фотореалистичная визуализация гостиницы', 'Представлены 3D визуализации экстерьера гостиницы в нескольких ракурсах. Высокая детализация визуализации позволила показать потенциальному заказчику будущую атмосферу строящейся гостиницы.', NULL),
-(2, 'interior', 'res/img/portfolio/interior/1.jpg', '3D визуализация интерьера квартиры в многоквартирном  доме', 'Дизайн выполнен в классическом стиле. Цель визуализации — продемонстрировать интерьер квартиры для потенциальных покупателей.', NULL),
-(3, 'furniture', 'res/img/portfolio/furniture/1.jpg', '3D моделирование и визуализации мебели', 'Создание коллекции 3D моделей мебели в различных форматах для последующего использования дизайнерами в своих проектах. 3D моделей мебели выполнена с максимально возможной прорисовкой деталей с последующей фото реалистичной визуализацией.', NULL),
-(4, 'buildings', 'res/img/portfolio/buildings/1.jpg', '3D визуализация общественного здания', 'Архитектура экстерьера магазина выделяется тщательной проработкой лепных элементов', NULL),
-(5, 'devices', 'res/img/portfolio/devices/1.jpg', '3D модели технологического оборудования', 'В коллекции представлено различное оборудование: тепловое, холодильное, нейтральное, морозильное, для линии раздачи и т. д. Все модели выполнены в высоком разрешении для демонстрации преимуществ оборудования.', NULL),
-(6, 'oil-tank', 'res/img/portfolio/oil-tank/1.jpg', '3D видеоролик обслуживания нефтяного материала', 'Видеоролик демонстрирует 3D визуализацию обслуживание нефтяного резервуара .Фото реалистичная визуализация и созданный на основе нее 3D видеоролик помогает реализовать и понять ее построение и работу.', 'https://www.youtube.com/embed/upNyoCemoao'),
-(7, 'explosion', 'res/img/portfolio/explosion/1.jpg', '3D анимация разрушаемого объекта', 'Видеоролик демонстрирует 3D анимацию разрушение кирпичной стены.', 'https://www.youtube.com/embed/okTB_vynf9s'),
-(8, 'factory', 'res/img/portfolio/factory/1.jpg', '3D видеоролик визуализации нефтеперерабатывающего завода', '3D визуализация нефтеперерабатывающего завода. Детальная проработка резервуаров, зданий и прилегающей территории позволила продемонстрировать преимущества спонсирования и постройке данного завода.', 'https://www.youtube.com/embed/9wZeR_GkzSE'),
-(9, 'bricks', 'res/img/portfolio/bricks/1.jpg', '3D видеоролик физического взаимодействия двух материалов', 'Видеоролик демонстрирует 3D анимацию взаимодействия двух объектов.', 'https://www.youtube.com/embed/RLODDUOl5B0'),
-(10, 'conference-room', 'res/img/portfolio/conference-room/1.jpg', '3D видеоролик визуализации конференц-зала', '3D визуализация комфортабельного конференц-зала для офиса крупной российской компании. Строгий, но уютный интерьер дает возможность провести деловую встречу в максимально комфортной обстановке.', 'https://www.youtube.com/embed/JHWz5IIbF_k'),
-(11, 'oil', 'res/img/portfolio/oil/1.jpg', '3D видеоролик визуализации различных видов жидкостей', '3D визуализация экстерьера различных видов масел. Визуализация выполнена для демонстрации вида различных жидкостей в данном ландшафте.', 'https://www.youtube.com/embed/h6b2FR6ZR58'),
-(12, 'plane', 'res/img/portfolio/plane/1.jpg', '3D видеоролик презентации реактивного самолета', '3D презентация реактивного самолета. 3D модель самолета выполнена с нуля, детально смоделирован фюзеляж , крылья, двигатель и все другие детали самолета.', 'https://www.youtube.com/embed/6fY_XkAh0NI'),
-(13, 'mixing', 'res/img/portfolio/mixing/1.jpg', '3D видеоролик визуализации процесса смешивания', 'Видеоролик демонстрирует 3D визуализацию смешивания двух различных жидкостей.', 'https://www.youtube.com/embed/-bskhME4Lts'),
-(14, 'machine', 'res/img/portfolio/machine/1.jpg', '3D видеоролик визуализации технологического оборудования', 'Видеоролик демонстрирует 3D визуализацию комплекса селективного нанесения влагозащитного покрытия на печатные узлы. Фото реалистичная визуализация и созданный на основе нее 3D видеоролик помогает решить многие вопросы в создании и понимании работы комплекса.', 'https://www.youtube.com/embed/8ecbyKR9WMo'),
-(15, 'chairs', 'res/img/portfolio/chairs/1.jpg', '3D видеоролик физического взаимодействия двух материалов', 'Видеоролик демонстрирует 3D анимацию взаимодействия двух различных материалов.', 'https://www.youtube.com/embed/ur_sR49zC3g'),
-(16, 'army', 'res/img/portfolio/army/1.jpg', '3D видеоролик визуализации военной техники', 'Видеоролик демонстрирует 3D визуализацию различных видов военной техники. 3D модели выполнены с нуля и детально смоделированы.', 'https://www.youtube.com/embed/4kYdfxu9EwI'),
-(17, 'hotel', 'res/img/portfolio/hotel/1.jpg', NULL, NULL, NULL),
-(18, 'hotel', 'res/img/portfolio/hotel/2.jpg', NULL, NULL, NULL),
-(19, 'hotel', 'res/img/portfolio/hotel/3.jpg', NULL, NULL, NULL),
-(20, 'hotel', 'res/img/portfolio/hotel/4.jpg', NULL, NULL, NULL),
-(21, 'hotel', 'res/img/portfolio/hotel/5.jpg', NULL, NULL, NULL),
-(22, 'hotel', 'res/img/portfolio/hotel/6.jpg', NULL, NULL, NULL),
-(23, 'hotel', 'res/img/portfolio/hotel/7.jpg', NULL, NULL, NULL),
-(24, 'interior', 'res/img/portfolio/interior/1.jpg', NULL, NULL, NULL),
-(25, 'interior', 'res/img/portfolio/interior/2.jpg', NULL, NULL, NULL),
-(26, 'interior', 'res/img/portfolio/interior/3.jpg', NULL, NULL, NULL),
-(27, 'interior', 'res/img/portfolio/interior/4.jpg', NULL, NULL, NULL),
-(28, 'furniture', 'res/img/portfolio/furniture/1.jpg', NULL, NULL, NULL),
-(29, 'furniture', 'res/img/portfolio/furniture/2.jpg', NULL, NULL, NULL),
-(30, 'furniture', 'res/img/portfolio/furniture/3.jpg', NULL, NULL, NULL),
-(31, 'furniture', 'res/img/portfolio/furniture/4.jpg', NULL, NULL, NULL),
-(32, 'furniture', 'res/img/portfolio/furniture/5.jpg', NULL, NULL, NULL),
-(33, 'furniture', 'res/img/portfolio/furniture/6.jpg', NULL, NULL, NULL),
-(34, 'devices', 'res/img/portfolio/devices/1.jpg', NULL, NULL, NULL),
-(35, 'devices', 'res/img/portfolio/devices/2.jpg', NULL, NULL, NULL),
-(36, 'devices', 'res/img/portfolio/devices/3.jpg', NULL, NULL, NULL),
-(37, 'devices', 'res/img/portfolio/devices/4.jpg', NULL, NULL, NULL),
-(38, 'buildings', 'res/img/portfolio/buildings/1.jpg', NULL, NULL, NULL),
-(40, 'buildings', 'res/img/portfolio/buildings/3.jpg', NULL, NULL, NULL),
-(41, 'buildings', 'res/img/portfolio/buildings/4.jpg', NULL, NULL, NULL),
-(42, 'buildings', 'res/img/portfolio/buildings/5.jpg', NULL, NULL, NULL),
-(43, 'buildings', 'res/img/portfolio/buildings/6.jpg', NULL, NULL, NULL),
-(44, 'buildings', 'res/img/portfolio/buildings/7.jpg', NULL, NULL, NULL);
+INSERT INTO `portfolio` (`id`, `title`, `info`) VALUES
+(1, '3D моделирование и фотореалистичная визуализация гостиницы', 'Представлены 3D визуализации экстерьера гостиницы в нескольких ракурсах. Высокая детализация визуализации позволила показать потенциальному заказчику будущую атмосферу строящейся гостиницы.'),
+(2, '3D визуализация интерьера квартиры в многоквартирном  доме', 'Дизайн выполнен в классическом стиле. Цель визуализации — продемонстрировать интерьер квартиры для потенциальных покупателей.'),
+(3, '3D моделирование и визуализации мебели', 'Создание коллекции 3D моделей мебели в различных форматах для последующего использования дизайнерами в своих проектах. 3D моделей мебели выполнена с максимально возможной прорисовкой деталей с последующей фото реалистичной визуализацией.'),
+(4, '3D визуализация общественного здания', 'Архитектура экстерьера магазина выделяется тщательной проработкой лепных элементов'),
+(5, '3D модели технологического оборудования', 'В коллекции представлено различное оборудование: тепловое, холодильное, нейтральное, морозильное, для линии раздачи и т. д. Все модели выполнены в высоком разрешении для демонстрации преимуществ оборудования.'),
+(6, '3D видеоролик обслуживания нефтяного материала', 'Видеоролик демонстрирует 3D визуализацию обслуживание нефтяного резервуара .Фото реалистичная визуализация и созданный на основе нее 3D видеоролик помогает реализовать и понять ее построение и работу.'),
+(7, '3D анимация разрушаемого объекта', 'Видеоролик демонстрирует 3D анимацию разрушение кирпичной стены.'),
+(8, '3D видеоролик визуализации нефтеперерабатывающего завода', '3D визуализация нефтеперерабатывающего завода. Детальная проработка резервуаров, зданий и прилегающей территории позволила продемонстрировать преимущества спонсирования и постройке данного завода.'),
+(9, '3D видеоролик физического взаимодействия двух материалов', 'Видеоролик демонстрирует 3D анимацию взаимодействия двух объектов.'),
+(10, '3D видеоролик визуализации конференц-зала', '3D визуализация комфортабельного конференц-зала для офиса крупной российской компании. Строгий, но уютный интерьер дает возможность провести деловую встречу в максимально комфортной обстановке.'),
+(11, '3D видеоролик визуализации различных видов жидкостей', '3D визуализация экстерьера различных видов масел. Визуализация выполнена для демонстрации вида различных жидкостей в данном ландшафте.'),
+(12, '3D видеоролик презентации реактивного самолета', '3D презентация реактивного самолета. 3D модель самолета выполнена с нуля, детально смоделирован фюзеляж , крылья, двигатель и все другие детали самолета.'),
+(13, '3D видеоролик визуализации процесса смешивания', 'Видеоролик демонстрирует 3D визуализацию смешивания двух различных жидкостей.'),
+(14, '3D видеоролик визуализации технологического оборудования', 'Видеоролик демонстрирует 3D визуализацию комплекса селективного нанесения влагозащитного покрытия на печатные узлы. Фото реалистичная визуализация и созданный на основе нее 3D видеоролик помогает решить многие вопросы в создании и понимании работы комплекса.'),
+(15, '3D видеоролик физического взаимодействия двух материалов', 'Видеоролик демонстрирует 3D анимацию взаимодействия двух различных материалов.'),
+(16, '3D видеоролик визуализации военной техники', 'Видеоролик демонстрирует 3D визуализацию различных видов военной техники. 3D модели выполнены с нуля и детально смоделированы.');
 
 -- --------------------------------------------------------
 
@@ -833,7 +872,7 @@ CREATE TABLE `schedule` (
 -- Dumping data for table `schedule`
 --
 
-INSERT DELAYED INTO `schedule` (`id`, `Date`, `Time`, `value`) VALUES
+INSERT INTO `schedule` (`id`, `Date`, `Time`, `value`) VALUES
 (1, '2018-03-15', '08:00:00', '4'),
 (2, '2018-03-14', '09:30:00', '2'),
 (3, '2018-03-22', '08:30:00', '7'),
@@ -863,7 +902,7 @@ CREATE TABLE `services` (
 -- Dumping data for table `services`
 --
 
-INSERT DELAYED INTO `services` (`id`, `title`, `description`, `link`) VALUES
+INSERT INTO `services` (`id`, `title`, `description`, `link`) VALUES
 (1, '3D визуализация модели', 'Визуализация 3D моделей стала широко распространена в любой отрасли. 3D модели зданий, мебели, машин, персонажей и многих других объектов используются в рекламе, при разработке моделей для 3D принтеров, в автомобильной промышленности, в компьютерных играx. Во всех этих областях очень важно иметь высококачественные детализированные точные модели, что может предоставить наша студия.\r\n\r\n', NULL),
 (2, '3D визуализация интерьера', '3D моделирование интерьеров является необходимым этапом при проектировании жилых и нежилых помещений. Студия 3D визуализации BrainLegion выполняет моделирование интерьеров по вашим чертежам, дизайн проектам, а так же фото. Большим преимуществом при заказе 3D визуализации в компании BrainLegion служит то, что по вашему желанию моделируемый интерьер текстурируется с использованием реальных отделочных материалов, что позволит Вам увидеть точное изображение помещения до начала ремонтных работ.', 'res/tour/Apartment1.html'),
 (3, '3D визуализация экстерьера', 'Студия BrainLegion разрабатывает 3D визуализацию экстерьеров по Вашим эскизам, чертежам, по файлам специализированных программ проектирования, а так же по фото. Мы гарантируем детальную проработку Ваших проектов независимо от сложности сцены, таких как проект дома, коттеджа, магазина или целого микрорайона.', NULL),
@@ -894,7 +933,7 @@ CREATE TABLE `tests` (
 -- Dumping data for table `tests`
 --
 
-INSERT DELAYED INTO `tests` (`test`, `price`, `id`, `type`, `test_code`) VALUES
+INSERT INTO `tests` (`test`, `price`, `id`, `type`, `test_code`) VALUES
 ('Определение усвояемости жиров и углеводов', 3100, 1, 'Диета', 'ДТ.1.1'),
 ('Определение усвояемости соли (риск набора лишнего веса)', 2700, 2, 'Диета', 'ДТ.1.2'),
 ('Определение усвояемости фруктозы и глюкозы (риск набора лишнего веса)', 3800, 3, 'Диета', 'ДТ.1.3'),
@@ -991,7 +1030,7 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT DELAYED INTO `users` (`id`, `login`, `password`) VALUES
+INSERT INTO `users` (`id`, `login`, `password`) VALUES
 (3, 'admin', '$2y$10$iT.S6WVwe/JC8.QDYFTXz.36BicSD8DnVuOlp1O7C7NNXI71QFpVS');
 
 -- --------------------------------------------------------
@@ -1013,7 +1052,7 @@ CREATE TABLE `waysofdevelopment` (
 -- Dumping data for table `waysofdevelopment`
 --
 
-INSERT DELAYED INTO `waysofdevelopment` (`id`, `title`, `description`, `logo`, `link`) VALUES
+INSERT INTO `waysofdevelopment` (`id`, `title`, `description`, `logo`, `link`) VALUES
 (1, 'BL Studio', 'Студия цифрового дизайна и креативных событий.\r\n\r\nВизуализация, 3D-панорамы и рекламные ролики любой сложности.\r\n\r\nОрганизация мероприятий «под ключ»: конференций, стратегических сессий, хакатонов и др.', 'res/img/logos/brainlegion_studio.svg', 'studio.php'),
 (2, 'BL Factory', 'Научно-инженерный комплекс для решения сложных задач бизнеса.\r\n\r\nIT-автоматизация бизнес-процессов, CRM-системы, Блокчейн и Смарт-контракты.\r\n\r\n3D-моделирование и расчеты, НИОКРТ «под ключ», прототипирование и макетирование.', 'res/img/logos/brainlegion_factory.svg', 'factory.php'),
 (3, 'BL Scholae\r\n', 'Современная обучающая площадка по компетенциям Цифровой экономики.\r\n\r\nПрактико-ориентированное обучение детей и молодежи, подготовка компетентных специалистов под разнообразные задачи бизнеса.\r\n\r\nАкселерация инновационных и социальных проектов, поиск инвестиций и партнеров.', 'res/img/logos/brainlegion_scholae.svg', 'scholae.php');
@@ -1039,6 +1078,13 @@ ALTER TABLE `geneorders`
 --
 ALTER TABLE `genetest`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `img`
+--
+ALTER TABLE `img`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `idPort` (`idPort`);
 
 --
 -- Indexes for table `news`
@@ -1124,10 +1170,16 @@ ALTER TABLE `genetest`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=203;
 
 --
+-- AUTO_INCREMENT for table `img`
+--
+ALTER TABLE `img`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
+
+--
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `orders`
@@ -1151,7 +1203,7 @@ ALTER TABLE `patients`
 -- AUTO_INCREMENT for table `portfolio`
 --
 ALTER TABLE `portfolio`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `schedule`
@@ -1182,6 +1234,16 @@ ALTER TABLE `users`
 --
 ALTER TABLE `waysofdevelopment`
   MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `img`
+--
+ALTER TABLE `img`
+  ADD CONSTRAINT `img_ibfk_1` FOREIGN KEY (`idPort`) REFERENCES `portfolio` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -1,7 +1,7 @@
 <?php
 header('Access-Control-Allow-Origin: *');
 if (isset ($_POST['email'])) {
-  $to = "brainlegionufa@gmail.com"; // поменять на свой электронный адрес
+  $to = "ishkining@gmail.com"; // поменять на свой электронный адрес
   $from = $_POST['email'];
   $subject = $_POST['subject'];
   // $subject = "Subject";

@@ -114,18 +114,20 @@
                     <button class="my-2 btn btn-purple-outline pointer pointer" data-toggle="modal" data-target="#modalPortfolio_add" aria-expanded="false">+</button>
                 </div>
 
-
                 <div class="collapse" id="collapsePortfolio">
                     <div class="card-container">
                         <div class="card card-half-transparent h-100 d-flex flex-wrap flex-row align-items-center">
                           <?
-                            $allDataAboutPorfolio = getFromOneTable('portfolio');
-                            for($counter = 0; $counter < count($allDataAboutPorfolio); $counter++)
+                            $exampleDB = $GLOBALS['mysqli']->query("SELECT `portfolio`.`id`, `img`.`img` FROM `portfolio`, `img` WHERE `portfolio`.`id` = `img`.`idPort` and `type` = 'logo'");
+                            $someDataBoutPortfolio;
+                            while(($row = $exampleDB->fetch_assoc()) != false)
                             {
-                              if($allDataAboutPorfolio[$counter]['info'] != NULL)
-                              {
-                                  echo '<img class="col-12 col-sm-6 col-md-4 img-fluid img-thumb" src="'.$allDataAboutPorfolio[$counter]['address'].'" alt="FILL" data-toggle="modal" data-target="#modalPortfolio'.$allDataAboutPorfolio[$counter]['id'].'">';
-                              }
+                              $someDataBoutPortfolio[] = $row;
+                            }
+                            for($counter = 0; $counter < count($someDataBoutPortfolio); $counter++)
+                            {
+                                echo '<img class="col-12 col-sm-6 col-md-4 img-fluid img-thumb" src="'.$someDataBoutPortfolio[$counter]['img'].'" alt="FILL" data-toggle="modal" data-target="#modalPortfolio'.$someDataBoutPortfolio[$counter]['id'].'">';
+
                             }
                           ?>
                         </div>
@@ -355,32 +357,35 @@
 
                         <!-- ГАЗИНУР, тут описание добавляется в бд -->
                         <div class="form-group">
-                            <label for="discriptionPortfolio" class="col-form-label">Описание услуги</label>
-                            <textarea name="textForAddInfo" class="form-control" id="discriptionPortfolio"></textarea>
+                            <label for="descriptionPortfolio" class="col-form-label">Описание услуги</label>
+                            <textarea name="descriptionPortfolio" class="form-control" id="descriptionPortfolio"></textarea>
                         </div>
 
                         <!-- ГАЗИНУР, тут фотки или видосы добавляются в бд -->
                         <!-- ГАЗИНУР, выбор заливать видео или изображения -->
                         <div class="form-group d-flex flex-column">
-                            <input type="radio" id="video" name="r" onclick="disp(document.getElementById('videoInput0'))"> Видео
+                            <input type="radio" id="video" name="r" onclick="disp(document.getElementById('videoInput0'))" value="video"> Видео
 
                             <form id="test">
 
                             </form>
 
                             <!-- Скрытая форма для добавления видео -->
-                            <form name="video" id="videoInput0" style="display: none;">
+                            <div name="video" id="videoInput0" style="display: none;">
+                              <!-- МАКС сюда добавь label то что изображение для логотипа портфолио -->
                                 <input type="text" name="videoForAddPortfolio">
-                            </form>
 
-                            <input type="radio" id="image" name="r" onclick="disp(document.getElementById('imageInput0'))"> Изображение
+                                <input type="file" name="logoForAddPortfolio">
+                            </div>
+
+                            <input type="radio" id="image" name="r" onclick="disp(document.getElementById('imageInput0'))" value="images"> Изображение
 
                             <!-- Скрытая форма для добавления видео -->
-                            <form name="image" id="imageInput0" style="display: none;">
+                            <div name="image" id="imageInput0" style="display: none;">
                                 <input type="file" name="imagesForAddPortfolio[]" multiple>
 
-                            </form>
-                          </div>
+                            </div>
+                          <div>
                             <input hidden class="my-3" type="text">
                             <input hidden type="file">
                         </div>
@@ -398,13 +403,40 @@
 
     <?
       $dataFromPostForAddPortfolio = $_POST;
+
       if(isset($dataFromPostForAddPortfolio['addPortfolio']))
       {
-        $GLOBALS['mysqli']->query("INSERT INTO `portfolio`(`type`, `address`, `title`, `info`, `video`)
-                                  VALUES ('".substr($dataFromPostForAddPortfolio['titleForAddPotfolio'], 0, strpos($dataFromPostForAddPortfolio['titleForAddPotfolio'], " ") + 1)."',
-                                          '".$dataFromPostForAddPortfolio['titleForAddPotfolio']."',
-                                          '".$dataFromPostForAddPortfolio['titleForAddPotfolio']."')");
-        echo '<script>document.location.href="adminstudio.php"</script>';
+        $GLOBALS['mysqli']->query("INSERT INTO `portfolio`(`title`, `info`)
+                                  VALUES ('".$dataFromPostForAddPortfolio['titleForAddPotfolio']."', '".$dataFromPostForAddPortfolio['descriptionPortfolio']."')");
+        $indexOfOurNewPortfolio = findSmthFromTable('portfolio', 'title', $dataFromPostForAddPortfolio['titleForAddPotfolio']);
+        if($dataFromPostForAddPortfolio['r'] == 'video')
+        {
+          echo '<script>alert(1)</script>';
+          $GLOBALS['mysqli']->query("INSERT INTO `img`(`img`, `type`, `idPort`)
+                                    VALUES ('res/img/portfolio/".$dataFromPostForAddPortfolio['logoForAddPortfolio']."', 'logo' , '".$indexOfOurNewPortfolio[0]['id']."')");
+          $GLOBALS['mysqli']->query("INSERT INTO `img`(`img`, `type`, `idPort`)
+                                    VALUES ('".$dataFromPostForAddPortfolio['videoForAddPortfolio']."', 'video' , '".$indexOfOurNewPortfolio[0]['id']."')");
+        }
+        elseif ($dataFromPostForAddPortfolio['r'] == 'images')
+        {
+          echo '<script>alert(2)</script>';
+          $counter = 0;
+          foreach ($dataFromPostForAddPortfolio['imagesForAddPortfolio'] as $value)
+          {
+            if($counter == 0)
+            {
+              $GLOBALS['mysqli']->query("INSERT INTO `img`(`img`, `type`, `idPort`)
+                                        VALUES ('res/img/portfolio/".$value."', 'logo' , '".$indexOfOurNewPortfolio[0]['id']."')");
+            }
+            else
+            {
+              $GLOBALS['mysqli']->query("INSERT INTO `img`(`img`, `type`, `idPort`)
+                                        VALUES ('res/img/portfolio/".$value."', 'image' , '".$indexOfOurNewPortfolio[0]['id']."')");
+            }
+            $counter++;
+          }
+        }
+       echo '<script>document.location.href="adminstudio.php"</script>';
       }
     ?>
 
