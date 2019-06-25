@@ -326,7 +326,7 @@
                                   VALUES ('".$dataAboutNews[$counter]['id']."',
                                           '',
                                           '',
-                                          'res/\img\/news/\\".$_POST['imagesOfEditing'][$counterImages]."')");
+                                          'res/\img\/news/".$_POST['imagesOfEditing'][$counterImages]."')");
       }
      echo '<script>document.location.href="adminmain.php"</script>';
     }
