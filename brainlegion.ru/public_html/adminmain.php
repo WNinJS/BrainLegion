@@ -216,7 +216,7 @@
     {
       $GLOBALS['mysqli']->query("UPDATE `waysOfDevelopment` SET `title` = '".$dataFromPost['titleForEditWay']."',
                                 `description` = '".$dataFromPost['textForEditWay']."',
-                                `logo` = '".$dataFromPost['logoForEditWay']."',
+                                `logo` = 'res/\img\/logos/".$dataFromPost['logoForEditWay']."',
                                 `link` = '".$dataFromPost['linkForEditWay']."' WHERE `waysOfDevelopment`.`id` = ".$allDataFromWaysOfDev[$counter]['id'].";");
       echo '<script>document.location.href="adminmain.php"</script>';
     }
@@ -234,7 +234,6 @@
 <!-- Новость 1 -->
 
 <?
-  $files;
   for($counter = 0; $counter < count($dataAboutNews); $counter++)
   {
     if($dataAboutNews[$counter]['description'] != '')
@@ -279,8 +278,6 @@
                     </button>
 
                   </div>';
-
-            $files[$dataAboutNews[$counter]['id']][$counterForIndexImages] = $dataAboutNews[$counterImages]['img'];
             $counterForIndexImages++;
           }
         }
@@ -311,22 +308,16 @@
       $GLOBALS['mysqli']->query("UPDATE `news` SET `title` = '".$dataFromPostForEdit['titleForEditNew']."',
                                 `description` = '".$dataFromPostForEdit['textForEditNew']."',
                                 `contacts` = '".$dataFromPostForEdit['contactsForEditNew']."' WHERE `news`.`id` = ".$dataAboutNews[$counter]['id'].";");
-      $GLOBALS['mysqli']->query("DELETE FROM `news` WHERE `news`.`title` = '".$dataAboutNews[$counter]['id']."';");
-      for($counterImages = 0; $counterImages < count($files[$dataAboutNews[$counter]['id']]); $counterImages++)
+      if($dataFromPostForEdit['imagesOfEditing'][0] != "")
       {
-        $GLOBALS['mysqli']->query("INSERT INTO `news` (`title`, `description`, `contacts`, `img`)
-                                  VALUES ('".$dataAboutNews[$counter]['id']."',
-                                          '',
-                                          '',
-                                          '".$files[$dataAboutNews[$counter]['id']][$counterImages]."')");
-      }
-      for($counterImages = 0; $counterImages < count($dataFromPostForEdit['imagesOfEditing']); $counterImages++)
-      {
-        $GLOBALS['mysqli']->query("INSERT INTO `news` (`title`, `description`, `contacts`, `img`)
-                                  VALUES ('".$dataAboutNews[$counter]['id']."',
-                                          '',
-                                          '',
-                                          'res/\img\/news/".$_POST['imagesOfEditing'][$counterImages]."')");
+        for($counterImages = 0; $counterImages < count($dataFromPostForEdit['imagesOfEditing']); $counterImages++)
+        {
+          $GLOBALS['mysqli']->query("INSERT INTO `news` (`title`, `description`, `contacts`, `img`)
+                                    VALUES ('".$dataAboutNews[$counter]['id']."',
+                                            '',
+                                            '',
+                                            'res/\img\/news/".$_POST['imagesOfEditing'][$counterImages]."')");
+        }
       }
      echo '<script>document.location.href="adminmain.php"</script>';
     }
