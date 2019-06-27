@@ -269,61 +269,55 @@
                                 <div class="modal-body">
                                     <div class="form-group">
                                         <label for="title" class="col-form-label">Заголовок портфолио</label>
-                                        <input type="text" class="form-control" id="title" value="'.$allDataAboutPorfolio[$counter]['title'].'">
+                                        <input name="editTitlePort" type="text" class="form-control" id="title" value="'.$someDataBoutPortfolio[$counter]['title'].'">
                                     </div>
                                     <div class="form-group">
                                         <label for="discriptionPortfolio" class="col-form-label">Описание услуги</label>
-                                        <textarea class="form-control" id="discriptionPortfolio">'.$allDataAboutPorfolio[$counter]['info'].'</textarea>
+                                        <textarea name="editInfoPort" class="form-control" id="discriptionPortfolio">'.$someDataBoutPortfolio[$counter]['info'].'</textarea>
                                     </div>
                                     <div class="form-group">
                                         <div class="imagesPorfolio f-flex justify-content-center text-center">';
-            if($allDataAboutPorfolio[$counter]['video'] == '')
+            if(getFromOneTableWithTwoCondition('img', 'type', 'idPort', 'video' ,$someDataBoutPortfolio[$counter]['id']) == 'empty')
             {
-              for($counterImages = 0; $counterImages < count($allDataAboutPorfolio); $counterImages++)
+              $allImagesForPortfolio = getFromOneTableWithTwoCondition('img', 'type', 'idPort', 'image' ,$someDataBoutPortfolio[$counter]['id']);
+              for($counterImages = 0; $counterImages < count($allImagesForPortfolio); $counterImages++)
               {
-                if($allDataAboutPorfolio[$counterImages]['type'] == $allDataAboutPorfolio[$counter]['type'] && $counter != $counterImages)
-                { /* ГАЗИНУР, тут удаление блоков по крестику */
-                  echo '
-                          <div class="imgs d-flex justify-content-center">
-
-                            <div id="picture'.$allDataAboutPorfolio[$counterImages]['id'].'" style="display: block;">
-                              <img src="'.$allDataAboutPorfolio[$counterImages]['address'].'" alt="ALT" class="img-fluid pb-3 news-img-style">
-                            </div>
-
-                            <button type="button" style="display: block;" class="close d-flex flex-column justify-content-start pointer" onclick="closeImg(document.getElementById(\'picture'.$allDataAboutPorfolio[$counterImages]['id'].'\'), document.getElementById(\'button'.$allDataAboutPorfolio[$counterImages]['id'].'\'))" aria-label="Close">
-                                <span id="button'.$allDataAboutPorfolio[$counterImages]['id'].'">&times;</span>
-                            </button>
-
-                          </div>';
+                  echo '<div class="imgs d-flex justify-content-center">
+                          <div id="picture'.$allImagesForPortfolio[$counterImages]['idImg'].'" style="display: block;">
+                            <img src="'.$allImagesForPortfolio[$counterImages]['img'].'" alt="ALT" class="img-fluid pb-3 news-img-style">
+                          </div>
+                          <button id="'.$allImagesForPortfolio[$counterImages]['idImg'].'" type="button" style="display: block;" class="close d-flex flex-column justify-content-start pointer" onclick="deletePic(this)" aria-label="Close">
+                              <span id="button'.$allImagesForPortfolio[$counterImages]['idImg'].'">&times;</span>
+                          </button>
+                        </div>';
                 }
-              }
             }
-            $length = count($allDataAboutPorfolio);
+            $memoryForVideo = "";
+            if(getFromOneTableWithTwoCondition('img', 'type', 'idPort', 'video' ,$someDataBoutPortfolio[$counter]['id']) != 'empty')
+            {
+              $memoryForVideo = getFromOneTableWithTwoCondition('img', 'type', 'idPort', 'video' ,$someDataBoutPortfolio[$counter]['id'])[0]['img'];
+            }
             echo                    '</div></div>
                                         <div class="form-group d-flex flex-column">
-                                          <input type="radio" id="video" name="r1" onclick="disp(document.getElementById(\'videoInput'.$allDataAboutPorfolio[$counter]['id'].'\'))"> Видео
-
-
-                                          <form id="test">
-
-                                          </form>
+                                          <input type="radio" id="video" name="r'.$someDataBoutPortfolio[$counter]['id'].'" onclick="disp(document.getElementById(\'videoInput'.$someDataBoutPortfolio[$counter]['id'].'\'))"> Видео
 
                                           <!-- Скрытая форма для добавления видео -->
-                                          <form name="video" id="videoInput'.$allDataAboutPorfolio[$counter]['id'].'" style="display: none;">
-                                              <input type="text">
-                                          </form>
-
-                                          <input type="radio" id="image" name="r1" onclick="disp(document.getElementById(\'imageInput'.$allDataAboutPorfolio[$counter]['id'].'\'))"> Изображение
+                                          <div name="video" id="videoInput'.$someDataBoutPortfolio[$counter]['id'].'" style="display: none;">
+                                              <input type="text" name="editVideo" value="'.$memoryForVideo.'">
+                                              <input type="file" name="editLogo">
+                                          </div>
+                                          <input type="radio" id="image" name="r'.$someDataBoutPortfolio[$counter]['id'].'" onclick="disp(document.getElementById(\'imageInput'.$someDataBoutPortfolio[$counter]['id'].'\'))"> Изображение
 
                                           <!-- Скрытая форма для добавления видео -->
-                                          <form name="image" id="imageInput'.$allDataAboutPorfolio[$counter]['id'].'" style="display: none;">
-                                              <input type="file" multiple>
-                                          </form>
+                                          <div name="image" id="imageInput'.$someDataBoutPortfolio[$counter]['id'].'" style="display: none;">
+                                              <input type="file" name="editImages[]" multiple>
+                                          </div>
                                         </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-purple-outline pointer" data-dismiss="modal">Закрыть</button>
-                                    <button type="submit" class="btn btn-purple-outline pointer">Применить изменения</button>
+                                  <button name="deletePort'.$someDataBoutPortfolio[$counter]['id'].'" type="submit" class="btn btn-purple-outline pointer">Удалить</button>
+                                  <button type="button" class="btn btn-purple-outline pointer" data-dismiss="modal">Закрыть</button>
+                                  <button name="editPort'.$someDataBoutPortfolio[$counter]['id'].'" type="submit" class="btn btn-purple-outline pointer">Применить изменения</button>
                                 </div>
                             </form>
                         </div>
@@ -331,6 +325,51 @@
                 </div>';
         }
     ?>
+
+    <?
+      $dataFromPost = $_POST;
+      for($counter = 0; $counter < count($someDataBoutPortfolio); $counter++)
+      {
+        if(isset($dataFromPost['deletePort'.$someDataBoutPortfolio[$counter]['id']]))
+        {
+          $GLOBALS['mysqli']->query("DELETE FROM `portfolio` WHERE `portfolio`.`id` = ".$someDataBoutPortfolio[$counter]['id'].";");
+          echo '<script>document.location.href="adminstudio.php"</script>';
+        }
+        elseif(isset($dataFromPost['editPort'.$someDataBoutPortfolio[$counter]['id']]))
+        {
+          $GLOBALS['mysqli']->query("UPDATE `portfolio` SET `title` = '".$dataFromPost['editTitlePort']."',
+                                    `info` = '".$dataFromPost['editInfoPort']."'  WHERE `portfolio`.`id` = ".$someDataBoutPortfolio[$counter]['id'].";");
+          if($dataFromPost['editVideo'] != "" && $dataFromPost['editImages'][0] != "")
+          {
+            echo '<script>alert("Нельзя выбирать режим видео и изображений. Выберите пожалуйста только один режим!")</script>';
+          }
+          elseif($dataFromPost['editVideo'] != "" || $dataFromPost['editLogo'] != "")
+          {
+            $GLOBALS['mysqli']->query("DELETE FROM `img` WHERE `img`.`idPort` = '".$someDataBoutPortfolio[$counter]['id']."'and `img`.`type` = 'video';");
+            $GLOBALS['mysqli']->query("INSERT INTO `img`(`img`, `type`, `idPort`)
+                                      VALUES ('".$dataFromPost['editVideo']."', 'video' , '".$someDataBoutPortfolio[$counter]['id']."')");
+            if($dataFromPost['editLogo'] != "")
+            {
+              $GLOBALS['mysqli']->query("UPDATE `img` SET `img` = 'res/img/portfolio/".$dataFromPost['editLogo']."'
+                                              WHERE `img`.`idPort` = '".$someDataBoutPortfolio[$counter]['id']."' and
+                                                      `img`.`type` = 'logo';");
+            }
+            $GLOBALS['mysqli']->query("DELETE FROM `img` WHERE `img`.`idPort` = '".$someDataBoutPortfolio[$counter]['id']." 'and `img`.`type` = 'image';");
+          }
+          elseif($dataFromPost['editImages'][0] != "")
+          {
+            foreach ($dataFromPost['editImages'] as $value)
+            {
+              $GLOBALS['mysqli']->query("INSERT INTO `img`(`img`, `type`, `idPort`)
+                                        VALUES ('res/img/portfolio/".$value."', 'image' , '".$someDataBoutPortfolio[$counter]['id']."')");
+            }
+            $GLOBALS['mysqli']->query("DELETE FROM `img` WHERE `img`.`idPort` = '".$someDataBoutPortfolio[$counter]['id']."'and `img`.`type` = 'video';");
+          }
+          echo '<script>document.location.href="adminstudio.php"</script>';
+        }
+      }
+    ?>
+
 
     <!-- ГАЗИНУР, модальное окно для добавления новой работы в "ПОРТФОЛИО" находится тут -->
     <div class="modal fade" id="modalPortfolio_add" tabindex="-1" role="dialog" aria-labelledby="modalPortfolio_addLabel" aria-hidden="true">
@@ -407,7 +446,6 @@
         $indexOfOurNewPortfolio = findSmthFromTable('portfolio', 'title', $dataFromPostForAddPortfolio['titleForAddPotfolio']);
         if($dataFromPostForAddPortfolio['r'] == 'video')
         {
-          echo '<script>alert(1)</script>';
           $GLOBALS['mysqli']->query("INSERT INTO `img`(`img`, `type`, `idPort`)
                                     VALUES ('res/img/portfolio/".$dataFromPostForAddPortfolio['logoForAddPortfolio']."', 'logo' , '".$indexOfOurNewPortfolio[0]['id']."')");
           $GLOBALS['mysqli']->query("INSERT INTO `img`(`img`, `type`, `idPort`)
@@ -415,7 +453,6 @@
         }
         elseif ($dataFromPostForAddPortfolio['r'] == 'images')
         {
-          echo '<script>alert(2)</script>';
           $counter = 0;
           foreach ($dataFromPostForAddPortfolio['imagesForAddPortfolio'] as $value)
           {
@@ -436,6 +473,20 @@
       }
     ?>
 
+    <script type="text/javascript">
+      function deletePic(object)
+      {
+        var sex = object.id;
+        $.ajax({
+            type: 'POST',
+            url: 'functions/deletePic.php?type=img',
+            data: {sex: sex},
+            success: function(data){
+              $(object).parent().fadeOut().remove();
+            }
+          });
+      }
+    </script>
 
     <script src="res/js/showInputs.js"></script>
     <script src="res/js/deleteImages.js"></script>

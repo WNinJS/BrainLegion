@@ -47,4 +47,22 @@
     }
     return $ourData;
   }
+
+  function getFromOneTableWithTwoCondition($table, $firstAttribute, $secondAttribute, $firstCondition, $secondCondition)
+  {
+    $exampleDB = $GLOBALS['mysqli']->query("SELECT * FROM `".$table."` WHERE `".$firstAttribute."` = '".$firstCondition."' and `".$secondAttribute."` = '".$secondCondition."'");
+    $ourData = [];
+    if($exampleDB->num_rows != 0)
+    {
+      while(($row = $exampleDB->fetch_assoc()) != false)
+      {
+        $ourData[] = $row;
+      }
+      return $ourData;
+    }
+    else
+    {
+      return 'empty';
+    }
+  }
 ?>

@@ -463,7 +463,7 @@
         var sex = object.id;
         $.ajax({
             type: 'POST',
-            url: 'functions/deletePic.php',
+            url: 'functions/deletePic.php?type=news',
             data: {sex: sex},
             success: function(data){
               $(object).parent().fadeOut().remove();

@@ -176,6 +176,10 @@
                 {
                   echo '<li data-target="#carouselExampleIndicators" data-slide-to="'.$counter.'"></li>';
                 }
+                if($counter == 5)
+                {
+                  break;
+                }
             }
           ?>
             </ol>
@@ -196,15 +200,17 @@
                     echo '<div class="carousel-item">';
                   }
                     echo '
-                  <h2>'.$allDataAboutPortfolio[$counter]['title'].'</h2>
-                  <img class="img-fluid img-thumb" src="'.$allDataAboutPortfolio[$counter]['img'].'" data-toggle="modal" data-target="#'.$allDataAboutPortfolio[$counter]['id'].'" alt="Card image cap">
-                       <br>
-                      </div>';
+                        <h2>'.$allDataAboutPortfolio[$counter]['title'].'</h2>
+                        <img class="img-fluid img-thumb" src="'.$allDataAboutPortfolio[$counter]['img'].'" data-toggle="modal" data-target="#'.$allDataAboutPortfolio[$counter]['id'].'" alt="Card image cap">
+                             <br>
+                            </div>';
+                  if($counter == 5)
+                  {
+                    break;
+                  }
                 }
               ?>
-
             </div>
-
             <!-- Arrows Next and Prev of Slider -->
             <a href="#carouselExampleIndicators" class="carousel-control-prev" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" style="width: 50px; height: 50px;" aria-hidden="true"></span>
@@ -418,6 +424,7 @@
     <!-- Bootstrap js -->
     <script src="res/jquery/jquery-3.2.1.min.js"></script>
     <script src="res/popper/popper.js"></script>
+      <script src="res/bootstrap/js/bootstrap.js"></script>
     <script src="res/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- YandexMap js -->
