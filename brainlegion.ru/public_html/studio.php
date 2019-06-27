@@ -1,5 +1,6 @@
 <?
   require_once 'functions/functions.php';
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -176,10 +177,6 @@
                 {
                   echo '<li data-target="#carouselExampleIndicators" data-slide-to="'.$counter.'"></li>';
                 }
-                if($counter == 5)
-                {
-                  break;
-                }
             }
           ?>
             </ol>
@@ -201,13 +198,9 @@
                   }
                     echo '
                         <h2>'.$allDataAboutPortfolio[$counter]['title'].'</h2>
-                        <img class="img-fluid img-thumb" src="'.$allDataAboutPortfolio[$counter]['img'].'" data-toggle="modal" data-target="#'.$allDataAboutPortfolio[$counter]['id'].'" alt="Card image cap">
+                        <img class="img-fluid img-thumb" src="'.$allDataAboutPortfolio[$counter]['img'].'" data-toggle="modal" data-target="#r'.$allDataAboutPortfolio[$counter]['id'].'" alt="Card image cap">
                              <br>
                             </div>';
-                  if($counter == 5)
-                  {
-                    break;
-                  }
                 }
               ?>
             </div>
@@ -379,7 +372,7 @@
       for($counter = 0; $counter < count($allDataAboutPortfolio); $counter++)
       {
         // Если это изображение является полной(т.е вложенной инофрмацией)
-          echo '<div class="modal fade" id="'.$allDataAboutPortfolio[$counter]['id'].'" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          echo '<div class="modal fade" id="r'.$allDataAboutPortfolio[$counter]['id'].'" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                   <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
@@ -390,23 +383,21 @@
                       </div>
                       <div class="modal-body">
                         <p>'.$allDataAboutPortfolio[$counter]['info'].'</p>';
-            echo '<script>alert('.empty(getFromOneTableWithTwoCondition('img', 'type', 'idPort', 'video' ,$allDataAboutPortfolio[$counter]['id'])).')</script>';
           // Если в данном контенте присуствует видео, то добавляется видео, а если нет то изображение.
-          if($allDataAboutPortfolio[$counter]['video'] == NULL)
+          if(getFromOneTableWithTwoCondition('img', 'type', 'idPort', 'video' ,$allDataAboutPortfolio[$counter]['id']) == 'empty')
           {
-            $imagesFromOneType = getFromOneTableWithCondition('portfolio', 'type', $allDataAboutPortfolio[$counter]['type']);
+            $imagesFromOneType = getFromOneTableWithTwoCondition('img', 'type', 'idPort', 'image' ,$allDataAboutPortfolio[$counter]['id']);
+            echo '<img src="'.$allDataAboutPortfolio[$counter]['img'].'" alt="ALT" class="img-fluid"> <p class="mt-4"></p>';
             for($counterImages = 0; $counterImages < count($imagesFromOneType); $counterImages++)
             {
-              if($imagesFromOneType[$counterImages]['info'] == NULL)
-              {
-                echo '<img src="'.$imagesFromOneType[$counterImages]['address'].'" alt="ALT" class="img-fluid"> <p class="mt-4"></p>';
-              }
+              echo '<img src="'.$imagesFromOneType[$counterImages]['img'].'" alt="ALT" class="img-fluid"> <p class="mt-4"></p>';
             }
           }
           else
           {
+            $currentVideo = getFromOneTableWithTwoCondition('img', 'type', 'idPort', 'video' ,$allDataAboutPortfolio[$counter]['id']);
             echo '<div class="video-portfolio-youtube">
-                    <iframe src="'.$allDataAboutPortfolio[$counter]['video'].'" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <iframe src="'.$currentVideo[0]['img'].'" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                   </div>';
           }
 
