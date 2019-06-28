@@ -124,12 +124,14 @@
                   {
                     if($dataAboutNews[$counter]['description'] != '')
                     {
+                      $otherString = substr($dataAboutNews[$counter]['description'], 40);
+                      $halfText = substr($dataAboutNews[$counter]['description'], 0, 40).substr($otherString, 0, strpos($otherString, ".") + 1);
                       echo '<div class="card-container col-sm-12 col-md-6  col-lg-4 p-2">
                               <div class="card card-half-transparent h-100">
                                   <div class="card-body d-flex flex-column text-center">
                                       <img src="'.$dataAboutNews[$counter]['img'].'" alt="ALT" class="img-fluid pb-3 news-img-style">
                                       <h4 class="card-title text-center"><b>'.$dataAboutNews[$counter]['title'].'</b></h4>
-                                      <p class="card-text">'.substr($dataAboutNews[$counter]['description'], 0, strpos($dataAboutNews[$counter]['description'], ".") + 1).'</p>
+                                      <p class="card-text">'.$halfText.'</p>
                                       <div class="text-center mt-auto d-flex justify-content-around">
                                           <button type="button" class="btn btn-purple-outline pointer" data-toggle="modal" data-target="#New'.$dataAboutNews[$counter]['id'].'">
                                             Редактировать
